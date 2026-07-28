@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chelsea · Home</title>
+<style>
+  :root{
+    --fly:#5b9ce6;
+    --jp:#e56b7e;
+    --cd:#f28e54;
+    --sy:#5cae80;
+    --dl:#a86fd6;
+    --bj:#e0a53a;
+    --ink:#e8eaed;  --muted:#9aa1ab;
+    --line:#3a3f48; --paper:#282b31; --bg:#1c1e22;
+    --wknd:#f4949a; --wkdy:#e7ecf4;
+    --serif:Georgia,"Times New Roman","Songti SC","STSong",serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;padding:34px 22px 64px;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Segoe UI,sans-serif;line-height:1.5;}
+  .wrap{max-width:980px;margin:0 auto;}
+
+  /* HERO */
+  header.hero{margin:48px 0 72px;text-align:center;}
+  .hero h1{font-family:var(--serif);font-size:34px;font-weight:400;margin:0;letter-spacing:1px;}
+  .hero .tagline{font-family:var(--serif);margin-top:4px;font-size:13px;color:var(--muted);letter-spacing:.5px;}
+
+  h2{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid var(--line);letter-spacing:.5px;}
+  .module{margin-bottom:56px;}
+
+  /* ENTRY CARDS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;}
+  a.card{position:relative;display:block;min-height:164px;background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:24px 24px 22px 28px;text-decoration:none;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.05);
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;overflow:hidden;}
+  a.card:hover{transform:translateY(-3px);border-color:#4a505a;box-shadow:0 6px 18px rgba(0,0,0,.3);}
+  a.card .accent{position:absolute;left:0;top:0;bottom:0;width:4px;}
+  a.card .emoji{font-size:30px;line-height:1;display:block;margin-bottom:14px;}
+  a.card .name{font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:6px;letter-spacing:.5px;}
+  a.card .desc{font-family:var(--serif);font-size:13px;color:var(--muted);}
+  a.card .go{position:absolute;right:18px;bottom:16px;font-size:14px;color:var(--muted);transition:color .15s ease, transform .15s ease;}
+  a.card:hover .go{color:var(--ink);transform:translateX(3px);}
+  a.card.soon{pointer-events:none;opacity:.55;}
+  a.card.soon .badge{position:absolute;right:16px;top:14px;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:2px 10px;}
+
+  @media(max-width:600px){
+    .hero h1{font-size:28px;}
+    header.hero{margin:20px 0 32px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🍕 Welcome to Chelsea's Space 🐕</h1>
+    <div class="tagline">eat well · travel often · pet Alice</div>
+  </header>
+
+  <section class="module">
+    <h2>🧳 Plan</h2>
+    <div class="grid">
+      <a class="card" href="2026-china-trip.html">
+        <span class="accent" style="background:var(--cd)"></span>
+        <span class="emoji">🇨🇳</span>
+        <div class="name">Dec 2026<br>China Trip Plan</div>
+        <div class="desc">12.4.2026 – 1.3.2027</div>
+        <span class="go">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="module">
+    <h2>📷 Moments</h2>
+    <div class="grid">
+      <a class="card soon" href="#">
+        <span class="accent" style="background:var(--dl)"></span>
+        <span class="badge">Coming soon</span>
+        <span class="emoji">🖼️</span>
+        <div class="name">Gallery</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="module">
+    <h2>📝 Notes</h2>
+    <div class="grid">
+      <a class="card soon" href="#">
+        <span class="accent" style="background:var(--sy)"></span>
+        <span class="badge">Coming soon</span>
+        <span class="emoji">✏️</span>
+        <div class="name">First note</div>
+      </a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
