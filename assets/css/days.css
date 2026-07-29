@@ -1,4 +1,4 @@
-/* Days Matter 倒数日模块（配合 days.js 使用，依赖 index.html 里的 :root 变量） */
+/* Days Matter 倒数日模块（配合 assets/js/days.js 使用，主题变量来自 base.css） */
 .cd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px;}
 .cd-item{position:relative;aspect-ratio:4/3;display:flex;flex-direction:column;background:var(--paper);
   border:1px solid var(--line);border-radius:14px;
@@ -9,7 +9,6 @@
 .cd-item .cd-num{font-family:var(--serif);font-size:36px;line-height:1.15;
   flex:1;display:flex;align-items:center;justify-content:center;text-align:center;}
 .cd-item .cd-num small{font-size:14px;color:var(--muted);margin-left:4px;}
-.cd-item .cd-num .word{font-size:15px;color:var(--muted);margin-right:6px;}
 .cd-item.today .cd-num{font-size:22px;}
 .cd-item .cd-date{font-family:var(--serif);font-size:13px;color:var(--muted);text-align:center;}
 

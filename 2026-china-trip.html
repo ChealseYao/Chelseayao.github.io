@@ -4,29 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dec 2026 China Trip Plan · Chelsea</title>
+<link rel="stylesheet" href="assets/css/base.css">
 <style>
-  :root{
-    --fly:#5b9ce6;  --fly-bg:#eaf2fc;
-    --jp:#e56b7e;   --jp-bg:#fdecef;
-    --cd:#f28e54;   --cd-bg:#fdf0e8;
-    --sy:#5cae80;   --sy-bg:#eaf6ef;
-    --dl:#a86fd6;   --dl-bg:#f3ebfb;
-    --bj:#e0a53a;   --bj-bg:#fbf3e2;
-    --ink:#e8eaed;  --muted:#9aa1ab;
-    --line:#3a3f48; --paper:#282b31; --bg:#1c1e22;
-    --wknd:#f4949a; --wkdy:#e7ecf4;
-    --serif:Georgia,"Times New Roman","Songti SC","STSong",serif;
-  }
   *{box-sizing:border-box;}
-  body{margin:0;padding:34px 22px 64px;background:var(--bg);color:var(--ink);
-    font-family:Georgia,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;line-height:1.5;}
+  body{margin:0;padding:34px 22px 64px;background:var(--bg);color:var(--ink);line-height:1.5;}
   .wrap{max-width:1280px;margin:0 auto;}
   header.top{margin-bottom:22px;}
-  .home-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);text-decoration:none;
-    margin-bottom:16px;padding:6px 14px;border:1px solid var(--line);border-radius:20px;background:var(--paper);
-    transition:color .15s ease,border-color .15s ease,transform .15s ease;}
-  .home-link:hover{color:var(--ink);border-color:#4a505a;transform:translateX(-2px);}
-  .home-link .arr{font-size:14px;}
   h1{font-family:var(--serif);font-size:30px;margin:0 0 4px;letter-spacing:.5px;}
   h1 .by{font-size:14px;color:var(--muted);font-weight:400;margin-left:10px;}
   .sub{color:var(--muted);font-size:14px;}
@@ -64,8 +47,8 @@
   .dhead{font-family:var(--serif);font-weight:700;font-size:13px;color:var(--wkdy);margin-bottom:8px;}
   td.we .dhead{color:var(--wknd);}
   .demoji{font-family:-apple-system,"Apple Color Emoji","Noto Color Emoji",sans-serif;font-weight:400;font-size:15px;vertical-align:-1px;}
-  .dlabel{font-family:Georgia,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:12px;color:#cfd4dc;}
-  .body{font-family:Georgia,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;font-size:13px;color:#e4e8ee;}
+  .dlabel{font-family:var(--body);font-weight:400;font-size:12px;color:#cfd4dc;}
+  .body{font-family:var(--body);font-size:13px;color:#e4e8ee;}
   .body div{margin-top:3px;}
   .body .sub2{color:#868c96;font-size:12px;}
   .accent{position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:0 0 0 0;}
@@ -74,23 +57,34 @@
 
   .todo-row{display:flex;gap:26px;align-items:flex-start;}
   .todo-row .card{flex:1;margin-bottom:26px;}
-  .todo label{display:block;margin:8px 0;color:var(--ink);}
+  .todo label{display:flex;align-items:center;gap:4px;margin:8px 0;color:var(--ink);}
+  .todo-link{color:var(--ink);text-decoration:underline dotted;text-underline-offset:3px;}
+  .todo-link:hover{color:var(--cd);}
+  .todo .tag{margin-left:auto;font-size:11px;padding:2px 10px;border-radius:20px;white-space:nowrap;}
+  .todo .tag.doing{color:var(--bj);border:1px solid var(--bj);}
+  .todo .tag.notyet{color:var(--muted);border:1px solid var(--line);}
   #cal{overflow-x:auto;-webkit-overflow-scrolling:touch;}
   @media(max-width:820px){
     body{padding:20px 12px 48px;}
     .card{padding:16px 14px;}
     #cal table{min-width:860px;}
     td{height:130px;}
-    .todo-row{flex-direction:column;gap:0;}
+    .todo-row{gap:12px;}
+    .todo label{font-size:13px;}
+    .todo .tag{font-size:10px;padding:2px 7px;}
     .seg{font-size:11px;}
     h1{font-size:24px;}
+  }
+  /* 窄到文字会被挤压时才退回上下排列 */
+  @media(max-width:460px){
+    .todo-row{flex-direction:column;gap:0;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="home-link" href="index.html"><span class="arr">←</span>Home</a>
+    <a class="home-link" href="index.html"><span class="arr">👈</span>Home</a>
     <h1>🇨🇳 Dec 2026 China Trip Plan<span class="by">by Chelsea</span></h1>
     <div class="sub">Dec 4, 2026 (Fri) – Jan 3, 2027 (Sun)</div>
     <div class="route">
@@ -131,7 +125,7 @@
         <div class="seg sy"  style="flex:2" data-tick="12/24">沈阳</div>
         <div class="seg bj"  style="flex:3" data-tick="12/26">北京</div>
         <div class="seg cd"  style="flex:4" data-tick="12/29">成都</div>
-        <div class="seg fly" style="flex:2">✈️</div>
+        <div class="seg fly" style="flex:2" data-tick="1/2">✈️</div>
       </div>
       <div class="tl-axis" id="tlAxis"></div>
     </div>
@@ -148,10 +142,10 @@
     <section class="card">
       <h2><span class="dot" style="background:#3fa96a"></span>🇺🇸 行前 TODO LIST</h2>
       <div class="todo">
-        <label>🛂&ensp;DKL 中国签证</label>
-        <label>✈️&ensp;机票</label>
-        <label>🎁&ensp;伴手礼</label>
-        <label>🐕&ensp;Ali 寄养</label>
+        <label>🛂&ensp;DKL 中国签证<span class="tag notyet">not started</span></label>
+        <label>✈️&ensp;<a class="todo-link" href="pages/plan/flights.html">机票</a><span class="tag doing">in progress</span></label>
+        <label>🎁&ensp;<a class="todo-link" href="pages/plan/gifts.html">伴手礼</a><span class="tag doing">in progress</span></label>
+        <label>🐕&ensp;Ali 寄养<span class="tag notyet">not started</span></label>
       </div>
     </section>
     <section class="card">
@@ -264,5 +258,6 @@ function drawTicks(){
 drawTicks();
 window.addEventListener('resize', drawTicks);
 </script>
+<script src="assets/js/scroll-restore.js"></script>
 </body>
 </html>

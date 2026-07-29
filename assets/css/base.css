@@ -1,0 +1,30 @@
+/* ===== 全站公共主题变量 =====
+   所有页面 <head> 里先引入这个文件，再写页面自己的样式。
+   改配色 / 字体只改这里，所有页面同步生效。 */
+:root{
+  /* 行程 & 卡片强调色（fly=航班 jp=日本 cd=成都 sy=沈阳 dl=大连 bj=北京） */
+  --fly:#5b9ce6;  --fly-bg:#eaf2fc;
+  --jp:#e56b7e;   --jp-bg:#fdecef;
+  --cd:#f28e54;   --cd-bg:#fdf0e8;
+  --sy:#5cae80;   --sy-bg:#eaf6ef;
+  --dl:#a86fd6;   --dl-bg:#f3ebfb;
+  --bj:#e0a53a;   --bj-bg:#fbf3e2;
+
+  /* 深色主题基础色 */
+  --ink:#e8eaed;  --muted:#9aa1ab;
+  --line:#3a3f48; --paper:#282b31; --bg:#1c1e22;
+  --wknd:#f4949a; --wkdy:#e7ecf4;
+
+  /* 字体：英文统一 Georgia，中文统一苹方（想换宋体把两行的 PingFang SC 改成 Songti SC） */
+  --serif:Georgia,"Times New Roman","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",serif;
+  --body:Georgia,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+}
+
+body{font-family:var(--body);}
+
+/* ← Home 返回按钮（子页面共用） */
+.home-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);text-decoration:none;
+  margin-bottom:16px;padding:6px 14px;border:1px solid var(--line);border-radius:20px;background:var(--paper);
+  transition:color .15s ease,border-color .15s ease,transform .15s ease;}
+.home-link:hover{color:var(--ink);border-color:#4a505a;transform:translateX(-2px);}
+.home-link .arr{font-size:14px;}

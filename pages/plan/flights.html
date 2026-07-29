@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机票 List · Chelsea</title>
+<link rel="stylesheet" href="../../assets/css/base.css">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;padding:34px 22px 64px;background:var(--bg);color:var(--ink);line-height:1.5;}
+  .wrap{max-width:960px;margin:0 auto;}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter-spacing:.5px;}
+  .sub{font-family:var(--serif);color:var(--muted);font-size:14px;margin-bottom:26px;}
+  .sub b{color:var(--ink);font-weight:400;}
+
+  .leg{margin-bottom:34px;}
+  .leg h2{font-family:var(--serif);font-weight:400;font-size:19px;letter-spacing:.5px;
+    margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);
+    display:flex;align-items:baseline;}
+  .leg h2 .gd{margin-left:auto;font-size:12px;color:var(--muted);}
+
+  .opts{display:flex;flex-direction:column;gap:12px;}
+  .opt{position:relative;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.05);
+    transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;}
+  .opt:hover{transform:translateY(-2px);border-color:#4a505a;box-shadow:0 6px 18px rgba(0,0,0,.3);}
+  .opt.pick{border-color:var(--bj);}
+
+  .opt .left{flex:none;width:215px;display:flex;align-items:center;gap:11px;}
+  .opt .av{flex:none;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;}
+  .opt .al{font-size:13px;}
+  .opt .al .nt{font-size:11px;color:var(--muted);margin-top:2px;}
+  .opt .mid{flex:1;display:grid;gap:6px;justify-content:center;justify-items:start;align-content:center;padding-right:110px;}
+  .opt .tm{font-size:17px;font-weight:600;letter-spacing:.3px;display:flex;align-items:center;}
+  .opt .tm sup{font-size:10px;color:#e06c75;margin-left:2px;top:-6px;position:relative;}
+  .opt .tline{display:inline-block;width:64px;height:2px;border-radius:2px;background:var(--sy);margin:0 12px;}
+  .opt .chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
+  .opt .chip{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:2px 10px;white-space:nowrap;}
+  .opt .chip.star{color:var(--bj);border-color:var(--bj);}
+  .opt .chip.dur{color:var(--sy);border-color:var(--sy);font-weight:700;font-size:12px;}
+  .opt .pricebox{flex:none;margin-left:auto;text-align:right;}
+  .opt .pr{font-size:19px;color:var(--cd);font-weight:700;}
+  .opt .pr .on{font-size:11px;color:var(--muted);font-weight:400;margin-left:6px;}
+  .opt .hist{font-size:11px;color:var(--muted);margin-top:2px;display:flex;flex-wrap:wrap;gap:2px 6px;align-items:baseline;justify-content:flex-end;}
+  .opt .hist .sep{opacity:.5;}
+  .opt .hist .up{color:#e06c75;margin-right:1px;}
+  .opt .hist .down{color:var(--sy);margin-right:1px;}
+  .opt .nt{font-size:12px;color:var(--muted);margin-top:6px;}
+  .empty{font-family:var(--serif);color:var(--muted);border:1px dashed var(--line);border-radius:14px;
+    padding:26px 20px;text-align:center;grid-column:1/-1;}
+
+  @media(max-width:600px){
+    body{padding:20px 12px 48px;}
+    h1{font-size:24px;}
+    .opt{gap:8px 12px;padding:13px 14px;}
+    .opt .left{width:auto;flex:1;}
+    .opt .mid{flex-basis:100%;order:5;justify-content:start;padding-right:0;}
+    .opt .tm{font-size:15px;}
+    .opt .tline{width:36px;margin:0 8px;}
+    .opt .pricebox{margin-left:auto;text-align:right;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="home-link" href="../../2026-china-trip.html"><span class="arr">👈</span> Trip Plan</a>
+    <h1>✈️ 机票 List</h1>
+    <div class="sub"><b id="progress"></b></div>
+  </header>
+
+  <div id="flights"></div>
+
+</div>
+<script src="../../assets/js/flights.js"></script>
+<script src="../../assets/js/scroll-restore.js"></script>
+</body>
+</html>
