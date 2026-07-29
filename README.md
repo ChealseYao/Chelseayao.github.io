@@ -12,7 +12,8 @@ Personal website and portfolio
 │   ├── travels/tijuana.html    旅行相册页
 │   ├── travels/catalina.html
 │   ├── plan/gifts.html         伴手礼清单页（从行程页 TODO 点进）
-│   └── plan/flights.html       机票清单页（从行程页 TODO 点进）
+│   ├── plan/flights.html       机票清单页（从行程页 TODO 点进）
+│   └── plan/wedding.html       答谢宴+领证 PLAN（主页 Plan 卡片 / 行程页"领证"点进）
 ├── photos/
 │   ├── moments/
 │   │   └── alice/          Alice 照片（命名：YYYYMMDD-序号.jpg）
@@ -23,12 +24,16 @@ Personal website and portfolio
     ├── css/
     │   ├── base.css        全站公共主题变量（配色 / 字体，改这里全站生效）
     │   ├── gallery.css     相册页共用样式（3:4 网格 + 灯箱）
+    │   ├── flights.css     机票页共用样式（航班卡片模板）
     │   └── days.css        Days Matter 模块样式
     └── js/
         ├── days.js         倒数日数据 + 渲染逻辑（加倒数日改这里）
         ├── gifts.js        伴手礼清单数据 + 渲染逻辑（记伴手礼改这里）
-        ├── flights.js      机票清单数据 + 渲染逻辑（记航班改这里）
+        ├── wedding.js      答谢宴+领证 PLAN 清单（打勾改这里）
         ├── gallery.js      相册页共用渲染逻辑（网格 + 灯箱）
+        ├── flight-card.js  机票卡片共用渲染模板（勿放数据）
+        ├── flights/        每个行程一个机票数据文件（字段说明见文件头注释）
+        │   └── 2026-china.js
         └── photos/         照片清单（scripts/sync-photos.js 自动生成，勿手改）
             ├── descriptions.js  ★ Moments 照片描述（key:value，唯一手动编辑的文件）
             ├── alice.js
