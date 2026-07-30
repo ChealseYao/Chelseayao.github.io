@@ -6,17 +6,19 @@
   if (!box || typeof FLIGHT_GROUPS === "undefined") return;
 
   // 价格日志 → 最新价 + 历史涨跌
+  const fmt$ = n => n.toLocaleString("en-US",
+    Number.isInteger(n) ? {} : { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   function priceBlock(prices){
     const hist = prices || [];
     const cur = hist[hist.length - 1];
     if (!cur) return "";
-    let html = `<div class="pr">$${cur.price.toLocaleString()}<span class="on">@ ${cur.on}</span></div>`;
+    let html = `<div class="pr">$${fmt$(cur.price)}<span class="on">@ ${cur.on}</span></div>`;
     if (hist.length > 1){
       html += '<div class="hist">' + hist.map((p, i) => {
         let arr = "";
         if (i > 0) arr = p.price > hist[i-1].price ? '<span class="up">↑</span>'
                        : p.price < hist[i-1].price ? '<span class="down">↓</span>' : "→";
-        return `${arr}${p.on} $${p.price.toLocaleString()}`;
+        return `${arr}${p.on} $${fmt$(p.price)}`;
       }).join('<span class="sep">·</span>') + "</div>";
     }
     return html;
@@ -38,7 +40,16 @@
     if (grp.options.length === 0){
       grid.innerHTML = '<div class="empty">还没有候选航班</div>';
     } else {
+      let lastDay = null;
       grp.options.forEach(o => {
+        // 航班带 day 字段时，日期变化处插入日期小标题
+        if (o.day && o.day !== lastDay){
+          const dh = document.createElement("div");
+          dh.className = "day-h";
+          dh.textContent = `📆 ${o.day}`;
+          grid.appendChild(dh);
+          lastDay = o.day;
+        }
         const card = document.createElement("div");
         card.className = "opt" + (o.pick ? " pick" : "");
 
@@ -46,9 +57,9 @@
         let timeHTML;
         if (o.dep){
           timeHTML =
-            `<div class="tpt"><b>${o.dep}</b><span class="ap">${o.depAp || ""}</span></div>` +
+            `<div class="tpt"><b>${o.dep}${o.depD ? `<span class="dts">（${o.depD}）</span>` : ""}</b><span class="ap">${o.depAp || ""}</span></div>` +
             `<div class="tmid"><div class="trow"><span class="tline"></span><span class="tdur">${o.dur || ""}</span><span class="tline"></span></div></div>` +
-            `<div class="tpt right"><b>${o.arr}${o.plus ? `<sup>${o.plus}</sup>` : ""}</b><span class="ap">${o.arrAp || ""}</span></div>`;
+            `<div class="tpt right"><b>${o.arr}${o.arrD ? `<span class="dts">（${o.arrD}）</span>` : ""}${o.plus ? `<sup>${o.plus}</sup>` : ""}</b><span class="ap">${o.arrAp || ""}</span></div>`;
         } else {
           timeHTML = (o.time || "")
             .replace(/\(\+(\d+)\)/, '<sup>+$1</sup>')
@@ -59,10 +70,13 @@
         const topHTML =
           `<div class="top">` +
             `<div class="left">` +
-              `<div class="av" style="background:${o.color || "#4a505a"}">${code}</div>` +
+              (o.logo
+                ? `<div class="av logo"><img src="${o.logo}" alt="${o.airline || ""}"></div>`
+                : `<div class="av" style="background:${o.color || "#4a505a"}">${code}</div>`) +
               `<div class="al">${o.link
-                ? `<a class="alink" href="${o.link}" target="_blank">${[o.airline, o.flight].filter(Boolean).join(" · ")} <span class="ext">↗</span></a>`
-                : [o.airline, o.flight].filter(Boolean).join(" · ")}` +
+                ? `<a class="alink" href="${o.link}" target="_blank">${o.airline} <span class="ext">↗</span></a>`
+                : o.airline}` +
+                `${o.flight ? `<div class="fno">${o.flight}</div>` : ""}` +
                 `${o.note ? `<div class="nt">${o.note}</div>` : ""}</div>` +
             `</div>` +
             `<div class="mid">` +
@@ -76,11 +90,11 @@
             (o.prices ? `<div class="pricebox">${priceBlock(o.prices)}</div>` : "") +
           `</div>`;
 
-        // perks 按「 · 」+emoji 拆成不可断行的小块：窄屏时整项换行，不从中间断开
+        // perks 按「·」+emoji 拆成不可断行的小块（· 前后空格可有可无）：窄屏时整项换行，不从中间断开
         const perksHTML = f_perks => (f_perks || "")
-          .split(/ · (?=\p{Extended_Pictographic})/u)
+          .split(/\s*·\s*(?=\p{Extended_Pictographic})/u)
           .map(p => `<span class="pk">${p}</span>`)
-          .join('<span class="psep"> · </span>');
+          .join('<span class="psep">·</span>');
 
         const faresHTML = o.fares ? `<div class="fares">` + o.fares.map(f =>
           `<div class="fare${f.pick ? " pick" : ""}">` +

@@ -15,6 +15,8 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 
 /* 航班卡片 */
 .opts{display:flex;flex-direction:column;gap:12px;}
+.day-h{font-size:13px;font-weight:700;letter-spacing:.3px;margin:8px 2px -2px;}
+.day-h:first-child{margin-top:0;}
 .opt{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;
   padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.05);
   transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;}
@@ -28,7 +30,10 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .opt .left{flex:none;width:215px;display:flex;align-items:center;gap:11px;}
 .opt .av{flex:none;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;}
+.opt .av.logo{background:#fff;overflow:hidden;}
+.opt .av.logo img{width:88%;height:88%;object-fit:contain;}
 .opt .al{font-size:13px;}
+.opt .al .fno{font-size:12px;letter-spacing:.3px;margin-top:1px;}
 .opt .al .nt{font-size:11px;color:var(--muted);margin-top:2px;}
 
 /* 时间条 */
@@ -40,14 +45,16 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .opt .tpt.right{align-items:flex-end;}
 .opt .tpt b{font-size:18px;font-weight:600;letter-spacing:.3px;}
 .opt .tpt .ap{font-size:11px;color:var(--muted);letter-spacing:.5px;}
+.opt .tpt .dts{font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0;}
 .opt .tmid{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;margin:0 14px;}
 .opt .trow{display:flex;align-items:center;width:100%;gap:10px;height:23px;}
-.opt .tdur{font-size:12px;color:#cfd4dc;white-space:nowrap;}
+.opt .tdur{font-size:12px;color:var(--sy);white-space:nowrap;}
 .opt .tline{flex:1;min-width:20px;height:2px;border-radius:2px;background:var(--sy);margin:0;}
 .opt .chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
-.opt .chip{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:2px 10px;white-space:nowrap;}
+.opt .chip{display:inline-flex;align-items:center;height:24px;font-size:12px;color:var(--muted);
+  border:1px solid var(--line);border-radius:20px;padding:0 10px;white-space:nowrap;}
 .opt .chip.star{color:var(--bj);border-color:var(--bj);}
-.opt .chip.dur{color:var(--sy);border-color:var(--sy);font-weight:700;font-size:12px;}
+.opt .chip.dur{color:var(--sy);border-color:var(--sy);font-weight:700;}
 
 /* 价格 */
 .opt .pricebox{flex:none;margin-left:auto;text-align:right;}
@@ -66,6 +73,7 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .fare.pick .fname{color:var(--bj);}
 .fare .fperks{flex:1;min-width:180px;font-size:12px;color:var(--muted);}
 .fare .pk{white-space:nowrap;}
+.fare .psep{margin:0 6px;color:#7a8089;}
 .fare .ffee{display:block;font-size:11px;color:#7a8089;margin-top:2px;}
 .fare .fprice{flex:none;margin-left:auto;text-align:right;}
 .fare .pr{font-size:16px;}

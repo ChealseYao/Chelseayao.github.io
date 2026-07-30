@@ -15,34 +15,59 @@
 //   选定:把那一档 pick 改成 true（高亮 ⭐，航段计入 picked）
 const FLIGHT_GROUPS = [
   {
-    route: "LAX → 🇯🇵 Tokyo",
-    date: "12.4 – 12.6 · 跨日界线",
+    route: "🌴 LAX → 🐼 成都",
+    date: "12.4 – 12.6 · 落地 TFU 天府",
     options: [
       {
-        airline:"American Airlines", code:"AA", color:"#3b6fb5",
-        dep:"23:45", depAp:"LAX", arr:"05:05", arrAp:"HND", plus:"+2",
-        dur:"12h 20m", stop:"Nonstop",
-        note:"12.4.2026 Friday",
-        link:"https://www.google.com/travel/flights/s/7nD6XUVbQuwUgTb69",
+        airline:"Sichuan Airlines", code:"3U", color:"#c0392b", logo:"../../assets/icons/airlines/3U.png", flight:"3U3838",
+        dep:"21:30", depAp:"LAX", arr:"08:10", arrAp:"TFU", plus:"+2", depD:"12.4", arrD:"12.6",
+        dur:"18h 40m", stop:"直达 · 技术经停 HGH",
+        day:"12.4.2026 Friday",
         fares:[
-          { name:"Basic Plus Bag", perks:"❌ 不可改签 · 💺 选座付费 · 🧳 免费托运 ×1（第二件 $100 · 第三件 $200）",
-            prices:[{ on:"7.28", price:1119 }], pick:false },
-          { name:"主舱（经济舱）",  perks:"✅ 免费改签 · 💺 免费选座 · 🧳 免费托运 ×1（第二件 $100 · 第三件 $200）",
-            prices:[{ on:"7.29", price:1239 }], pick:false },
-          { name:"Main Plus",      perks:"✅ 免费改签 · 💺 免费选座+加腿距 · 🧳 免费托运 ×2", prices:[{ on:"7.29", price:1379 }], pick:false },
-          { name:"豪华经济舱",      perks:"✅ 免费改签 · 💺 免费选座+加腿距 · 🛫 优先登机 · 🧳 免费托运 ×2", prices:[{ on:"7.29", price:1689 }], pick:false },
+          { name:"Economy", perks:"🎒 随身小包+登机箱（17.6 磅）· 🧳 免费托运 ×1（50.7 磅）· 💰 取消/改签需付费",
+            fee:"可选加购：灵活机票（可改期）+$71.83 · 旅行保障 +$49.72",
+            prices:[{ on:"7.30", price:552.50 }], pick:false },
         ],
       },
     ],
   },
   {
-    route: "🇯🇵 Tokyo → 🐼 成都",
-    date: "12.8 · 落地 CTU 天府",
-    options: [],
-  },
-  {
-    route: "🐼 成都 → LAX",
-    date: "1.2 – 1.3 · 到家 🏠",
-    options: [],
+    route: "🐼 成都 → 🌴 LAX",
+    date: "1.1 / 1.2 出发 · 当天到 LA 🏠",
+    options: [
+      {
+        airline:"Sichuan Airlines", code:"3U", color:"#c0392b", logo:"../../assets/icons/airlines/3U.png", flight:"3U3837",
+        dep:"23:00", depAp:"TFU", arr:"19:30", arrAp:"LAX", depD:"1.1", arrD:"1.1",
+        dur:"12h 30m", stop:"直飞",
+        tags:["⚠️ 常晚点 30+ 分钟"],
+        day:"1.1.2027 Friday",
+        fares:[
+          { name:"Economy", perks:"🎒 随身 ×1 免费 · 🧳 首件托运需付费",
+            prices:[{ on:"7.30", price:1283 }], pick:false },
+        ],
+      },
+      {
+        airline:"Cathay Pacific", code:"CX", color:"#006564", logo:"../../assets/icons/airlines/CX.png", flight:"CX917 ➡️ CX884",
+        dep:"08:15", depAp:"CTU", arr:"09:15", arrAp:"LAX", depD:"1.1", arrD:"1.1",
+        dur:"17h 00m",
+        tags:["转机 HKG · 停留 1h 35m","🛫 双流 CTU 出发","⚠️ CX884 常晚点 30+ 分钟"],
+        day:"1.1.2027 Friday",
+        fares:[
+          { name:"Economy", perks:"🎒 随身 ×1 免费 · 🧳 首件托运免费",
+            prices:[{ on:"7.30", price:1132 }], pick:false },
+        ],
+      },
+      {
+        airline:"Cathay Pacific", code:"CX", color:"#006564", logo:"../../assets/icons/airlines/CX.png", flight:"CX987 ➡️ CX882",
+        dep:"14:30", depAp:"CTU", arr:"16:20", arrAp:"LAX", depD:"1.2", arrD:"1.2",
+        dur:"17h 50m",
+        tags:["转机 HKG · 停留 2h 35m","🛫 双流 CTU 出发"],
+        day:"1.2.2027 Saturday",
+        fares:[
+          { name:"Economy", perks:"🎒 随身 ×1 免费 · 🧳 首件托运免费",
+            prices:[{ on:"7.30", price:1296 }], pick:false },
+        ],
+      },
+    ],
   },
 ];

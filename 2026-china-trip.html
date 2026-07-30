@@ -90,8 +90,6 @@
     <div class="route">
       <span class="stop"><i style="background:var(--fly)"></i>🇺🇸</span>
       <span class="arr">→</span>
-      <span class="stop"><i style="background:var(--jp)"></i>🇯🇵 日本</span>
-      <span class="arr">→</span>
       <span class="stop"><i style="background:var(--cd)"></i>🐼 成都</span>
       <span class="arr">→</span>
       <span class="stop"><i style="background:var(--sy)"></i><i style="background:var(--dl)"></i>❄️ 沈阳 / 大连</span>
@@ -108,7 +106,6 @@
   <section class="card">
     <h2><span class="dot"></span>⌚️ Timeline</h2>
     <div class="legend">
-      <span><i class="sw" style="background:var(--jp)"></i>日本</span>
       <span><i class="sw" style="background:var(--cd)"></i>成都</span>
       <span><i class="sw" style="background:var(--sy)"></i>沈阳</span>
       <span><i class="sw" style="background:var(--dl)"></i>大连</span>
@@ -118,8 +115,7 @@
     <div class="tl">
       <div class="tl-track" id="tlTrack" data-end="1/3">
         <div class="seg fly" style="flex:2" data-tick="12/4">✈️</div>
-        <div class="seg jp"  style="flex:3" data-tick="12/6">日本</div>
-        <div class="seg cd"  style="flex:8" data-tick="12/9">成都</div>
+        <div class="seg cd"  style="flex:11" data-tick="12/6">成都</div>
         <div class="seg sy"  style="flex:5" data-tick="12/17">沈阳</div>
         <div class="seg dl"  style="flex:2" data-tick="12/22">大连</div>
         <div class="seg sy"  style="flex:2" data-tick="12/24">沈阳</div>
@@ -166,19 +162,19 @@
 // city: 用于左侧色条 fly/jp/cd/sy/bj ；top: 日期后的 emoji/标签；body: 当天安排（数组，(...) 会变灰）
 const plan = {
   '2026-11-30':{}, '2026-12-01':{}, '2026-12-02':{}, '2026-12-03':{},
-  '2026-12-04':{city:'fly',top:'✈️',body:['下班 ➡️ LAX']},
-  '2026-12-05':{city:'fly',top:'✈️',body:['✈️ 飞行 / 时差']},
-  '2026-12-06':{city:'jp',top:'🇯🇵',body:['落地日本','🇯🇵 Day 1']},
-  '2026-12-07':{city:'jp',top:'🇯🇵',body:['🇯🇵 Day 2','🗻 富士山']},
-  '2026-12-08':{city:'fly',top:'✈️',body:['日本 ➡️ 成都']},
-  '2026-12-09':{city:'cd',top:'🐼',body:['成都 Day 1','(💅 美甲 / 💇 理发 / 👓 配眼镜)']},
-  '2026-12-10':{city:'cd',top:'🐼',body:['成都 Day 2','(💅 美甲 / 💇 理发 / 👓 配眼镜)']},
-  '2026-12-11':{city:'cd',top:'🐼',body:['成都 Day 3','dkl 爸妈来成都']},
-  '2026-12-12':{city:'cd',top:'🐼',body:['成都 Day 4','(成都答谢宴)']},
-  '2026-12-13':{city:'cd',top:'🐼',body:['成都 Day 5','(成都答谢宴)']},
-  '2026-12-14':{city:'cd',top:'🐼',body:['成都 Day 6','🗻 乐山']},
-  '2026-12-15':{city:'cd',top:'🐼',body:['成都 Day 7']},
-  '2026-12-16':{city:'cd',top:'🐼',body:['成都 Day 8']},
+  '2026-12-04':{city:'fly',top:'✈️',body:['下班 ➡️ LAX','21:30 ✈️成都']},
+  '2026-12-05':{city:'fly',top:'✈️',body:['✈️ 飞行 / 跨日界线']},
+  '2026-12-06':{city:'cd',top:'🐼',body:['8:10 落地天府','成都 Day 1']},
+  '2026-12-07':{city:'cd',top:'🐼',body:['成都 Day 2','(💅 美甲 / 💇 理发 / 👓 配眼镜)']},
+  '2026-12-08':{city:'cd',top:'🐼',body:['成都 Day 3','(💅 美甲 / 💇 理发 / 👓 配眼镜)']},
+  '2026-12-09':{city:'cd',top:'🐼',body:['成都 Day 4']},
+  '2026-12-10':{city:'cd',top:'🐼',body:['成都 Day 5']},
+  '2026-12-11':{city:'cd',top:'🐼',body:['成都 Day 6','dkl 爸妈来成都']},
+  '2026-12-12':{city:'cd',top:'🐼',body:['成都 Day 7','(成都答谢宴)']},
+  '2026-12-13':{city:'cd',top:'🐼',body:['成都 Day 8','(成都答谢宴)']},
+  '2026-12-14':{city:'cd',top:'🐼',body:['成都 Day 9','🗻 乐山']},
+  '2026-12-15':{city:'cd',top:'🐼',body:['成都 Day 10']},
+  '2026-12-16':{city:'cd',top:'🐼',body:['成都 Day 11']},
   '2026-12-17':{city:'fly',top:'✈️',body:['成都 ➡️ 沈阳']},
   '2026-12-18':{city:'sy',top:'❄️',body:['沈阳 Day 1','🛁 洗浴']},
   '2026-12-19':{city:'sy',top:'❄️',body:['沈阳 Day 2']},
