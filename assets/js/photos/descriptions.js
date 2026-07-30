@@ -21,6 +21,6 @@ const DESCRIPTIONS = {
   "20260405-01-catalina.jpg": "",
 
   // ── tijuana ──
-  "20260703-02-tijuana.jpg": "Avenida Revolución",
+  "20260703-02-Tijuana.jpg": "",
   "20260703-03-tijuana.jpg": "Border Sunset",
 };
