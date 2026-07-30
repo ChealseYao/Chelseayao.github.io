@@ -11,8 +11,8 @@ const DESCRIPTIONS = {
   // ── nyc ──
   "20240809-01-nyc.jpg": "Bryant Park",
   "20240810-01-nyc.jpg": "Liberty Island View",
-  "20240810-02-nyc.jpg": "Status of Liberty",
-  "20240810-03-nyc.jpg": "Status of Liberty",
+  "20240810-02-nyc.jpg": "Statue of Liberty",
+  "20240810-03-nyc.jpg": "Statue of Liberty",
   "20240811-01-nyc.jpg": "Manhattan Bridge",
   "20240813-01-nyc.jpg": "Skyline from The Met",
   "20240814-01-nyc.jpg": "Empire State Building",

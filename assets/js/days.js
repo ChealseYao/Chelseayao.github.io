@@ -6,7 +6,7 @@ const COUNTDOWNS = [
   { emoji:"🎆", label:"New Year",        date:"2027-01-01", color:"var(--bj)" },
   { emoji:"💍", label:"Getting Married", date:"2025-05-21", color:"var(--jp)" },
   { emoji:"🐶", label:"With Alice",      date:"2025-03-26", color:"var(--dl)" },
-  { emoji:"🎓", label:"Graduate",        date:"2025-05-15", color:"var(--sy)" },
+  { emoji:"🎓", label:"Graduated",       date:"2025-05-15", color:"var(--sy)" },
 ];
 
 (function(){
@@ -21,8 +21,8 @@ const COUNTDOWNS = [
     const diff = Math.round((target - today) / 86400000);
 
     let numHTML, cls = "";
-    if (diff > 0)       numHTML = `${diff}<small>days left</small>`;
-    else if (diff < 0)  numHTML = `${-diff}<small>days since</small>`;
+    if (diff > 0)       numHTML = `<span class="n" style="color:${c.color}">${diff}</span><small>days left</small>`;
+    else if (diff < 0)  numHTML = `<span class="n" style="color:${c.color}">${-diff}</span><small>days since</small>`;
     else              { numHTML = `Today 🎉`; cls = "today"; }
 
     const el = document.createElement("div");
