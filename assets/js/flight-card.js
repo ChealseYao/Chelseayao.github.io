@@ -30,6 +30,36 @@
     progress.textContent = `${n} flight${n === 1 ? "" : "s"}`;
   }
 
+  // perks 按「·」+emoji 拆成不可断行的小块（· 前后空格可有可无）：窄屏时整项换行，不从中间断开
+  const perksHTML = perks => (perks || "")
+    .split(/\s*·\s*(?=\p{Extended_Pictographic})/u)
+    .map(p => `<span class="pk">${p}</span>`)
+    .join('<span class="psep">·</span>');
+
+  // 「渠道 × 时间」价格矩阵：行 = 票档/订票渠道，列 = 查价日期，每列最低价标绿
+  function fareMatrix(fares){
+    const dates = [];
+    fares.forEach(f => (f.prices || []).forEach(p => { if (!dates.includes(p.on)) dates.push(p.on); }));
+    const colMin = {};
+    dates.forEach(d => {
+      const vals = fares.map(f => (f.prices || []).find(p => p.on === d)).filter(Boolean).map(p => p.price);
+      colMin[d] = vals.length ? Math.min(...vals) : null;
+    });
+    let h = '<table class="fm-tbl"><thead><tr><th>Fare / Channel</th><th class="tk">Terms</th>' +
+      dates.map(d => `<th class="d">${d}</th>`).join("") + "</tr></thead><tbody>";
+    fares.forEach(f => {
+      h += `<tr${f.pick ? ' class="pick"' : ""}><td class="nm">${f.pick ? "⭐ " : ""}${f.name}` +
+        `${f.via ? `<span class="via">（${f.via}）</span>` : ""}</td>` +
+        `<td class="tk">${perksHTML(f.perks)}</td>` +
+        dates.map(d => {
+          const p = (f.prices || []).find(x => x.on === d);
+          if (!p) return `<td class="d" data-d="${d}">–</td>`;
+          const low = colMin[d] !== null && p.price <= colMin[d];
+          return `<td class="d${low ? " low" : ""}" data-d="${d}">$${fmt$(p.price)}</td>`;
+        }).join("") + "</tr>";
+    });
+    return h + "</tbody></table>";
+  }
   FLIGHT_GROUPS.forEach(grp => {
     const sec = document.createElement("section");
     sec.className = "leg";
@@ -46,7 +76,8 @@
         if (o.day && o.day !== lastDay){
           const dh = document.createElement("div");
           dh.className = "day-h";
-          dh.textContent = `📆 ${o.day}`;
+          const dm = o.day.match(/^(.+?)\s+(\S+)$/);
+          dh.innerHTML = `<span class="de">📆</span>&ensp;${dm ? `${dm[1]} <span class="dw">${dm[2]}</span>` : o.day}`;
           grid.appendChild(dh);
           lastDay = o.day;
         }
@@ -90,22 +121,35 @@
             (o.prices ? `<div class="pricebox">${priceBlock(o.prices)}</div>` : "") +
           `</div>`;
 
-        // perks 按「·」+emoji 拆成不可断行的小块（· 前后空格可有可无）：窄屏时整项换行，不从中间断开
-        const perksHTML = f_perks => (f_perks || "")
-          .split(/\s*·\s*(?=\p{Extended_Pictographic})/u)
-          .map(p => `<span class="pk">${p}</span>`)
-          .join('<span class="psep">·</span>');
-
         const faresHTML = o.fares ? `<div class="fares">` + o.fares.map(f =>
           `<div class="fare${f.pick ? " pick" : ""}">` +
-            `<span class="fname">${f.pick ? "⭐ " : ""}${f.name}</span>` +
+            `<span class="fname">${f.pick ? "⭐ " : ""}${f.name}${f.via ? `<span class="via">（${f.via}）</span>` : ""}</span>` +
             `<span class="fperks">${perksHTML(f.perks)}${f.fee ? `<span class="ffee">${f.fee}</span>` : ""}</span>` +
             `<div class="fprice">${priceBlock(f.prices)}</div>` +
           `</div>`
         ).join("") + `</div>` : "";
 
-        card.innerHTML = topHTML + faresHTML +
-          (o.foot ? `<div class="foot">${o.foot}</div>` : "");
+        // 有票档 → 卡片收起时只显示最低价（多档带"起"），点击展开「渠道 × 时间」价格矩阵
+        if (o.fares && o.fares.length){
+          const latest = o.fares
+            .map(f => (f.prices || [])[(f.prices || []).length - 1])
+            .filter(Boolean).map(p => p.price);
+          const minHTML = latest.length
+            ? `<div class="pr">$${fmt$(Math.min(...latest))}${o.fares.length > 1 ? '<span class="on">起</span>' : ""}</div>`
+            : "";
+          card.innerHTML = topHTML.slice(0, -6) +
+            `<div class="pricebox">${minHTML}<button class="dtl">Detail <span class="ar">⬇️</span></button></div>` +
+            `</div>` +
+            `<div class="fdetail">${fareMatrix(o.fares)}</div>` +
+            (o.foot ? `<div class="foot">${o.foot}</div>` : "");
+          const btn = card.querySelector(".dtl");
+          btn.addEventListener("click", () => {
+            btn.querySelector(".ar").textContent = card.classList.toggle("open") ? "⬆️" : "⬇️";
+          });
+        } else {
+          card.innerHTML = topHTML + faresHTML +
+            (o.foot ? `<div class="foot">${o.foot}</div>` : "");
+        }
         grid.appendChild(card);
       });
     }

@@ -15,7 +15,9 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 
 /* 航班卡片 */
 .opts{display:flex;flex-direction:column;gap:12px;}
-.day-h{font-size:13px;font-weight:700;letter-spacing:.3px;margin:8px 2px -2px;}
+.day-h{font-size:13px;font-weight:700;letter-spacing:.3px;margin:8px 2px -2px;color:var(--ink);}
+.day-h .de{font-size:16px;margin-right:2px;vertical-align:-2px;}
+.day-h .dw{color:var(--cd);}
 .day-h:first-child{margin-top:0;}
 .opt{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;
   padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -40,7 +42,7 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .opt .mid{flex:1;display:grid;gap:8px;justify-content:start;justify-items:center;align-content:center;padding:0 20px;}
 .opt .tm{display:flex;align-items:flex-start;width:480px;max-width:100%;}
 .opt .tpt b{position:relative;}
-.opt .tm sup{font-size:10px;color:#e06c75;position:absolute;left:100%;top:-4px;margin-left:2px;}
+.opt .tm sup{font-size:12px;color:#e06c75;position:absolute;left:100%;top:-6px;margin-left:-2px;}
 .opt .tpt{display:flex;flex-direction:column;align-items:flex-start;line-height:1.3;}
 .opt .tpt.right{align-items:flex-end;}
 .opt .tpt b{font-size:18px;font-weight:600;letter-spacing:.3px;}
@@ -72,8 +74,8 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .fare .fname{flex:none;min-width:150px;font-size:13px;font-weight:700;letter-spacing:.3px;}
 .fare.pick .fname{color:var(--bj);}
 .fare .fperks{flex:1;min-width:180px;font-size:12px;color:var(--muted);}
-.fare .pk{white-space:nowrap;}
-.fare .psep{margin:0 6px;color:#7a8089;}
+.fare .pk,.fm-tbl .pk{white-space:nowrap;}
+.fare .psep,.fm-tbl .psep{margin:0 6px;color:#7a8089;}
 .fare .ffee{display:block;font-size:11px;color:#7a8089;margin-top:2px;}
 .fare .fprice{flex:none;margin-left:auto;text-align:right;}
 .fare .pr{font-size:16px;}
@@ -82,17 +84,50 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .empty{font-family:var(--serif);color:var(--muted);border:1px dashed var(--line);border-radius:14px;
   padding:26px 20px;text-align:center;grid-column:1/-1;}
 
+/* 票价对比（Detail 按钮展开的「渠道 × 时间」矩阵） */
+.opt .dtl{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:3px 11px;
+  background:none;border:1px solid var(--line);border-radius:20px;
+  font-family:inherit;font-size:11px;letter-spacing:.4px;color:var(--muted);cursor:pointer;
+  transition:color .15s ease,border-color .15s ease;}
+.opt .dtl:hover{color:var(--ink);border-color:#4a505a;}
+.opt .dtl .ar{font-size:11px;}
+.fdetail{display:none;margin-top:12px;border-top:1px solid var(--line);}
+.opt.open .fdetail{display:block;}
+.fm-tbl{width:100%;border-collapse:collapse;margin-top:4px;}
+.fm-tbl th{font-size:12px;color:var(--muted);font-weight:400;text-align:left;
+  padding:10px 12px 8px;border-bottom:1px solid var(--line);white-space:nowrap;}
+.fm-tbl td{font-size:13px;padding:11px 12px;border-bottom:1px dashed var(--line);vertical-align:top;}
+.fm-tbl tr:last-child td{border-bottom:none;}
+.fm-tbl .nm{font-weight:700;white-space:nowrap;}
+.fm-tbl .tk{font-size:12px;color:var(--muted);min-width:220px;}
+.fm-tbl th.d,.fm-tbl td.d{text-align:right;white-space:nowrap;}
+.fm-tbl td.d{font-weight:700;color:var(--cd);}
+.fm-tbl td.d.low{color:var(--sy);}
+.fm-tbl tr.pick .nm{color:var(--bj);}
+.fname .via,.fm-tbl .via{font-size:11px;font-weight:400;color:var(--muted);margin-left:2px;}
+
 @media(max-width:600px){
   body{padding:20px 12px 48px;}
   h1{font-size:24px;}
   .opt{gap:8px 12px;padding:13px 14px;}
   .opt .left{width:auto;flex:1;}
   .opt .mid{flex-basis:100%;order:5;justify-content:stretch;justify-items:start;padding:0;grid-template-columns:100%;}
-  .opt .tm{width:100%;}
+  .opt .tm{width:100%;padding-right:18px;}
   .opt .tpt b{font-size:15px;}
   .opt .pricebox{margin-left:auto;text-align:right;}
   /* 权益按项换行：每个 emoji 项独占一行 */
-  .fare .pk{display:block;}
-  .fare .psep{display:none;}
+  .fare .pk,.fm-tbl .pk{display:block;}
+  .fare .psep,.fm-tbl .psep{display:none;}
+
+  /* 弹窗矩阵：小屏改为按渠道堆叠，不横向滚动 */
+  .fm-tbl,.fm-tbl tbody,.fm-tbl tr,.fm-tbl td{display:block;}
+  .fm-tbl thead{display:none;}
+  .fm-tbl tr{padding:10px 2px;border-bottom:1px dashed var(--line);}
+  .fm-tbl tr:last-child{border-bottom:none;}
+  .fm-tbl td{border:none;padding:2px 0;}
+  .fm-tbl .nm{font-size:14px;}
+  .fm-tbl .tk{min-width:0;}
+  .fm-tbl td.d{text-align:left;display:flex;gap:8px;align-items:baseline;}
+  .fm-tbl td.d::before{content:attr(data-d);font-size:11px;font-weight:400;color:var(--muted);}
   .fare .fname{min-width:0;flex-basis:100%;}
 }

@@ -44,10 +44,12 @@ Personal website and portfolio
 ## 加一个新相册（如新的旅行）
 
 1. 建文件夹 `photos/travels/YYYYMM-<地名>/`，照片按 `YYYYMMDD-序号-地点.jpg` 放进去
+   （不知道具体日子可用月份级：`YYYYMM-序号-地点.jpg`，卡片就不显示具体日期）
 2. 跑 `node scripts/sync-photos.js`（或直接 push，GitHub Action 会自动跑）——
-   照片清单和 `pages/travels/<地名>.html` 相册页都会自动生成
-3. 主页 Travels 区加一张卡片（这步手动，需要选 emoji 和颜色）
-4. Moments 照片想配字：编辑 `assets/js/photos/descriptions.js`
+   照片清单和相册页（通用空壳模板）都会自动生成
+3. 相册的 emoji / 标题 / 副标题：改 `assets/js/photos/<相册>.js` 顶部的 `meta` 行（同步永远保留这行）
+4. 主页对应板块加一张卡片（这步手动，需要选 emoji 和颜色）
+5. 照片配字（所有相册都支持）：编辑 `assets/js/photos/descriptions.js`，文字显示在图下方的文字条里
 
 ## 约定
 

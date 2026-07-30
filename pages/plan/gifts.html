@@ -13,23 +13,30 @@
   .sub{font-family:var(--serif);color:var(--muted);font-size:14px;margin-bottom:26px;}
   .sub b{color:var(--ink);font-weight:400;}
 
-  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 8px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .card{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);
+    border-radius:14px;padding:10px 12px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .card .accent{position:absolute;left:0;top:0;bottom:0;width:4px;}
   #gifts{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
   .gift-group{padding-top:4px;}
   .gift-group h2{font-family:var(--serif);font-weight:400;font-size:17px;letter-spacing:.5px;
-    margin:0;padding:10px 14px 12px;border-bottom:1px solid var(--line);
-    display:flex;align-items:baseline;}
+    margin:0;padding:10px 14px 10px;display:flex;align-items:baseline;}
   .gift-group h2 .gp{margin-left:auto;font-size:12px;color:var(--muted);}
-  .gift{display:flex;align-items:baseline;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line);font-size:14px;}
+  .gbar{height:4px;border-radius:2px;background:#33373f;margin:0 14px 6px;overflow:hidden;}
+  .gbar i{display:block;height:100%;border-radius:2px;}
+
+  .gift{display:flex;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line);font-size:14px;}
   .gift:last-child{border-bottom:none;}
-  .gift .tick{flex:none;font-size:15px;}
+  .ck{flex:none;width:19px;height:19px;border-radius:50%;border:2px solid #4a505a;
+    display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;}
+  .ck.on{background:var(--sy);border-color:var(--sy);}
   .gift .who{flex:none;min-width:110px;font-family:var(--serif);font-weight:700;letter-spacing:.5px;}
   .gift .what{flex:1;}
   .gift .note{font-size:12px;color:var(--muted);margin-left:8px;}
-  .gift .tbd{color:var(--muted);}
+  .gift .tbd{color:#6b7079;}
+
   #ideas{margin-top:20px;}
-  .idea{padding:8px 14px;font-size:14px;}
-  .idea:first-of-type{padding-top:12px;}
+  .ideas .irows{columns:2 300px;column-gap:30px;padding:10px 14px 8px;}
+  .idea{padding:5px 0;font-size:14px;break-inside:avoid;}
   .empty{font-family:var(--serif);color:var(--muted);border:1px dashed var(--line);border-radius:14px;
     padding:48px 24px;text-align:center;}
 
@@ -46,7 +53,7 @@
 
   <header>
     <a class="home-link" href="../../2026-china-trip.html"><span class="arr">👈</span> Trip Plan</a>
-    <h1>🎁 伴手礼 List</h1>
+    <h1>🎁&ensp;伴手礼 List</h1>
     <div class="sub"><b id="progress"></b></div>
   </header>
 

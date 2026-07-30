@@ -4,6 +4,16 @@
   const grid = document.getElementById("gallery");
   if (!grid || typeof GALLERY === "undefined") return;
 
+  // 页头由数据文件的 meta 驱动（emoji / 标题 / 副标题），页面本身是通用空壳
+  const m = GALLERY.meta || {};
+  const gt = document.getElementById("gtitle");
+  if (gt && m.title){
+    gt.innerHTML = `${m.emoji ? m.emoji + "&ensp;" : ""}${m.title}`;
+    document.title = `${m.title} · Chelsea`;
+  }
+  const gs = document.getElementById("gsub");
+  if (gs && m.sub) gs.textContent = m.sub;
+
   const desc = typeof DESCRIPTIONS !== "undefined" ? DESCRIPTIONS : {};
   const photos = GALLERY.photos.map(p => ({
     ...p,
@@ -16,14 +26,13 @@
     return;
   }
 
+  // 统一布局（所有相册）：日期靠左、描述靠右；窄屏时描述提行并左对齐
   photos.forEach((p, i) => {
     const fig = document.createElement("figure");
     fig.className = "ph";
     fig.innerHTML =
       `<img src="${p.src}" alt="${p.caption || ""}" loading="lazy" data-i="${i}">` +
-      (p.caption || p.date
-        ? `<figcaption>${p.caption || ""}${p.date ? `<span class="d">${p.date}</span>` : ""}</figcaption>`
-        : "");
+      `<figcaption class="trav"><span class="d">${p.date || "\u00A0"}</span><span class="cap">${p.caption || ""}</span></figcaption>`;
     grid.appendChild(fig);
   });
 

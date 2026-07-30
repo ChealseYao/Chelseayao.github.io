@@ -4,6 +4,7 @@
 const GIFT_GROUPS = [
   {
     group: "Chelsea",
+    color: "var(--jp)",
     items: [
       { who:"爸爸妈妈", what:"保健品", note:"Costco 购买", done:false },
       { who:"朵儿",     what:"🐦 始祖鸟包", note:"", done:true },
@@ -15,6 +16,7 @@ const GIFT_GROUPS = [
   },
   {
     group: "DKL",
+    color: "var(--fly)",
     items: [
       { who:"爸爸妈妈",   what:"保健品", note:"Costco 购买", done:false },
       { who:"Dkl 妹妹 1", what:"🐦 始祖鸟包", note:"", done:true },
@@ -46,12 +48,16 @@ const GIFT_IDEAS = [
     const sec = document.createElement("section");
     sec.className = "gift-group card";
     const gDone = grp.items.filter(g => g.done).length;
-    sec.innerHTML = `<h2>${grp.group}<span class="gp">${gDone} / ${grp.items.length} ready</span></h2>`;
+    const pct = Math.round(gDone / grp.items.length * 100);
+    sec.innerHTML =
+      `<span class="accent" style="background:${grp.color || "var(--sy)"}"></span>` +
+      `<h2>${grp.group}<span class="gp">${gDone} / ${grp.items.length} ready</span></h2>` +
+      `<div class="gbar"><i style="width:${pct}%;background:${grp.color || "var(--sy)"}"></i></div>`;
     grp.items.forEach(g => {
       const row = document.createElement("div");
       row.className = "gift" + (g.done ? " done" : "");
       row.innerHTML =
-        `<span class="tick">${g.done ? "✅" : "⬜"}</span>` +
+        `<span class="ck${g.done ? " on" : ""}">${g.done ? "✓" : ""}</span>` +
         `<span class="who">${g.who}</span>` +
         `<span class="what">${g.what || '<span class="tbd">thinking…</span>'}${g.note ? `<span class="note">${g.note}</span>` : ""}</span>`;
       sec.appendChild(row);
@@ -59,13 +65,17 @@ const GIFT_IDEAS = [
     box.appendChild(sec);
   });
 
-  // Gift Ideas
+  // Gift Ideas（两栏）
   const ideasBox = document.getElementById("ideas");
   if (ideasBox && GIFT_IDEAS.length){
     const sec = document.createElement("section");
-    sec.className = "gift-group card";
-    sec.innerHTML = `<h2>🤔 Gift Ideas</h2>` +
-      GIFT_IDEAS.map(t => `<div class="idea">${t.replace(" ", "&ensp;")}</div>`).join("");
+    sec.className = "gift-group card ideas";
+    sec.innerHTML =
+      `<span class="accent" style="background:var(--bj)"></span>` +
+      `<h2>🤔&ensp;Gift Ideas</h2>` +
+      `<div class="irows">` +
+      GIFT_IDEAS.map(t => `<div class="idea">${t.replace(" ", "&ensp;")}</div>`).join("") +
+      `</div>`;
     ideasBox.appendChild(sec);
   }
 })();

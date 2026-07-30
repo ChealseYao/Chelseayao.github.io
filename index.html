@@ -11,9 +11,14 @@
   .wrap{max-width:980px;margin:0 auto;}
 
   /* HERO */
-  header.hero{margin:48px 0 72px;text-align:center;}
-  .hero h1{font-family:var(--serif);font-size:34px;font-weight:400;margin:0;letter-spacing:1px;}
-  .hero .tagline{font-family:var(--serif);margin-top:4px;font-size:13px;color:var(--muted);letter-spacing:.5px;}
+  header.hero{margin:52px 0 76px;text-align:center;}
+  .hero .hi{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--muted);letter-spacing:2px;margin-bottom:8px;}
+  .hero h1{font-family:var(--serif);font-size:44px;font-weight:400;margin:0;letter-spacing:1px;
+    display:flex;align-items:center;justify-content:center;gap:16px;}
+  .hero h1 .grad{background:linear-gradient(92deg,var(--cd) 5%,var(--jp) 50%,var(--bj) 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero h1 .pe{font-size:30px;}
+  .hero .tagline{font-family:var(--serif);margin-top:10px;font-size:14px;color:var(--muted);letter-spacing:2px;}
 
   h2{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid var(--line);letter-spacing:.5px;}
   .module{margin-bottom:56px;}
@@ -33,8 +38,10 @@
 
   @media(max-width:600px){
     body{padding:24px 16px 48px;}
-    .hero h1{font-size:24px;}
-    header.hero{margin:24px 0 44px;}
+    .hero h1{font-size:27px;gap:10px;}
+    .hero h1 .pe{font-size:20px;}
+    .hero .hi{font-size:13px;}
+    header.hero{margin:28px 0 48px;}
     .module{margin-bottom:40px;}
   }
 </style>
@@ -44,17 +51,18 @@
 <div class="wrap">
 
   <header class="hero">
-    <h1>🍕 Welcome to Chelsea's Space 🐕</h1>
+    <div class="hi">Welcome to</div>
+    <h1><span class="pe">🍕</span><span class="grad">Chelsea's Space</span><span class="pe">🐕</span></h1>
     <div class="tagline">eat well · travel often · pet Alice</div>
   </header>
 
   <section class="module">
-    <h2>⏳ Days Matter</h2>
+    <h2>⏳&ensp;Days Matter&ensp;⭐</h2>
     <div class="cd-grid" id="countdowns"></div>
   </section>
 
   <section class="module">
-    <h2>🧳 Plan</h2>
+    <h2>🗺️&ensp;Plans&ensp;💡</h2>
     <div class="grid">
       <a class="card" href="2026-china-trip.html">
         <span class="accent" style="background:var(--cd)"></span>
@@ -72,7 +80,7 @@
   </section>
 
   <section class="module">
-    <h2>📷 Moments</h2>
+    <h2>📸&ensp;Moments&ensp;✨</h2>
     <div class="grid">
       <a class="card" href="pages/moments/alice.html">
         <span class="accent" style="background:var(--dl)"></span>
@@ -84,7 +92,7 @@
   </section>
 
   <section class="module">
-    <h2>✈️ Travels</h2>
+    <h2>🌍&ensp;Travels&ensp;✈️</h2>
     <div class="grid">
       <a class="card" href="pages/travels/tijuana.html">
         <span class="accent" style="background:var(--sy)"></span>
@@ -98,11 +106,17 @@
         <div class="name">Catalina</div>
         <div class="desc">April 2026</div>
       </a>
+      <a class="card" href="pages/travels/nyc.html">
+        <span class="accent" style="background:var(--bj)"></span>
+        <span class="emoji">🗽</span>
+        <div class="name">NYC</div>
+        <div class="desc">August 2024</div>
+      </a>
     </div>
   </section>
 
   <section class="module">
-    <h2>📝 Notes</h2>
+    <h2>📝&ensp;Notes&ensp;💭</h2>
     <div class="grid">
       <a class="card soon" href="#">
         <span class="accent" style="background:var(--sy)"></span>

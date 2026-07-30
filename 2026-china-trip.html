@@ -35,6 +35,8 @@
   .tl-axis{position:relative;height:16px;margin-top:9px;font-size:10px;color:var(--muted);}
   .tick{position:absolute;top:6px;transform:translateX(-50%);white-space:nowrap;font-weight:700;}
   .tick::before{content:"";position:absolute;top:-8px;left:50%;width:1px;height:6px;background:#4a505a;}
+  .tick.lo{top:20px;}
+  .tick.lo::before{top:-22px;height:20px;}
 
   /* CALENDAR */
   table{width:100%;border-collapse:collapse;table-layout:fixed;}
@@ -75,9 +77,9 @@
     .seg{font-size:11px;}
     h1{font-size:24px;}
   }
-  /* 窄到文字会被挤压时才退回上下排列 */
+  /* 窄到文字会被挤压时才退回上下排列（拉伸满宽，两框同宽） */
   @media(max-width:460px){
-    .todo-row{flex-direction:column;gap:0;}
+    .todo-row{flex-direction:column;gap:0;align-items:stretch;}
   }
 </style>
 </head>
@@ -104,7 +106,7 @@
 
   <!-- TIMELINE -->
   <section class="card">
-    <h2><span class="dot"></span>⌚️ Timeline</h2>
+    <h2><span class="dot"></span>⌚️&ensp;Timeline</h2>
     <div class="legend">
       <span><i class="sw" style="background:var(--cd)"></i>成都</span>
       <span><i class="sw" style="background:var(--sy)"></i>沈阳</span>
@@ -115,8 +117,8 @@
     <div class="tl">
       <div class="tl-track" id="tlTrack" data-end="1/3">
         <div class="seg fly" style="flex:2" data-tick="12/4">✈️</div>
-        <div class="seg cd"  style="flex:11" data-tick="12/6">成都</div>
-        <div class="seg sy"  style="flex:5" data-tick="12/17">沈阳</div>
+        <div class="seg cd"  style="flex:10" data-tick="12/6">成都</div>
+        <div class="seg sy"  style="flex:6" data-tick="12/16">沈阳</div>
         <div class="seg dl"  style="flex:2" data-tick="12/22">大连</div>
         <div class="seg sy"  style="flex:2" data-tick="12/24">沈阳</div>
         <div class="seg bj"  style="flex:3" data-tick="12/26">北京</div>
@@ -129,14 +131,14 @@
 
   <!-- CALENDAR -->
   <section class="card">
-    <h2><span class="dot" style="background:var(--sy)"></span>📅 Calendar</h2>
+    <h2><span class="dot" style="background:var(--sy)"></span>📅&ensp;Calendar</h2>
     <div id="cal"></div>
   </section>
 
   <!-- TODO -->
   <div class="todo-row">
     <section class="card">
-      <h2><span class="dot" style="background:#3fa96a"></span>🇺🇸 行前 TODO LIST</h2>
+      <h2><span class="dot" style="background:#3fa96a"></span>🇺🇸&ensp;行前 TODO LIST</h2>
       <div class="todo">
         <label>🛂&ensp;DKL 中国签证<span class="tag notyet">not started</span></label>
         <label>✈️&ensp;<a class="todo-link" href="pages/plan/flights.html">机票</a><span class="tag doing">in progress</span></label>
@@ -145,13 +147,14 @@
       </div>
     </section>
     <section class="card">
-      <h2><span class="dot" style="background:#e83e8c"></span>🇨🇳 TODO LIST</h2>
+      <h2><span class="dot" style="background:#e83e8c"></span>🇨🇳&ensp;TODO LIST</h2>
       <div class="todo">
         <label>👓&ensp;配眼镜</label>
         <label>💇&ensp;理发</label>
         <label>💅&ensp;美甲</label>
         <label>🎎&ensp;<a class="todo-link" href="pages/plan/wedding.html">答谢宴 / 领证</a></label>
         <label>📷&ensp;结婚照</label>
+        <label>📿&ensp;穿手绳</label>
         <label>🏥&ensp;眼袋</label>
       </div>
     </section>
@@ -174,16 +177,16 @@ const plan = {
   '2026-12-13':{city:'cd',top:'🐼',body:['成都 Day 8','(成都答谢宴)']},
   '2026-12-14':{city:'cd',top:'🐼',body:['成都 Day 9','🗻 乐山']},
   '2026-12-15':{city:'cd',top:'🐼',body:['成都 Day 10']},
-  '2026-12-16':{city:'cd',top:'🐼',body:['成都 Day 11']},
-  '2026-12-17':{city:'fly',top:'✈️',body:['成都 ➡️ 沈阳']},
-  '2026-12-18':{city:'sy',top:'❄️',body:['沈阳 Day 1','🛁 洗浴']},
-  '2026-12-19':{city:'sy',top:'❄️',body:['沈阳 Day 2']},
-  '2026-12-20':{city:'sy',top:'❄️',body:['沈阳 Day 3','🍽 沈阳答谢宴']},
-  '2026-12-21':{city:'sy',top:'❄️',body:['沈阳 Day 4','(💒 领结婚证)']},
-  '2026-12-22':{city:'sy',top:'❄️',body:['沈阳 Day 5','🛳 大连']},
-  '2026-12-23':{city:'sy',top:'❄️',body:['沈阳 Day 6','🛳 大连']},
-  '2026-12-24':{city:'sy',top:'🎄 平安夜',body:['沈阳 Day 7']},
-  '2026-12-25':{city:'sy',top:'🎄 圣诞',body:['沈阳 Day 8']},
+  '2026-12-16':{city:'fly',top:'✈️',body:['成都 ➡️ 沈阳']},
+  '2026-12-17':{city:'sy',top:'❄️',body:['沈阳 Day 1']},
+  '2026-12-18':{city:'sy',top:'❄️',body:['沈阳 Day 2','🛁 洗浴']},
+  '2026-12-19':{city:'sy',top:'❄️',body:['沈阳 Day 3']},
+  '2026-12-20':{city:'sy',top:'❄️',body:['沈阳 Day 4','🍽 沈阳答谢宴']},
+  '2026-12-21':{city:'sy',top:'❄️',body:['沈阳 Day 5','(💒 领结婚证)']},
+  '2026-12-22':{city:'sy',top:'❄️',body:['沈阳 Day 6','🛳 大连']},
+  '2026-12-23':{city:'sy',top:'❄️',body:['沈阳 Day 7','🛳 大连']},
+  '2026-12-24':{city:'sy',top:'🎄 平安夜',body:['沈阳 Day 8']},
+  '2026-12-25':{city:'sy',top:'🎄 圣诞',body:['沈阳 Day 9']},
   '2026-12-26':{city:'fly',top:'✈️',body:['沈阳 ➡️ 北京']},
   '2026-12-27':{city:'bj',top:'',body:['北京']},
   '2026-12-28':{city:'fly',top:'',body:['北京 ➡️ 成都']},
@@ -249,7 +252,16 @@ function drawTicks(){
     }
   });
   if(track.dataset.end) ax += '<div class="tick" style="left:100%">'+track.dataset.end+'</div>';
-  document.getElementById('tlAxis').innerHTML = ax;
+  const axis = document.getElementById('tlAxis');
+  axis.innerHTML = ax;
+  // 窄屏防重叠：与上一个标签相撞的刻度自动落到第二排
+  let r0 = -1e9, r1 = -1e9;
+  Array.from(axis.children).forEach(t=>{
+    const b = t.getBoundingClientRect();
+    if(b.left < r0 + 4){ t.classList.add('lo'); r1 = b.right; }
+    else r0 = b.right;
+  });
+  axis.style.height = axis.querySelector('.lo') ? '32px' : '';
 }
 drawTicks();
 window.addEventListener('resize', drawTicks);
