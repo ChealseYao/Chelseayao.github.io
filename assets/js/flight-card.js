@@ -22,10 +22,11 @@
     return html;
   }
 
-  const legsPicked = FLIGHT_GROUPS.filter(g =>
-    g.options.some(o => o.pick || (o.fares || []).some(f => f.pick))).length;
   const progress = document.getElementById("progress");
-  if (progress) progress.textContent = `${legsPicked} / ${FLIGHT_GROUPS.length} legs picked`;
+  if (progress){
+    const n = FLIGHT_GROUPS.length;
+    progress.textContent = `${n} flight${n === 1 ? "" : "s"}`;
+  }
 
   FLIGHT_GROUPS.forEach(grp => {
     const sec = document.createElement("section");
