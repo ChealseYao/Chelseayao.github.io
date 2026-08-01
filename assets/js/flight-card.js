@@ -138,13 +138,16 @@
             ? `<div class="pr">$${fmt$(Math.min(...latest))}${o.fares.length > 1 ? '<span class="on">起</span>' : ""}</div>`
             : "";
           card.innerHTML = topHTML.slice(0, -6) +
-            `<div class="pricebox">${minHTML}<button class="dtl">Detail <span class="ar">⬇️</span></button></div>` +
+            `<div class="pricebox">${minHTML}</div>` +
             `</div>` +
-            `<div class="fdetail">${fareMatrix(o.fares)}</div>` +
+            `<div class="fdetail">${fareMatrix(o.fares)}<div class="fold">收起 ⬆️</div></div>` +
             (o.foot ? `<div class="foot">${o.foot}</div>` : "");
-          const btn = card.querySelector(".dtl");
-          btn.addEventListener("click", () => {
-            btn.querySelector(".ar").textContent = card.classList.toggle("open") ? "⬆️" : "⬇️";
+          card.classList.add("has-fares");
+          // 点卡片任意处展开；只有点"收起"才合上
+          card.addEventListener("click", e => {
+            if (e.target.closest("a")) return;
+            if (e.target.closest(".fold")){ card.classList.remove("open"); return; }
+            card.classList.add("open");
           });
         } else {
           card.innerHTML = topHTML + faresHTML +

@@ -84,15 +84,14 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
 .empty{font-family:var(--serif);color:var(--muted);border:1px dashed var(--line);border-radius:14px;
   padding:26px 20px;text-align:center;grid-column:1/-1;}
 
-/* 票价对比（Detail 按钮展开的「渠道 × 时间」矩阵） */
-.opt .dtl{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:3px 11px;
-  background:none;border:1px solid var(--line);border-radius:20px;
-  font-family:inherit;font-size:11px;letter-spacing:.4px;color:var(--muted);cursor:pointer;
-  transition:color .15s ease,border-color .15s ease;}
-.opt .dtl:hover{color:var(--ink);border-color:#4a505a;}
-.opt .dtl .ar{font-size:11px;}
+/* 票价对比（点击卡片展开/收起的「渠道 × 时间」矩阵） */
+.opt.has-fares{cursor:pointer;}
+.opt.has-fares.open{cursor:default;}
 .fdetail{display:none;margin-top:12px;border-top:1px solid var(--line);}
 .opt.open .fdetail{display:block;}
+.fold{margin-top:4px;padding:5px 0 0;border-top:1px dashed var(--line);
+  text-align:center;font-size:10px;color:var(--muted);letter-spacing:1px;cursor:pointer;line-height:1.4;}
+.fold:hover{color:var(--ink);}
 .fm-tbl{width:100%;border-collapse:collapse;margin-top:4px;}
 .fm-tbl th{font-size:12px;color:var(--muted);font-weight:400;text-align:left;
   padding:10px 12px 8px;border-bottom:1px solid var(--line);white-space:nowrap;}
@@ -119,6 +118,7 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
   .fare .pk,.fm-tbl .pk{display:block;}
   .fare .psep,.fm-tbl .psep{display:none;}
 
+
   /* 弹窗矩阵：小屏改为按渠道堆叠，不横向滚动 */
   .fm-tbl,.fm-tbl tbody,.fm-tbl tr,.fm-tbl td{display:block;}
   .fm-tbl thead{display:none;}
@@ -128,6 +128,6 @@ h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter
   .fm-tbl .nm{font-size:14px;}
   .fm-tbl .tk{min-width:0;}
   .fm-tbl td.d{text-align:left;display:flex;gap:8px;align-items:baseline;}
-  .fm-tbl td.d::before{content:attr(data-d);font-size:11px;font-weight:400;color:var(--muted);}
+  .fm-tbl td.d::after{content:"@ " attr(data-d);font-size:11px;font-weight:400;color:var(--muted);}
   .fare .fname{min-width:0;flex-basis:100%;}
 }
