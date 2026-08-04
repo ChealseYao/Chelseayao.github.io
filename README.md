@@ -57,3 +57,4 @@ Personal website and portfolio
 - 新页面的 `<head>` 里先引 `assets/css/base.css`（pages 下注意 `../../` 前缀），再写页面自己的样式
 - CSS / JS 归 `assets/`，图片等内容文件按类型建根目录文件夹（如 `photos/`）
 - `scripts/sync-photos.js` 负责照片清单自动化，`.github/workflows/sync-photos.yml` 在 push 后自动执行它
+- 记账本的数据格式与规则记在 [LEDGER.md](LEDGER.md)：Chelsea 按月发表格 → Claude 按手册录入

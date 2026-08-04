@@ -1,0 +1,225 @@
+[
+ {
+  "d": "7.1",
+  "t": "🍑",
+  "a": 27.9,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.2",
+  "t": "Albertsons",
+  "a": 42.68,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.2",
+  "t": "🍑",
+  "a": -14.8,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.3",
+  "t": "AMC Membership 🎬",
+  "a": 27.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "7.5",
+  "t": "H&M 👕",
+  "a": 15.18,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.5",
+  "t": "AMC Membership 🎬",
+  "a": 27.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "7.6",
+  "t": "🍑",
+  "a": 45.58,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.7",
+  "t": "HungryPanda",
+  "a": 2.85,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "7.7",
+  "t": "Hollister 👕",
+  "a": 113.07,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.8",
+  "t": "99 Ranch 🥬",
+  "a": 14.88,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.8",
+  "t": "🍑",
+  "a": 25.5,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.8",
+  "t": "OpenAI 🤖",
+  "a": 20.0,
+  "cat": "Subscription"
+ },
+ {
+  "d": "7.10",
+  "t": "Brandy Melville",
+  "a": 68.97,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.10",
+  "t": "H&M 👕",
+  "a": 10.87,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.10",
+  "t": "Costco Gas ⛽️",
+  "a": 65.07,
+  "cat": "Car"
+ },
+ {
+  "d": "7.12",
+  "t": "Chevron ⛽️",
+  "a": 8.88,
+  "cat": "Car"
+ },
+ {
+  "d": "7.13",
+  "t": "Costco 🛒",
+  "a": 50.62,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.13",
+  "t": "99 Ranch 🥬",
+  "a": 15.94,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.13",
+  "t": "Soup n Fresh",
+  "a": 42.85,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "7.14",
+  "t": "Target 🎯",
+  "a": 30.16,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.14",
+  "t": "Hi Time Wine 🍷",
+  "a": 15.05,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "7.15",
+  "t": "🍑",
+  "a": 101.51,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.16",
+  "t": "Weee 🥬",
+  "a": 66.59,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.17",
+  "t": "🍑",
+  "a": 64.34,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.19",
+  "t": "H&M 👕",
+  "a": 6.47,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.20",
+  "t": "🍑",
+  "a": 2.6,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.21",
+  "t": "🍑",
+  "a": 42.64,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.22",
+  "t": "Ralphs",
+  "a": 11.18,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.22",
+  "t": "🍑",
+  "a": 3.97,
+  "cat": "Shopping"
+ },
+ {
+  "d": "7.22",
+  "t": "REI",
+  "a": 64.42,
+  "cat": "Gifts",
+  "n": "始祖鸟小包"
+ },
+ {
+  "d": "7.24",
+  "t": "Ralphs",
+  "a": 12.18,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.26",
+  "t": "Superior Grocers",
+  "a": 26.31,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.26",
+  "t": "99 Ranch 🥬",
+  "a": 4.3,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.27",
+  "t": "Northgate Market",
+  "a": 11.46,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.27",
+  "t": "SFC Irvine",
+  "a": 35.54,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.27",
+  "t": "Costco 🛒",
+  "a": 86.83,
+  "cat": "Groceries"
+ },
+ {
+  "d": "7.27",
+  "t": "🍑",
+  "a": 39.56,
+  "cat": "Shopping"
+ }
+]

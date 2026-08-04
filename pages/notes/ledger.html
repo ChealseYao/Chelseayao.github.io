@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger · Chelsea</title>
+<link rel="stylesheet" href="../../assets/css/base.css">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;padding:34px 22px 64px;background:var(--bg);color:var(--ink);line-height:1.5;}
+  .wrap{max-width:960px;margin:0 auto;}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 4px;letter-spacing:.5px;}
+  .hero-stat{margin:14px 0 24px;}
+  .hs-label{font-size:12px;color:var(--muted);letter-spacing:1.5px;}
+  .hs-num{font-family:var(--serif);font-size:42px;font-weight:700;letter-spacing:.5px;line-height:1.15;
+    background:linear-gradient(92deg,var(--cd) 10%,var(--jp) 55%,var(--bj) 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;}
+
+  .card{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);
+    border-radius:14px;padding:6px 18px 12px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .card h2{font-family:var(--serif);font-weight:400;font-size:17px;letter-spacing:.5px;
+    margin:0 0 4px;padding:10px 0;display:flex;align-items:baseline;border-bottom:1px solid var(--line);}
+  .card h2 .gp{margin-left:auto;font-size:12px;color:var(--muted);
+    display:inline-flex;align-items:baseline;gap:10px;}
+  .card h2 .gp .dot{opacity:.6;}
+  .card h2 .gp .gt{font-size:15px;font-weight:700;color:var(--bj);}
+
+  /* 月份切换 */
+  .mtabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 2px 8px;}
+  .mt{padding:4px 14px;border:1px solid var(--line);border-radius:20px;font-size:13px;
+    color:var(--muted);cursor:pointer;transition:color .15s ease,border-color .15s ease;}
+  .mt:hover{color:var(--ink);border-color:#4a505a;}
+  .mt.on{color:var(--cd);border-color:var(--cd);font-weight:700;}
+
+  /* 月度堆叠柱状图 */
+  .mchart-wrap{padding:8px 4px 2px;}
+  .mchart{width:100%;max-width:760px;margin:0 auto;display:block;}
+  .mchart .mbar{cursor:pointer;transition:opacity .15s ease;}
+  .mchart .mbar.dim{opacity:.4;}
+  .mchart .mc-total{fill:#e8eaed;font-size:12.5px;font-weight:700;}
+  .mchart .avgline{stroke:#9aa1ab;stroke-width:1;stroke-dasharray:4 4;opacity:.55;}
+  .mchart .avglab{fill:#9aa1ab;font-size:10px;letter-spacing:.3px;}
+  .mchart .mc-mon{fill:#9aa1ab;font-size:11px;letter-spacing:.5px;}
+  .mchart .mc-mon.on{fill:#f28e54;font-weight:700;}
+
+  /* 汇总卡：饼图 + 迷你月历并列，分类行横贯在下 */
+  .sumtop{display:flex;gap:28px;align-items:center;padding:10px 2px 8px;}
+
+  /* All 视图：商户排行榜（3×2 奖牌卡） */
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .tcard{border:1px solid var(--line);border-radius:10px;background:#2a2d34;
+    padding:10px 8px 8px;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:0;}
+  .tcard .trk{font-size:17px;line-height:1.2;}
+  .tcard .trk.plain{color:var(--muted);font-size:12px;padding:3px 0 2px;}
+  .tcard .tn{max-width:100%;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .tcard .tv{font-family:var(--serif);font-size:16px;font-weight:700;letter-spacing:.3px;}
+  .tcard .tct{font-size:10px;color:var(--muted);}
+  .dwrap{flex:none;width:230px;}
+  .donut{width:230px;height:230px;display:block;}
+  .donut path{cursor:pointer;transition:opacity .15s ease;}
+  .donut path.dim{opacity:.3;}
+  .dc-num{fill:#e8eaed;font-size:16px;font-weight:700;font-family:Georgia,serif;}
+  .dc-lab{fill:#9aa1ab;font-size:9px;letter-spacing:.5px;}
+  .srows{width:100%;min-width:0;border-top:1px solid var(--line);padding-top:4px;}
+  .dotc{flex:none;width:9px;height:9px;border-radius:50%;}
+
+  /* 分类汇总（行可点击，作为下方流水的筛选器） */
+  .srow{display:flex;align-items:center;gap:12px;padding:7px 6px;font-size:14px;
+    border-top:1px dashed var(--line);border-radius:8px;cursor:pointer;
+    transition:background .15s ease;}
+  .srow:hover{background:#2e323a;}
+  .srow.on{background:#33373f;}
+  .srow.on .sn{color:var(--cd);font-weight:700;}
+  .srow .sn{flex:none;width:180px;}
+  .srow .sbar{flex:1;height:6px;border-radius:3px;background:#33373f;overflow:hidden;}
+  .srow .sbar i{display:block;height:100%;border-radius:3px;background:var(--cd);}
+  .srow .sv{flex:none;min-width:90px;text-align:right;font-weight:700;color:var(--cd);}
+  .srow .sv.zero{color:var(--muted);font-weight:400;}
+
+  /* 迷你月历：每天只显示总花费 */
+  .calmini{flex:1;min-width:0;}
+  .calhead{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 2px 6px;}
+  .calgrid{display:grid;grid-template-columns:repeat(7,1fr);}
+  .cw{font-size:9.5px;color:var(--muted);text-align:center;padding:3px 0 5px;letter-spacing:1px;}
+  .cday{min-height:42px;border-top:1px dashed var(--line);border-right:1px dashed var(--line);
+    padding:2px 3px 4px;min-width:0;}
+  .cday:nth-child(7n){border-right:none;}
+  .cn{display:block;text-align:right;font-size:9px;color:var(--muted);}
+  .dsum{display:block;text-align:center;font-size:11px;font-weight:700;color:var(--cd);margin-top:1px;}
+  .dsum.refund{color:var(--sy);}
+
+  /* 全部明细（日期降序） */
+  h2 .ft{margin-left:12px;font-size:12px;color:var(--cd);border:1px solid var(--cd);
+    border-radius:20px;padding:2px 10px;cursor:pointer;}
+  h2 .st{cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;transition:color .12s ease;}
+  h2 .st:hover{color:var(--cd);}
+  .row{display:flex;align-items:baseline;gap:12px;padding:8px 6px;border-bottom:1px dashed var(--line);
+    font-size:13px;border-radius:6px;transition:background .12s ease;}
+  .row:hover{background:#2e323a;}
+  .row:last-child{border-bottom:none;}
+  .row .d{flex:none;min-width:74px;color:var(--muted);}
+  .row .ce{flex:none;}
+  .row .it{flex:1;}
+  .row .tnote{color:var(--muted);font-size:11px;margin-left:8px;}
+  .row .ctag{flex:none;width:118px;display:inline-flex;align-items:center;gap:6px;
+    font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .row .cdot{flex:none;width:7px;height:7px;border-radius:50%;}
+  .row .amt{min-width:72px;text-align:right;}
+  .row .amt{flex:none;font-weight:700;}
+  .row .amt.refund{color:var(--sy);}
+
+
+  @media(max-width:820px){
+    .sumtop{flex-direction:column;gap:12px;}
+    .calmini{width:100%;}
+  }
+  @media(max-width:600px){
+    body{padding:20px 12px 48px;}
+    h1{font-size:24px;}
+    .srow .sn{width:150px;}
+    .row .ctag{width:88px;font-size:9.5px;}
+    .dsum{font-size:8.5px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="home-link" href="../../index.html"><span class="arr">👈</span> Home</a>
+    <h1>📒&ensp;Ledger</h1>
+    <div class="hero-stat">
+      <div class="hs-label" id="hs-label"></div>
+      <div class="hs-num" id="hs-num"></div>
+    </div>
+  </header>
+
+  <div id="ledger"></div>
+
+</div>
+<script src="../../assets/js/ledger.js"></script>
+<script src="../../assets/js/scroll-restore.js"></script>
+<script src="../../assets/js/gate.js" data-hash="a2108ac16ab0f646127af9fb24708149d8ae0c4a3cc947e245b1b6456873fcdd"></script>
+</body>
+</html>

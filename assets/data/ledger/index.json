@@ -1,0 +1,76 @@
+{
+ "year": 2026,
+ "period": "Jan 1 – Aug 3, 2026",
+ "months": [
+  "2026-01",
+  "2026-02",
+  "2026-03",
+  "2026-04",
+  "2026-05",
+  "2026-06",
+  "2026-07",
+  "2026-08"
+ ],
+ "categories": [
+  {
+   "name": "Groceries",
+   "emoji": "🥬",
+   "color": "#1fa06c"
+  },
+  {
+   "name": "Dine Out",
+   "emoji": "🍽️",
+   "color": "#3987e5"
+  },
+  {
+   "name": "Shopping",
+   "emoji": "🛍️",
+   "color": "#d55181"
+  },
+  {
+   "name": "Car",
+   "emoji": "🚗",
+   "color": "#c98500"
+  },
+  {
+   "name": "Entertainment",
+   "emoji": "🎬",
+   "color": "#9085e9"
+  },
+  {
+   "name": "Bills & Utilities",
+   "emoji": "🧾",
+   "color": "#cf4444"
+  },
+  {
+   "name": "Alice",
+   "emoji": "🐶",
+   "color": "#d3bd45"
+  },
+  {
+   "name": "Health",
+   "emoji": "🏥",
+   "color": "#b5722e"
+  },
+  {
+   "name": "Gifts",
+   "emoji": "🎁",
+   "color": "#2f9db5"
+  },
+  {
+   "name": "Subscription",
+   "emoji": "⏰",
+   "color": "#d95926"
+  },
+  {
+   "name": "Food & Drink",
+   "emoji": "🥤",
+   "color": "#8c8f3a"
+  },
+  {
+   "name": "Home",
+   "emoji": "🏠",
+   "color": "#c2597d"
+  }
+ ]
+}

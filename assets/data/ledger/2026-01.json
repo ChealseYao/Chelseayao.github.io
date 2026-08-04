@@ -1,0 +1,177 @@
+[
+ {
+  "d": "1.4",
+  "t": "Weee 🥬",
+  "a": 37.95,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.4",
+  "t": "AMC Membership 🎬",
+  "a": 55.98,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "1.5",
+  "t": "Costco 🛒",
+  "a": 84.68,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.5",
+  "t": "Soup n Fresh",
+  "a": 51.25,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.5",
+  "t": "🍑",
+  "a": 8.76,
+  "cat": "Shopping"
+ },
+ {
+  "d": "1.5",
+  "t": "Moco Pet",
+  "a": 72.8,
+  "cat": "Alice"
+ },
+ {
+  "d": "1.6",
+  "t": "Costco 🛒",
+  "a": 11.99,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.9",
+  "t": "🍑",
+  "a": 50.8,
+  "cat": "Shopping"
+ },
+ {
+  "d": "1.11",
+  "t": "Costco 🛒",
+  "a": 51.73,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.12",
+  "t": "99 Ranch 🥬",
+  "a": 46.13,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.18",
+  "t": "Burger King",
+  "a": 31.22,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.18",
+  "t": "Simply Pho 🍜",
+  "a": 20.56,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.18",
+  "t": "Sensorio",
+  "a": 145.26,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "1.19",
+  "t": "In-N-Out 🍔",
+  "a": 22.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.19",
+  "t": "Habit 🍔",
+  "a": 23.45,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.19",
+  "t": "Oceano Dunes Park",
+  "a": 5.0,
+  "cat": "Bills & Utilities"
+ },
+ {
+  "d": "1.20",
+  "t": "Costco 🛒",
+  "a": 61.93,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.20",
+  "t": "Upside",
+  "a": 2.0,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.20",
+  "t": "Splash Cafe",
+  "a": 65.75,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.21",
+  "t": "Simply Pho 🍜",
+  "a": 29.7,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.21",
+  "t": "Costco Gas ⛽️",
+  "a": 85.18,
+  "cat": "Car"
+ },
+ {
+  "d": "1.22",
+  "t": "Jamboree Car Wash",
+  "a": 2.0,
+  "cat": "Car"
+ },
+ {
+  "d": "1.26",
+  "t": "GW Supermarket",
+  "a": 29.47,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.26",
+  "t": "Costco 🛒",
+  "a": 46.13,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.26",
+  "t": "LA County Parks",
+  "a": 10.0,
+  "cat": "Bills & Utilities"
+ },
+ {
+  "d": "1.28",
+  "t": "Target 🎯",
+  "a": 39.11,
+  "cat": "Groceries"
+ },
+ {
+  "d": "1.28",
+  "t": "Panda Express",
+  "a": 26.72,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "1.29",
+  "t": "CA DMV Service Fee",
+  "a": 4.72,
+  "cat": "Car"
+ },
+ {
+  "d": "1.29",
+  "t": "CA DMV",
+  "a": 236.0,
+  "cat": "Car",
+  "n": "Vehicle Registration"
+ }
+]

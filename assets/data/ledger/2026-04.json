@@ -1,0 +1,200 @@
+[
+ {
+  "d": "4.3",
+  "t": "Target 🎯",
+  "a": 5.12,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.3",
+  "t": "AMC Membership 🎬",
+  "a": 27.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "4.5",
+  "t": "Costco 🛒",
+  "a": 41.84,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.5",
+  "t": "Costco Gas ⛽️",
+  "a": 82.2,
+  "cat": "Car"
+ },
+ {
+  "d": "4.5",
+  "t": "AMC Membership 🎬",
+  "a": 27.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "4.6",
+  "t": "Catalina Coffee & Co",
+  "a": 18.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.7",
+  "t": "Catalina Landing Parking",
+  "a": 24.95,
+  "cat": "Car"
+ },
+ {
+  "d": "4.7",
+  "t": "Leo's Catalina Drug",
+  "a": 8.81,
+  "cat": "Health"
+ },
+ {
+  "d": "4.9",
+  "t": "🍑",
+  "a": 27.39,
+  "cat": "Shopping"
+ },
+ {
+  "d": "4.10",
+  "t": "HeyTea",
+  "a": 7.49,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.12",
+  "t": "Metropolis Parking",
+  "a": 27.93,
+  "cat": "Car"
+ },
+ {
+  "d": "4.12",
+  "t": "NV Parks Valley of Fire",
+  "a": 5.0,
+  "cat": "Bills & Utilities"
+ },
+ {
+  "d": "4.13",
+  "t": "Starbucks",
+  "a": 0.34,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.14",
+  "t": "7-Eleven",
+  "a": 8.0,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "4.15",
+  "t": "Truly Pizza",
+  "a": 159.91,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.16",
+  "t": "Chick-fil-A",
+  "a": 2.47,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.17",
+  "t": "HungryPanda",
+  "a": 5.98,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.19",
+  "t": "Oculus",
+  "a": 21.98,
+  "cat": "Shopping"
+ },
+ {
+  "d": "4.19",
+  "t": "Walmart",
+  "a": 251.26,
+  "cat": "Shopping"
+ },
+ {
+  "d": "4.20",
+  "t": "Costco 🛒",
+  "a": 95.91,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.20",
+  "t": "Weee 🥬",
+  "a": 46.75,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.20",
+  "t": "DuoDuo Snacks",
+  "a": 31.85,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.22",
+  "t": "Tustin Fuel",
+  "a": 60.03,
+  "cat": "Car"
+ },
+ {
+  "d": "4.24",
+  "t": "99 Ranch 🥬",
+  "a": 24.82,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.24",
+  "t": "Ultimate Detailing",
+  "a": 115.0,
+  "cat": "Car"
+ },
+ {
+  "d": "4.26",
+  "t": "Ralphs",
+  "a": 22.57,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.26",
+  "t": "Chiang Rai",
+  "a": 142.95,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.28",
+  "t": "Naisnow Tea Bakery",
+  "a": 12.4,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.28",
+  "t": "CO2",
+  "a": 69.27,
+  "cat": "Shopping"
+ },
+ {
+  "d": "4.29",
+  "t": "Duke Bakery 🥐",
+  "a": 8.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.30",
+  "t": "Costco 🛒",
+  "a": 62.26,
+  "cat": "Groceries"
+ },
+ {
+  "d": "4.30",
+  "t": "Total Wine 🍷",
+  "a": 22.47,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "4.30",
+  "t": "Costco Gas ⛽️",
+  "a": 69.75,
+  "cat": "Car"
+ }
+]

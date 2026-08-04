@@ -1,0 +1,236 @@
+[
+ {
+  "d": "5.3",
+  "t": "Grocery Outlet",
+  "a": 37.12,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.3",
+  "t": "AMC Membership 🎬",
+  "a": 27.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "5.4",
+  "t": "AMC Membership 🎬",
+  "a": 27.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "5.5",
+  "t": "Target 🎯",
+  "a": 5.14,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.5",
+  "t": "Erick Schat's Bakery",
+  "a": 47.3,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "5.7",
+  "t": "Walmart",
+  "a": 21.14,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.7",
+  "t": "Coastal Communities Hospital",
+  "a": 200.0,
+  "cat": "Health"
+ },
+ {
+  "d": "5.8",
+  "t": "Duke Bakery 🥐",
+  "a": 8.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.8",
+  "t": "Walmart",
+  "a": 218.49,
+  "cat": "Shopping"
+ },
+ {
+  "d": "5.10",
+  "t": "Costco 🛒",
+  "a": 28.17,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.10",
+  "t": "Grocery Outlet",
+  "a": 10.68,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.10",
+  "t": "HFS Market",
+  "a": 45.81,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.10",
+  "t": "P10neer 🍸",
+  "a": 77.78,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.10",
+  "t": "Quail Animal Hospital 🐶",
+  "a": 393.0,
+  "cat": "Alice"
+ },
+ {
+  "d": "5.11",
+  "t": "Costco 🛒",
+  "a": 67.18,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.12",
+  "t": "🍑",
+  "a": 19.38,
+  "cat": "Shopping"
+ },
+ {
+  "d": "5.13",
+  "t": "HungryPanda",
+  "a": 8.49,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.14",
+  "t": "Biryani Pot Express",
+  "a": 68.37,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.14",
+  "t": "Walmart",
+  "a": -251.26,
+  "cat": "Shopping"
+ },
+ {
+  "d": "5.15",
+  "t": "Costco 🛒",
+  "a": 83.29,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.15",
+  "t": "Duke Bakery 🥐",
+  "a": 9.5,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.15",
+  "t": "Lucky Strike",
+  "a": 14.75,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.17",
+  "t": "Kaiser Pharmacy",
+  "a": 15.0,
+  "cat": "Health"
+ },
+ {
+  "d": "5.17",
+  "t": "Kaiser Permanente",
+  "a": 20.0,
+  "cat": "Health"
+ },
+ {
+  "d": "5.17",
+  "t": "7-Eleven",
+  "a": 4.62,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "5.18",
+  "t": "Global Fresh Supermarket",
+  "a": 37.38,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.18",
+  "t": "Trader Joe's",
+  "a": 13.96,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.18",
+  "t": "🍑",
+  "a": 9.13,
+  "cat": "Shopping"
+ },
+ {
+  "d": "5.20",
+  "t": "Target 🎯",
+  "a": 6.38,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.21",
+  "t": "Target 🎯",
+  "a": 4.31,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.21",
+  "t": "🍑",
+  "a": 21.32,
+  "cat": "Shopping"
+ },
+ {
+  "d": "5.22",
+  "t": "Duke Bakery 🥐",
+  "a": 4.5,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.24",
+  "t": "Vons",
+  "a": 16.96,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.24",
+  "t": "Duke Bakery 🥐",
+  "a": 7.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.25",
+  "t": "Erewhon",
+  "a": 50.42,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.25",
+  "t": "HungryPanda",
+  "a": 31.35,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.25",
+  "t": "Too Good To Go",
+  "a": 5.48,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.28",
+  "t": "World Oil ⛽️",
+  "a": 44.54,
+  "cat": "Car"
+ },
+ {
+  "d": "5.31",
+  "t": "Trader Joe's",
+  "a": 23.31,
+  "cat": "Groceries"
+ }
+]
