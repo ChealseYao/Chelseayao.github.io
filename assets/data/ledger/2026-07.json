@@ -174,6 +174,12 @@
   "card": "3299"
  },
  {
+  "d": "7.11",
+  "t": "🥣 Soup n Fresh",
+  "a": 42.85,
+  "cat": "Dine Out"
+ },
+ {
   "d": "7.12",
   "t": "⛽️ Chevron",
   "a": 8.88,
@@ -187,22 +193,16 @@
   "card": "3299"
  },
  {
-  "d": "7.13",
+  "d": "7.12",
   "t": "🛒 Costco",
   "a": 50.62,
   "cat": "Groceries"
  },
  {
-  "d": "7.13",
+  "d": "7.12",
   "t": "🥬 99 Ranch",
   "a": 15.94,
   "cat": "Groceries"
- },
- {
-  "d": "7.13",
-  "t": "🥣 Soup n Fresh",
-  "a": 42.85,
-  "cat": "Dine Out"
  },
  {
   "d": "7.13",
@@ -406,9 +406,9 @@
  },
  {
   "d": "7.31",
-  "t": "REI",
+  "t": "🎂 尚可 Birthday Gift",
   "a": 90.43,
   "cat": "Gifts",
-  "n": "尚可Birthday"
+  "n": "Arc'teryx"
  }
 ]

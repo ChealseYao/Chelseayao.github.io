@@ -43,6 +43,13 @@
   "cat": "Dine Out"
  },
  {
+  "d": "4.5",
+  "t": "📶 AT&T",
+  "a": 115.0,
+  "cat": "Bills & Utilities",
+  "card": "3299"
+ },
+ {
   "d": "4.7",
   "t": "🅿️ Catalina Landing Parking",
   "a": 24.95,
@@ -277,6 +284,12 @@
   "a": 1.65,
   "cat": "Shopping",
   "card": "3299"
+ },
+ {
+  "d": "4.29",
+  "t": "🧋 Gamgam",
+  "a": 8.0,
+  "cat": "Food & Drink"
  },
  {
   "d": "4.30",

@@ -202,6 +202,12 @@
   "card": "3299"
  },
  {
+  "d": "5.15",
+  "t": "🇮🇳 IndiaGate",
+  "a": 21.33,
+  "cat": "Dine Out"
+ },
+ {
   "d": "5.16",
   "t": "🍑",
   "a": 40.89,
@@ -365,5 +371,12 @@
   "a": 2.99,
   "cat": "Subscription",
   "card": "3299"
+ },
+ {
+  "d": "5.31",
+  "t": "YiaYia and Friends",
+  "a": 43.9,
+  "cat": "Gifts",
+  "n": "qinx 🎁"
  }
 ]

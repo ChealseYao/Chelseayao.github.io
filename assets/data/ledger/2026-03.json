@@ -6,34 +6,17 @@
   "cat": "Groceries"
  },
  {
-  "d": "3.1",
-  "t": "Mitsuwa Marketplace",
-  "a": 3.93,
-  "cat": "Groceries"
- },
- {
-  "d": "3.1",
-  "t": "🐔 Chick-fil-A",
-  "a": 2.47,
-  "cat": "Dine Out"
- },
- {
-  "d": "3.1",
-  "t": "🍜 Simply Pho",
-  "a": 20.48,
-  "cat": "Dine Out"
- },
- {
-  "d": "3.1",
-  "t": "Patisserie Too",
-  "a": 12.75,
-  "cat": "Dine Out"
- },
- {
   "d": "3.3",
   "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
+ },
+ {
+  "d": "3.3",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "3.4",
@@ -42,25 +25,37 @@
   "cat": "Entertainment"
  },
  {
-  "d": "3.8",
+  "d": "3.4",
+  "t": "🐔🥙 肉夹馍",
+  "a": 36.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "3.4",
+  "t": "📶 AT&T",
+  "a": 36.66,
+  "cat": "Bills & Utilities"
+ },
+ {
+  "d": "3.7",
   "t": "🛒 Costco",
   "a": 28.06,
   "cat": "Groceries"
  },
  {
   "d": "3.8",
-  "t": "Pets Best Insurance",
+  "t": "Alice Insurance",
   "a": 333.37,
-  "cat": "Bills & Utilities"
+  "cat": "Alice"
  },
  {
-  "d": "3.10",
+  "d": "3.9",
   "t": "🥬 99 Ranch",
   "a": 46.13,
   "cat": "Groceries"
  },
  {
-  "d": "3.11",
+  "d": "3.9",
   "t": "🥬 Trader Joe's",
   "a": 17.08,
   "cat": "Groceries"
@@ -84,6 +79,18 @@
   "cat": "Groceries"
  },
  {
+  "d": "3.15",
+  "t": "🍝 Jon&Vinny's",
+  "a": 90.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "3.17",
+  "t": "🦐 BoilingCrab",
+  "a": 57.2,
+  "cat": "Dine Out"
+ },
+ {
   "d": "3.18",
   "t": "Walmart",
   "a": 9.61,
@@ -94,6 +101,19 @@
   "t": "AT&T Device",
   "a": 144.5,
   "cat": "Shopping"
+ },
+ {
+  "d": "3.20",
+  "t": "🎂 Peter Birthday Gift",
+  "a": 172.39,
+  "cat": "Gifts",
+  "n": "唱片机"
+ },
+ {
+  "d": "3.20",
+  "t": "🧋 HeyTea",
+  "a": 10.0,
+  "cat": "Food & Drink"
  },
  {
   "d": "3.21",
@@ -111,12 +131,6 @@
   "d": "3.22",
   "t": "🛒 Costco",
   "a": 91.9,
-  "cat": "Groceries"
- },
- {
-  "d": "3.22",
-  "t": "🎯 Target",
-  "a": 258.59,
   "cat": "Groceries"
  },
  {

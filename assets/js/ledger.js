@@ -174,7 +174,7 @@
           const list = byDay[d] || [];
           const sum = list.reduce((s, i) => s + i.a, 0);
           cells += `<div class="cday"${list.length
-              ? ` title="${list.map(i => `${i.t} ${fmt(i.a)}`).join("&#10;")}"` : ""}>` +
+              ? ` data-day="${mf}.${d}" title="${list.map(i => `${i.t} ${fmt(i.a)}`).join("&#10;")}"` : ""}>` +
             `<span class="cn">${d}</span>` +
             (list.length ? `<span class="dsum${sum < 0 ? " refund" : ""}">${fmt(sum)}</span>` : "") +
             `</div>`;
@@ -267,7 +267,8 @@
         `<span class="ctag">Category</span><span class="cardn">Card</span><span class="amt">Amount</span></div>` +
         rows.map((i, idx) => {
           const nd = !idx || rows[idx - 1].d !== i.d;   // 新的一天才画分隔线、显示日期
-          return `<div class="row${nd ? " nd" : ""}"><span class="d">${nd ? `${i.d}.${YEAR}` : ""}</span>` +
+          const wk = "周" + "日一二三四五六"[new Date(YEAR, monOf(i) - 1, dayOf(i)).getDay()];
+          return `<div class="row${nd ? " nd" : ""}" data-day="${i.d}"><span class="d">${nd ? `${i.d}.${YEAR}<span class="dwk">${wk}</span>` : ""}</span>` +
             `<span class="it">${i.t}${i.n ? `<span class="tnote">${i.n}</span>` : ""}</span>` +
             `<span class="ctag" style="color:${CAT[i.cat].color}">${CAT[i.cat].emoji} ${i.cat}</span>` +
             `<span class="cardn">${cardOf(i) ? (cardOf(i).label || cardOf(i).name) : ""}</span>` +
@@ -278,6 +279,17 @@
       tx.querySelector(".st").addEventListener("click", () =>
         { sortBy = sortBy === "date" ? "amt" : "date"; render(); });
       box.appendChild(tx);
+
+      // 点月历某天 → 滚到明细里那一天，行高亮一下
+      const grid = sm.querySelector(".calgrid");
+      if (grid) grid.addEventListener("click", e => {
+        const c = e.target.closest(".cday[data-day]");
+        if (!c) return;
+        const rows2 = tx.querySelectorAll(`.row[data-day="${c.dataset.day}"]`);
+        if (!rows2.length) return;   // 该天的行被分类筛选滤掉了就不动
+        rows2[0].scrollIntoView({ behavior: "smooth", block: "start" });
+        rows2.forEach(r => { r.classList.remove("flash"); void r.offsetWidth; r.classList.add("flash"); });
+      });
     }
     render();
   }

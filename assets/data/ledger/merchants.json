@@ -37,6 +37,11 @@
    "cat": "Shopping"
   },
   {
+   "match": "AT\\&T(?!.*DEVICE)",
+   "t": "📶 AT&T",
+   "cat": "Bills & Utilities"
+  },
+  {
    "match": "BAG OF CAKES",
    "t": "🍰 Bag of Cakes",
    "cat": "Food & Drink"
@@ -319,11 +324,11 @@
   {
    "match": "MITSUWA",
    "t": "Mitsuwa Marketplace",
-   "cat": "Groceries"
+   "cat": "Food & Drink"
   },
   {
    "match": "MOCO PET",
-   "t": "Moco Pet",
+   "t": "🛁 Dog Wash",
    "cat": "Alice"
   },
   {
@@ -363,8 +368,8 @@
   },
   {
    "match": "OCEANO DUNES",
-   "t": "Oceano Dunes Park",
-   "cat": "Bills & Utilities"
+   "t": "🌊 Oceano Dunes Park",
+   "cat": "Entertainment"
   },
   {
    "match": "OCULUS",
@@ -398,18 +403,18 @@
   },
   {
    "match": "PARIS BAGUETTE",
-   "t": "🎂 Paris Baguette",
+   "t": "🍰 Paris Baguette",
    "cat": "Gifts"
   },
   {
    "match": "PATISSERIE TOO",
-   "t": "Patisserie Too",
-   "cat": "Dine Out"
+   "t": "🥧 Patisserie Too",
+   "cat": "Food & Drink"
   },
   {
    "match": "PETS BEST INSURANCE",
-   "t": "Pets Best Insurance",
-   "cat": "Bills & Utilities"
+   "t": "Alice Insurance",
+   "cat": "Alice"
   },
   {
    "match": "PIZZA 123 FARM",
@@ -448,7 +453,7 @@
   },
   {
    "match": "SENSORIO",
-   "t": "Sensorio",
+   "t": "🎫 Sensorio Tickets",
    "cat": "Entertainment"
   },
   {

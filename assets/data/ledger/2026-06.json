@@ -1,12 +1,5 @@
 [
  {
-  "d": "6.1",
-  "t": "YiaYia and Friends",
-  "a": 43.9,
-  "cat": "Gifts",
-  "n": "qinx🎁"
- },
- {
   "d": "6.2",
   "t": "🍳 MOOD",
   "a": 88.38,
@@ -37,6 +30,19 @@
   "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
+ },
+ {
+  "d": "6.5",
+  "t": "🍵 LalaLand",
+  "a": 10.0,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "6.6",
+  "t": "📶 AT&T",
+  "a": 71.93,
+  "cat": "Bills & Utilities",
+  "card": "3299"
  },
  {
   "d": "6.7",
@@ -75,6 +81,13 @@
   "t": "🤖 Cursor",
   "a": 60.0,
   "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "6.12",
+  "t": "🧋 ChaRedefine",
+  "a": 8.88,
+  "cat": "Food & Drink",
   "card": "3299"
  },
  {
@@ -200,13 +213,13 @@
   "cat": "Shopping"
  },
  {
-  "d": "6.29",
+  "d": "6.28",
   "t": "🛒 Costco",
   "a": 82.98,
   "cat": "Groceries"
  },
  {
-  "d": "6.29",
+  "d": "6.28",
   "t": "🍷 Total Wine",
   "a": 43.27,
   "cat": "Food & Drink"

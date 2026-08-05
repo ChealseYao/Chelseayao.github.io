@@ -56,7 +56,7 @@ assets/data/ledger/
 3. **首字母大写为主**，保留品牌缩写（REI、AMC、H&M、AT&T、DMV、LA、GW、SFC、KP→Kaiser…）
 4. **emoji 装饰放在文字前面，中间空一格**（2026-08-04 起，原来在尾部）：`🎯 Target`、`🛒 Costco`、`👕 H&M`、`🥬 99 Ranch`、`🐔🍚 Rooster & Rice`；🍑 单独作淘宝名
 5. 同一商户一个名字一个分类，录入后跑一致性体检
-6. **同一天 + 同一商户 + 同一分类的多笔合并成一笔**（金额相加，退款也一并抵扣；带备注的不合并）；
+6. **同一天 + 同一商户 + 同一分类 + 同一张卡的多笔合并成一笔**（金额相加，退款也一并抵扣；带备注的不合并；不同卡的两笔如 5355/3299 同日 🍑 不合并）；
    退款跨天也要抵进同商户最近一笔消费，全额退货则连原消费一起删掉，账本里不留负数行
 7. **Bakery 类（DUSU BAKERY 等）都记作 `🥐 Duke Bakery`，一律归 Food & Drink**
 8. 特殊改名：**AMC 一律（含 AMC Theatres Online 等）** → `🎬 AMC Membership`；TM \*LA CLIPPERS → `🏀 CLIPPERS Game`；TCKTWEB\*ELECTRIKSEOUL → `🎢 SixFlags Ticket`；MISSION VIEJO CA-HCO → `👕 Hollister`；SUPERIOR SUPER WHSE → `Superior Grocers`；CHAO WEI JU → `🐮 潮厢`；完整映射见解析脚本历史

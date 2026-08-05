@@ -49,6 +49,19 @@
   "cat": "Entertainment"
  },
  {
+  "d": "2.3",
+  "t": "余姐",
+  "a": 14.0,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "2.3",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
   "d": "2.4",
   "t": "Oculus",
   "a": 19.99,
@@ -157,6 +170,13 @@
   "cat": "Groceries"
  },
  {
+  "d": "2.20",
+  "t": "🍰 Paris Baguette",
+  "a": 37.99,
+  "cat": "Gifts",
+  "n": "Chelsea's birthday cake"
+ },
+ {
   "d": "2.22",
   "t": "🎯 Target",
   "a": 39.86,
@@ -167,13 +187,6 @@
   "t": "🛒 Costco",
   "a": 125.22,
   "cat": "Groceries"
- },
- {
-  "d": "2.23",
-  "t": "🎂 Paris Baguette",
-  "a": 37.99,
-  "cat": "Gifts",
-  "n": "Birthday cake"
  },
  {
   "d": "2.24",
@@ -188,9 +201,33 @@
   "cat": "Groceries"
  },
  {
+  "d": "2.27",
+  "t": "🐔 Chick-fil-A",
+  "a": 2.47,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "2.27",
+  "t": "🍜 Simply Pho",
+  "a": 20.48,
+  "cat": "Dine Out"
+ },
+ {
   "d": "2.28",
   "t": "🐮 潮厢",
   "a": 75.89,
   "cat": "Dine Out"
+ },
+ {
+  "d": "2.28",
+  "t": "🥧 Patisserie Too",
+  "a": 12.75,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "2.28",
+  "t": "Mitsuwa Marketplace",
+  "a": 3.93,
+  "cat": "Food & Drink"
  }
 ]
