@@ -1,25 +1,25 @@
 [
  {
   "d": "1.4",
-  "t": "Weee 🥬",
+  "t": "🥬 Weee",
   "a": 37.95,
   "cat": "Groceries"
  },
  {
   "d": "1.4",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 55.98,
   "cat": "Entertainment"
  },
  {
   "d": "1.5",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 84.68,
   "cat": "Groceries"
  },
  {
   "d": "1.5",
-  "t": "Soup n Fresh",
+  "t": "🥣 Soup n Fresh",
   "a": 51.25,
   "cat": "Dine Out"
  },
@@ -37,7 +37,7 @@
  },
  {
   "d": "1.6",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 11.99,
   "cat": "Groceries"
  },
@@ -49,25 +49,25 @@
  },
  {
   "d": "1.11",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 51.73,
   "cat": "Groceries"
  },
  {
   "d": "1.12",
-  "t": "99 Ranch 🥬",
+  "t": "🥬 99 Ranch",
   "a": 46.13,
   "cat": "Groceries"
  },
  {
   "d": "1.18",
-  "t": "Burger King",
-  "a": 31.22,
+  "t": "🍔 Burger King",
+  "a": 15.61,
   "cat": "Dine Out"
  },
  {
   "d": "1.18",
-  "t": "Simply Pho 🍜",
+  "t": "🍜 Simply Pho",
   "a": 20.56,
   "cat": "Dine Out"
  },
@@ -79,13 +79,13 @@
  },
  {
   "d": "1.19",
-  "t": "In-N-Out 🍔",
+  "t": "🍔 In-N-Out",
   "a": 22.0,
   "cat": "Dine Out"
  },
  {
   "d": "1.19",
-  "t": "Habit 🍔",
+  "t": "🍔 Habit",
   "a": 23.45,
   "cat": "Dine Out"
  },
@@ -97,7 +97,7 @@
  },
  {
   "d": "1.20",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 61.93,
   "cat": "Groceries"
  },
@@ -109,37 +109,37 @@
  },
  {
   "d": "1.20",
-  "t": "Splash Cafe",
+  "t": "🦞 Splash Cafe",
   "a": 65.75,
   "cat": "Dine Out"
  },
  {
   "d": "1.21",
-  "t": "Simply Pho 🍜",
+  "t": "🍜 Simply Pho",
   "a": 29.7,
   "cat": "Dine Out"
  },
  {
   "d": "1.21",
-  "t": "Costco Gas ⛽️",
+  "t": "⛽️ Costco Gas",
   "a": 85.18,
   "cat": "Car"
  },
  {
   "d": "1.22",
-  "t": "Jamboree Car Wash",
+  "t": "🧼 Jamboree CarWash",
   "a": 2.0,
   "cat": "Car"
  },
  {
   "d": "1.26",
-  "t": "GW Supermarket",
+  "t": "🥬 GW Supermarket",
   "a": 29.47,
   "cat": "Groceries"
  },
  {
   "d": "1.26",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 46.13,
   "cat": "Groceries"
  },
@@ -151,27 +151,33 @@
  },
  {
   "d": "1.28",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 39.11,
   "cat": "Groceries"
  },
  {
   "d": "1.28",
-  "t": "Panda Express",
-  "a": 26.72,
+  "t": "🐼 Panda Express",
+  "a": 13.36,
   "cat": "Dine Out"
  },
  {
   "d": "1.29",
-  "t": "CA DMV Service Fee",
+  "t": "🛂 CA DMV Service Fee",
   "a": 4.72,
   "cat": "Car"
  },
  {
   "d": "1.29",
-  "t": "CA DMV",
+  "t": "🛂 CA DMV",
   "a": 236.0,
   "cat": "Car",
   "n": "Vehicle Registration"
+ },
+ {
+  "d": "1.31",
+  "t": "Michaels in Borrego",
+  "a": 88.0,
+  "cat": "Dine Out"
  }
 ]

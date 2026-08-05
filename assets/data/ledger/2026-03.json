@@ -1,7 +1,7 @@
 [
  {
   "d": "3.1",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 26.46,
   "cat": "Groceries"
  },
@@ -13,13 +13,13 @@
  },
  {
   "d": "3.1",
-  "t": "Chick-fil-A",
+  "t": "🐔 Chick-fil-A",
   "a": 2.47,
   "cat": "Dine Out"
  },
  {
   "d": "3.1",
-  "t": "Simply Pho 🍜",
+  "t": "🍜 Simply Pho",
   "a": 20.48,
   "cat": "Dine Out"
  },
@@ -31,19 +31,19 @@
  },
  {
   "d": "3.3",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
   "d": "3.4",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
   "d": "3.8",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 28.06,
   "cat": "Groceries"
  },
@@ -55,31 +55,31 @@
  },
  {
   "d": "3.10",
-  "t": "99 Ranch 🥬",
+  "t": "🥬 99 Ranch",
   "a": 46.13,
   "cat": "Groceries"
  },
  {
   "d": "3.11",
-  "t": "Trader Joe's",
+  "t": "🥬 Trader Joe's",
   "a": 17.08,
   "cat": "Groceries"
  },
  {
   "d": "3.12",
-  "t": "Amazon Fresh",
+  "t": "🛒 Amazon Fresh",
   "a": 8.24,
   "cat": "Groceries"
  },
  {
   "d": "3.15",
-  "t": "99 Ranch 🥬",
+  "t": "🥬 99 Ranch",
   "a": 11.36,
   "cat": "Groceries"
  },
  {
   "d": "3.15",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 40.93,
   "cat": "Groceries"
  },
@@ -96,38 +96,38 @@
   "cat": "Shopping"
  },
  {
+  "d": "3.21",
+  "t": "🍕 Pizza at 123 Farm",
+  "a": 23.7,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "3.21",
+  "t": "🍖 Tapas at 123 Farm",
+  "a": 22.63,
+  "cat": "Dine Out"
+ },
+ {
   "d": "3.22",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 91.9,
   "cat": "Groceries"
  },
  {
   "d": "3.22",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 258.59,
   "cat": "Groceries"
  },
  {
-  "d": "3.22",
-  "t": "Pizza at 123 Farm",
-  "a": 23.7,
-  "cat": "Dine Out"
- },
- {
-  "d": "3.22",
-  "t": "Tapas at 123 Farm",
-  "a": 22.63,
-  "cat": "Dine Out"
- },
- {
   "d": "3.23",
-  "t": "99 Ranch 🥬",
+  "t": "🥬 99 Ranch",
   "a": 16.53,
   "cat": "Groceries"
  },
  {
   "d": "3.23",
-  "t": "Ramen Mura",
+  "t": "🍜 Ramen Mura",
   "a": 60.54,
   "cat": "Dine Out"
  },
@@ -139,19 +139,19 @@
  },
  {
   "d": "3.25",
-  "t": "Costco Gas ⛽️",
+  "t": "⛽️ Costco Gas",
   "a": 50.01,
   "cat": "Car"
  },
  {
   "d": "3.26",
-  "t": "Albertsons",
+  "t": "🛒 Albertsons",
   "a": 36.11,
   "cat": "Groceries"
  },
  {
   "d": "3.26",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 30.13,
   "cat": "Groceries"
  },
@@ -169,7 +169,7 @@
  },
  {
   "d": "3.29",
-  "t": "99 Ranch 🥬",
+  "t": "🥬 99 Ranch",
   "a": 49.98,
   "cat": "Groceries"
  },
@@ -180,8 +180,8 @@
   "cat": "Dine Out"
  },
  {
-  "d": "3.30",
-  "t": "Omomo 🧋",
+  "d": "3.29",
+  "t": "🧋 Omomo",
   "a": 28.0,
   "cat": "Dine Out"
  },

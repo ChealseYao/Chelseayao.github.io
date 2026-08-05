@@ -1,43 +1,50 @@
 [
  {
   "d": "4.3",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 5.12,
   "cat": "Groceries"
  },
  {
   "d": "4.3",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
+  "d": "4.3",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
   "d": "4.5",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 41.84,
   "cat": "Groceries"
  },
  {
   "d": "4.5",
-  "t": "Costco Gas ⛽️",
+  "t": "⛽️ Costco Gas",
   "a": 82.2,
   "cat": "Car"
  },
  {
   "d": "4.5",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
-  "d": "4.6",
-  "t": "Catalina Coffee & Co",
+  "d": "4.5",
+  "t": "☕️ Catalina Coffee & Co",
   "a": 18.0,
   "cat": "Dine Out"
  },
  {
   "d": "4.7",
-  "t": "Catalina Landing Parking",
+  "t": "🅿️ Catalina Landing Parking",
   "a": 24.95,
   "cat": "Car"
  },
@@ -48,20 +55,55 @@
   "cat": "Health"
  },
  {
+  "d": "4.7",
+  "t": "🍎 Apple",
+  "a": 10.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "4.8",
+  "t": "💳 TJX Payment",
+  "a": 129.06,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
+  "d": "4.8",
+  "t": "🍎 Apple",
+  "a": 5.98,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
   "d": "4.9",
   "t": "🍑",
   "a": 27.39,
   "cat": "Shopping"
  },
  {
+  "d": "4.9",
+  "t": "🛒 Grocery",
+  "a": 11.12,
+  "cat": "Groceries",
+  "card": "3299"
+ },
+ {
   "d": "4.10",
-  "t": "HeyTea",
+  "t": "🧋 HeyTea",
   "a": 7.49,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "4.10",
+  "t": "🤖 Cursor",
+  "a": 60.0,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "4.12",
-  "t": "Metropolis Parking",
+  "t": "🅿️ Metropolis Parking",
   "a": 27.93,
   "cat": "Car"
  },
@@ -73,33 +115,60 @@
  },
  {
   "d": "4.13",
-  "t": "Starbucks",
+  "t": "☕️ Starbucks",
   "a": 0.34,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "4.13",
+  "t": "🍕 Truly Pizza",
+  "a": 63.96,
   "cat": "Dine Out"
  },
  {
   "d": "4.14",
-  "t": "7-Eleven",
+  "t": "🥤 7-Eleven",
   "a": 8.0,
   "cat": "Food & Drink"
  },
  {
-  "d": "4.15",
-  "t": "Truly Pizza",
-  "a": 159.91,
+  "d": "4.14",
+  "t": "📈 Robinhood",
+  "a": 500.0,
+  "cat": "Investment",
+  "card": "3299"
+ },
+ {
+  "d": "4.16",
+  "t": "🐔 Chick-fil-A",
+  "a": 2.47,
   "cat": "Dine Out"
  },
  {
   "d": "4.16",
-  "t": "Chick-fil-A",
-  "a": 2.47,
-  "cat": "Dine Out"
+  "t": "🍎 Apple",
+  "a": 7.98,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "4.17",
   "t": "HungryPanda",
   "a": 5.98,
   "cat": "Dine Out"
+ },
+ {
+  "d": "4.18",
+  "t": "💅 Nails",
+  "a": 110.0,
+  "cat": "Beauty",
+  "card": "3299"
+ },
+ {
+  "d": "4.18",
+  "t": "🍥 DuoDuo Snacks",
+  "a": 31.85,
+  "cat": "Groceries"
  },
  {
   "d": "4.19",
@@ -109,49 +178,51 @@
  },
  {
   "d": "4.19",
-  "t": "Walmart",
-  "a": 251.26,
-  "cat": "Shopping"
- },
- {
-  "d": "4.20",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 95.91,
   "cat": "Groceries"
  },
  {
   "d": "4.20",
-  "t": "Weee 🥬",
+  "t": "🥬 Weee",
   "a": 46.75,
   "cat": "Groceries"
  },
  {
-  "d": "4.20",
-  "t": "DuoDuo Snacks",
-  "a": 31.85,
-  "cat": "Groceries"
+  "d": "4.21",
+  "t": "🤖 Cursor",
+  "a": 20.24,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "4.21",
+  "t": "🍎 Apple",
+  "a": 8.99,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "4.22",
-  "t": "Tustin Fuel",
+  "t": "⛽️ Tustin Fuel",
   "a": 60.03,
   "cat": "Car"
  },
  {
   "d": "4.24",
-  "t": "99 Ranch 🥬",
+  "t": "🥬 99 Ranch",
   "a": 24.82,
   "cat": "Groceries"
  },
  {
   "d": "4.24",
-  "t": "Ultimate Detailing",
+  "t": "🧼 Ultimate Detailing",
   "a": 115.0,
   "cat": "Car"
  },
  {
   "d": "4.26",
-  "t": "Ralphs",
+  "t": "🛒 Ralphs",
   "a": 22.57,
   "cat": "Groceries"
  },
@@ -162,10 +233,24 @@
   "cat": "Dine Out"
  },
  {
+  "d": "4.27",
+  "t": "🤖 Cursor",
+  "a": 40.87,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "4.27",
+  "t": "🍑",
+  "a": 4.38,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
   "d": "4.28",
-  "t": "Naisnow Tea Bakery",
+  "t": "❄️ Naisnow TeaBakery",
   "a": 12.4,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "4.28",
@@ -174,26 +259,40 @@
   "cat": "Shopping"
  },
  {
+  "d": "4.28",
+  "t": "🍑",
+  "a": 17.8,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
   "d": "4.29",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 8.0,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "4.29",
+  "t": "🍑",
+  "a": 1.65,
+  "cat": "Shopping",
+  "card": "3299"
  },
  {
   "d": "4.30",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 62.26,
   "cat": "Groceries"
  },
  {
   "d": "4.30",
-  "t": "Total Wine 🍷",
+  "t": "🍷 Total Wine",
   "a": 22.47,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "4.30",
-  "t": "Costco Gas ⛽️",
+  "t": "⛽️ Costco Gas",
   "a": 69.75,
   "cat": "Car"
  }

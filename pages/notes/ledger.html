@@ -23,18 +23,18 @@
   .card h2 .gp{margin-left:auto;font-size:12px;color:var(--muted);
     display:inline-flex;align-items:baseline;gap:10px;}
   .card h2 .gp .dot{opacity:.6;}
-  .card h2 .gp .gt{font-size:15px;font-weight:700;color:var(--bj);}
+  .card h2 .gp .gt{font-size:15px;font-weight:700;color:var(--cd);}
 
   /* 月份切换 */
-  .mtabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 2px 8px;}
-  .mt{padding:4px 14px;border:1px solid var(--line);border-radius:20px;font-size:13px;
+  .mtabs{display:flex;flex-wrap:wrap;gap:9px;margin:8px 2px 10px;justify-content:center;}
+  .mt{padding:5px 16px;border:1px solid var(--line);border-radius:20px;font-size:13.5px;
     color:var(--muted);cursor:pointer;transition:color .15s ease,border-color .15s ease;}
   .mt:hover{color:var(--ink);border-color:#4a505a;}
   .mt.on{color:var(--cd);border-color:var(--cd);font-weight:700;}
 
   /* 月度堆叠柱状图 */
   .mchart-wrap{padding:8px 4px 2px;}
-  .mchart{width:100%;max-width:760px;margin:0 auto;display:block;}
+  .mchart{display:block;margin:0 auto;max-width:100%;height:auto;}
   .mchart .mbar{cursor:pointer;transition:opacity .15s ease;}
   .mchart .mbar.dim{opacity:.4;}
   .mchart .mc-total{fill:#e8eaed;font-size:12.5px;font-weight:700;}
@@ -59,7 +59,7 @@
   .donut{width:230px;height:230px;display:block;}
   .donut path{cursor:pointer;transition:opacity .15s ease;}
   .donut path.dim{opacity:.3;}
-  .dc-num{fill:#e8eaed;font-size:16px;font-weight:700;font-family:Georgia,serif;}
+  .dc-num{fill:#e8eaed;font-size:16px;font-weight:700;font-family:var(--serif);}
   .dc-lab{fill:#9aa1ab;font-size:9px;letter-spacing:.5px;}
   .srows{width:100%;min-width:0;border-top:1px solid var(--line);padding-top:4px;}
   .dotc{flex:none;width:9px;height:9px;border-radius:50%;}
@@ -74,6 +74,7 @@
   .srow .sn{flex:none;width:180px;}
   .srow .sbar{flex:1;height:6px;border-radius:3px;background:#33373f;overflow:hidden;}
   .srow .sbar i{display:block;height:100%;border-radius:3px;background:var(--cd);}
+  .srow .sav{flex:none;min-width:96px;text-align:right;font-size:11px;color:var(--muted);}
   .srow .sv{flex:none;min-width:90px;text-align:right;font-weight:700;color:var(--cd);}
   .srow .sv.zero{color:var(--muted);font-weight:400;}
 
@@ -94,17 +95,25 @@
     border-radius:20px;padding:2px 10px;cursor:pointer;}
   h2 .st{cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;transition:color .12s ease;}
   h2 .st:hover{color:var(--cd);}
-  .row{display:flex;align-items:baseline;gap:12px;padding:8px 6px;border-bottom:1px dashed var(--line);
+  .thead{display:flex;align-items:baseline;gap:12px;padding:2px 6px 7px;
+    font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);}
+  .thead .d{flex:none;min-width:74px;}
+  .thead .it{flex:1;}
+  .thead .cardn{flex:none;width:78px;}
+  .thead .ctag{flex:none;width:158px;}
+  .thead .amt{flex:none;min-width:72px;text-align:right;}
+  .row{display:flex;align-items:baseline;gap:12px;padding:5px 6px;
     font-size:13px;border-radius:6px;transition:background .12s ease;}
+  .row.nd{border-top:1px dashed var(--line);padding-top:8px;margin-top:3px;}
+  h2 + .row.nd,.thead + .row.nd{margin-top:0;}
   .row:hover{background:#2e323a;}
-  .row:last-child{border-bottom:none;}
   .row .d{flex:none;min-width:74px;color:var(--muted);}
   .row .ce{flex:none;}
   .row .it{flex:1;}
   .row .tnote{color:var(--muted);font-size:11px;margin-left:8px;}
-  .row .ctag{flex:none;width:118px;display:inline-flex;align-items:center;gap:6px;
-    font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .row .cdot{flex:none;width:7px;height:7px;border-radius:50%;}
+  .row .cardn{flex:none;width:78px;color:var(--muted);font-size:10.5px;letter-spacing:.3px;}
+  .row .ctag{flex:none;width:158px;font-size:10.5px;font-weight:600;letter-spacing:.2px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .row .amt{min-width:72px;text-align:right;}
   .row .amt{flex:none;font-weight:700;}
   .row .amt.refund{color:var(--sy);}
@@ -118,7 +127,16 @@
     body{padding:20px 12px 48px;}
     h1{font-size:24px;}
     .srow .sn{width:150px;}
-    .row .ctag{width:88px;font-size:9.5px;}
+    .row,.thead{gap:6px;}
+    .row .d,.thead .d{min-width:52px;font-size:11px;}
+    .row .it{min-width:0;}
+    .row .ctag,.thead .ctag{width:80px;}
+    .row .ctag{font-size:9px;}
+    .row .cardn,.thead .cardn{width:52px;}
+    .row .cardn{font-size:9px;}
+    .row .amt,.thead .amt{min-width:56px;}
+    .row .amt{font-size:12.5px;}
+    .thead{font-size:9px;}
     .dsum{font-size:8.5px;}
   }
 </style>

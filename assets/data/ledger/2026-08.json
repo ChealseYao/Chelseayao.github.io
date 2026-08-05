@@ -1,22 +1,69 @@
 [
  {
-  "d": "8.2",
-  "t": "FTOC Tustin Medical",
-  "a": 25.0,
-  "cat": "Health",
-  "n": "体检"
+  "d": "8.1",
+  "t": "🎬 AMC Membership",
+  "a": 29.99,
+  "cat": "Entertainment"
  },
  {
   "d": "8.2",
-  "t": "REI",
-  "a": 90.43,
-  "cat": "Gifts",
-  "n": "尚可Birthday"
- },
- {
-  "d": "8.2",
-  "t": "The Home Depot",
+  "t": "🔧 HomeDepot",
   "a": 4.99,
   "cat": "Home"
+ },
+ {
+  "d": "8.2",
+  "t": "🍰 Bag of Cakes",
+  "a": 35.03,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "8.2",
+  "t": "🛒 Costco",
+  "a": 110.83,
+  "cat": "Groceries"
+ },
+ {
+  "d": "8.2",
+  "t": "🎬 AMC Membership",
+  "a": 29.99,
+  "cat": "Entertainment"
+ },
+ {
+  "d": "8.2",
+  "t": "🥐 Duke Bakery",
+  "a": 5.99,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "8.2",
+  "t": "🧋 MoreYogurt",
+  "a": 34.81,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "8.2",
+  "t": "🍑",
+  "a": 12.16,
+  "cat": "Shopping"
+ },
+ {
+  "d": "8.2",
+  "t": "🪪 Costco Membership",
+  "a": 130.0,
+  "cat": "Subscription"
+ },
+ {
+  "d": "8.3",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "8.4",
+  "t": "🛒 Costco",
+  "a": 37.78,
+  "cat": "Groceries"
  }
 ]

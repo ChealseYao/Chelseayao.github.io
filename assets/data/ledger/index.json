@@ -20,7 +20,7 @@
   {
    "name": "Dine Out",
    "emoji": "🍽️",
-   "color": "#3987e5"
+   "color": "#b5722e"
   },
   {
    "name": "Shopping",
@@ -50,7 +50,7 @@
   {
    "name": "Health",
    "emoji": "🏥",
-   "color": "#b5722e"
+   "color": "#a3c9e8"
   },
   {
    "name": "Gifts",
@@ -71,6 +71,35 @@
    "name": "Home",
    "emoji": "🏠",
    "color": "#c2597d"
+  },
+  {
+   "name": "Investment",
+   "emoji": "📈",
+   "color": "#7e93ad"
+  },
+  {
+   "name": "Beauty",
+   "emoji": "💅",
+   "color": "#b968d6"
+  },
+  {
+   "name": "Travel",
+   "emoji": "✈️",
+   "color": "#3987e5"
+  }
+ ],
+ "cards": [
+  {
+   "id": "5355",
+   "name": "Chase Credit ····5355",
+   "label": "Chase 5355",
+   "emoji": "💳"
+  },
+  {
+   "id": "3299",
+   "name": "Chase Credit ····3299",
+   "label": "Chase 3299",
+   "emoji": "💳"
   }
  ]
 }

@@ -26,19 +26,28 @@
     idx.categories.forEach(c => CAT[c.name] = c);
     const months = [...new Set(ALL.map(monOf))].sort((a, b) => a - b);
 
+    // 卡片只作明细行备注，不做筛选；交易可带 card 字段（=卡 id），缺省记在第一张卡
+    const CARDS = idx.cards || [];
+    const CARD = {}; CARDS.forEach(c => CARD[c.id] = c);
+    const cardOf = i => CARD[i.card] || CARDS[0];
     let mf = months[months.length - 1] || 0;   // 默认最新月份
     let catf = null;
     let sortBy = "date";   // date=日期降序 amt=金额降序
 
     // 每月 × 分类 合计（净额，负数按 0 参与堆叠）
-    const M_BY_CAT = {};
-    months.forEach(m => {
-      const t = {};
-      ALL.filter(i => monOf(i) === m).forEach(i => t[i.cat] = (t[i.cat] || 0) + i.a);
-      M_BY_CAT[m] = t;
-    });
-    const M_TOTAL = {};
-    months.forEach(m => M_TOTAL[m] = Object.values(M_BY_CAT[m]).reduce((s, v) => s + v, 0));
+    let M_BY_CAT = {}, M_TOTAL = {}, AVG = 0;
+    function calcMonthly(src){
+      M_BY_CAT = {}; M_TOTAL = {};
+      months.forEach(m => {
+        const t = {};
+        src.filter(i => monOf(i) === m).forEach(i => t[i.cat] = (t[i.cat] || 0) + i.a);
+        M_BY_CAT[m] = t;
+        M_TOTAL[m] = Object.values(t).reduce((s, v) => s + v, 0);
+      });
+      AVG = months.length > 1
+        ? months.slice(0, -1).reduce((s, m) => s + M_TOTAL[m], 0) / (months.length - 1)
+        : (M_TOTAL[months[0]] || 0);
+    }
 
     const tabs = document.createElement("div");
     tabs.className = "mtabs";
@@ -54,37 +63,40 @@
 
     // 月度堆叠柱状图：柱高 = 当月总消费，分段 = 各分类（固定色），点柱子切换月份
     // 月均（不含最新的一个月，因为还没过完）
-    const AVG = months.length > 1
-      ? months.slice(0, -1).reduce((s, m) => s + M_TOTAL[m], 0) / (months.length - 1)
-      : (M_TOTAL[months[0]] || 0);
-
     function monthlyChart(){
-      const SLOT = 62, BW = 30, TOP = 26, BOT = 22, H = 150;
+      const SLOT = 88, BW = 38, TOP = 26, BOT = 22, H = 190;
       const W = months.length * SLOT + 16;
       const maxT = Math.max(...months.map(m => M_TOTAL[m]));
       let out = "";
-      // 平均线（虚线）
-      const ay = TOP + H - AVG / maxT * H;
+      // 平均线（虚线）；坐标取整 +0.5 让 1px 线落在整像素上
+      const ay = Math.round(TOP + H - AVG / maxT * H) + 0.5;
       out += `<line x1="10" x2="${W - 6}" y1="${ay}" y2="${ay}" class="avgline"/>` +
         `<text x="${W - 6}" y="${ay - 5}" class="avglab" text-anchor="end">avg $${Math.round(AVG).toLocaleString()}</text>`;
       months.forEach((m, mi) => {
         const x = 16 + mi * SLOT + (SLOT - BW) / 2;
         const dim = mf && mf !== m;
-        let y = TOP + H;
-        let bar = "";
+        // 段边界先按比例浮点累计，再取整到整像素：缝恒为 1px、底边齐平，不会半像素发虚。
+        // 分段一律直角，整根柱子用一个圆角 clipPath 裁出轮廓——侧边才是一条直线，不会被段角削出波浪
+        let bf = TOP + H, b = TOP + H, si = 0, bar = "";
         [...idx.categories].reverse().forEach(c => {
           const v = Math.max(0, M_BY_CAT[m][c.name] || 0);
           if (!v) return;
-          const h = Math.max(1.5, v / maxT * H) - 1;   // 段间留 1px 缝
-          y -= h + 1;
-          bar += `<rect x="${x}" y="${y}" width="${BW}" height="${h}" rx="1.5" fill="${c.color}">` +
+          bf -= Math.max(1.5, v / maxT * H);
+          const t = Math.round(bf);
+          const h = Math.max(1, b - t - (si++ ? 1 : 0));   // 段间 1px 缝；最底段贴基线
+          bar += `<rect x="${x}" y="${b - (si > 1 ? 1 : 0) - h}" width="${BW}" height="${h}" fill="${c.color}">` +
             `<title>${MNAMES[m]} · ${c.name} ${fmt(v)}</title></rect>`;
+          b = t;
         });
-        out += `<g class="mbar${dim ? " dim" : ""}" data-m="${m}">${bar}` +
+        const y = b;
+        out += `<g class="mbar${dim ? " dim" : ""}" data-m="${m}">` +
+          `<clipPath id="bc${m}"><rect x="${x}" y="${y}" width="${BW}" height="${TOP + H - y}" rx="3"/></clipPath>` +
+          `<g clip-path="url(#bc${m})">${bar}</g>` +
           `<text x="${x + BW / 2}" y="${y - 7}" class="mc-total" text-anchor="middle">$${Math.round(M_TOTAL[m]).toLocaleString()}</text>` +
           `<text x="${x + BW / 2}" y="${TOP + H + 16}" class="mc-mon${mf === m ? " on" : ""}" text-anchor="middle">${MNAMES[m]}</text></g>`;
       });
-      return `<svg viewBox="0 0 ${W} ${TOP + H + BOT}" class="mchart">${out}</svg>`;
+      // width/height 写死 = 1:1 渲染不放大，文字和页面字号一致；手机端靠 max-width 缩小
+      return `<svg width="${W}" height="${TOP + H + BOT}" viewBox="0 0 ${W} ${TOP + H + BOT}" class="mchart">${out}</svg>`;
     }
 
     // 环形图：每分类一片（当前范围金额降序），切片间留缝
@@ -108,17 +120,22 @@
 
     function render(){
       box.innerHTML = "";
+      calcMonthly(ALL);
       const inMonth = ALL.filter(i => !mf || monOf(i) === mf);
 
       const byCat = {};
       inMonth.forEach(i => { byCat[i.cat] = (byCat[i.cat] || 0) + i.a; });
-      // 所有分类常驻：当月没有的显示 0
+      // 当前范围没有消费的分类不显示（分类多了列表太长）
       const cats = idx.categories
         .map(c => ({ name: c.name, total: byCat[c.name] || 0 }))
+        .filter(c => c.total !== 0)
         .sort((a, b) => b.total - a.total);
 
       const grand = inMonth.reduce((s, i) => s + i.a, 0);
       const maxTotal = cats.length ? cats[0].total : 1;
+      // All 视图下每个分类的月均（不含最新一个月）
+      const nAvg = months.length - 1;
+      const avgOf = c => months.slice(0, -1).reduce((s, m) => s + (M_BY_CAT[m][c] || 0), 0) / nAvg;
 
       const lab = document.getElementById("hs-label"), num = document.getElementById("hs-num");
       if (lab) lab.textContent = "Total Spending · " + (mf ? `${MNAMES[mf]} ${YEAR}` : PERIOD);
@@ -130,7 +147,7 @@
       // 月度趋势卡（点柱子切换月份）
       const mc = document.createElement("section");
       mc.className = "card";
-      mc.innerHTML = `<h2>📈&ensp;Monthly<span class="gp">${months.length} months · 月均 $${Math.round(AVG).toLocaleString()}（不含最新月）</span></h2>` +
+      mc.innerHTML = `<h2>📈&ensp;Monthly<span class="gp">${months.length} months · avg $${Math.round(AVG).toLocaleString()}/mo (excl. latest)</span></h2>` +
         `<div class="mchart-wrap">${monthlyChart()}</div>`;
       mc.querySelectorAll(".mbar").forEach(g => {
         g.addEventListener("click", () => {
@@ -194,7 +211,8 @@
           `<i class="dotc" style="background:${CAT[c.name].color}"></i>` +
           `<span class="sn">${CAT[c.name].emoji}&ensp;${c.name}</span>` +
           `<span class="sbar"><i style="width:${c.total > 0 ? Math.max(2, c.total / maxTotal * 100) : 0}%;background:${CAT[c.name].color}"></i></span>` +
-          `<span class="sv${c.total > 0 ? "" : " zero"}">${fmt(c.total)}</span></div>`
+          (!mf && nAvg > 0 ? `<span class="sav">avg $${Math.round(avgOf(c.name)).toLocaleString()}/mo</span>` : "") +
+          `<span class="sv${c.total > 0 ? "" : " zero"}"${c.total > 0 ? ` style="color:${CAT[c.name].color}"` : ""}>${fmt(c.total)}</span></div>`
         ).join("") + `</div>`;
       sm.addEventListener("click", e => {
         const r = e.target.closest(".srow");
@@ -232,20 +250,29 @@
           ? b.a - a.a
           : (monOf(b) - monOf(a)) || (dayOf(b) - dayOf(a)));
       const total = rows.reduce((s, i) => s + i.a, 0);
+      // 选中分类时算它的月均（口径同顶部 avg：不含最新一个月，因为还没过完）
+      const catAvg = catf && months.length > 1
+        ? months.slice(0, -1).reduce((s, m) => s + (M_BY_CAT[m][catf] || 0), 0) / (months.length - 1)
+        : 0;
 
       const tx = document.createElement("section");
       tx.className = "card";
       tx.innerHTML =
-        `<h2>🧾&ensp;Transactions${catf ? `<span class="ft">${CAT[catf].emoji} ${catf} ✕</span>` : ""}` +
+        `<h2>🧾&ensp;Transactions${catf ? `<span class="ft" style="color:${CAT[catf].color};border-color:${CAT[catf].color}">${CAT[catf].emoji} ${catf} ✕</span>` : ""}` +
         `<span class="gp"><span class="st">${sortBy === "date" ? "by date ↓" : "by amount ↓"}</span>` +
+        (catf && months.length > 1 ? `<span class="dot">·</span><span style="color:${CAT[catf].color}">avg $${Math.round(catAvg).toLocaleString()}/mo</span>` : "") +
         `<span class="dot">·</span><span>${rows.length} 笔</span><span class="dot">·</span>` +
-        `<span class="gt">${fmt(total)}</span></span></h2>` +
-        rows.map(i =>
-          `<div class="row"><span class="d">${i.d}.${YEAR}</span>` +
-          `<span class="it">${i.t}${i.n ? `<span class="tnote">${i.n}</span>` : ""}</span>` +
-          `<span class="ctag"><i class="cdot" style="background:${CAT[i.cat].color}"></i>${i.cat}</span>` +
-          `<span class="amt ${i.a < 0 ? "refund" : ""}"${i.a < 0 ? "" : ` style="color:${CAT[i.cat].color}"`}>${fmt(i.a)}</span></div>`
-        ).join("");
+        `<span class="gt"${catf ? ` style="color:${CAT[catf].color}"` : ""}>💰 ${fmt(total)}</span></span></h2>` +
+        `<div class="thead"><span class="d">Date</span><span class="it">Merchant</span>` +
+        `<span class="ctag">Category</span><span class="cardn">Card</span><span class="amt">Amount</span></div>` +
+        rows.map((i, idx) => {
+          const nd = !idx || rows[idx - 1].d !== i.d;   // 新的一天才画分隔线、显示日期
+          return `<div class="row${nd ? " nd" : ""}"><span class="d">${nd ? `${i.d}.${YEAR}` : ""}</span>` +
+            `<span class="it">${i.t}${i.n ? `<span class="tnote">${i.n}</span>` : ""}</span>` +
+            `<span class="ctag" style="color:${CAT[i.cat].color}">${CAT[i.cat].emoji} ${i.cat}</span>` +
+            `<span class="cardn">${cardOf(i) ? (cardOf(i).label || cardOf(i).name) : ""}</span>` +
+            `<span class="amt ${i.a < 0 ? "refund" : ""}"${i.a < 0 ? "" : ` style="color:${CAT[i.cat].color}"`}>${fmt(i.a)}</span></div>`;
+        }).join("");
       const ftEl = tx.querySelector(".ft");
       if (ftEl) ftEl.addEventListener("click", () => { catf = null; render(); });
       tx.querySelector(".st").addEventListener("click", () =>

@@ -1,33 +1,67 @@
 [
  {
+  "d": "5.1",
+  "t": "🍎 Apple",
+  "a": 2.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "5.2",
+  "t": "📈 Robinhood",
+  "a": 500.0,
+  "cat": "Investment",
+  "card": "3299"
+ },
+ {
+  "d": "5.2",
+  "t": "🏠 MMS Airbnb",
+  "a": 282.75,
+  "cat": "Travel"
+ },
+ {
   "d": "5.3",
-  "t": "Grocery Outlet",
+  "t": "🛒 Grocery Outlet",
   "a": 37.12,
   "cat": "Groceries"
  },
  {
   "d": "5.3",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
+  "d": "5.3",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "5.3",
+  "t": "🥐 Erick Schat's Bakery",
+  "a": 47.3,
+  "cat": "Food & Drink"
+ },
+ {
   "d": "5.4",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
   "d": "5.5",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 5.14,
   "cat": "Groceries"
  },
  {
-  "d": "5.5",
-  "t": "Erick Schat's Bakery",
-  "a": 47.3,
-  "cat": "Food & Drink"
+  "d": "5.6",
+  "t": "🍑",
+  "a": 2.15,
+  "cat": "Shopping",
+  "card": "3299"
  },
  {
   "d": "5.7",
@@ -42,10 +76,17 @@
   "cat": "Health"
  },
  {
+  "d": "5.7",
+  "t": "🍎 Apple",
+  "a": 10.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
   "d": "5.8",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 8.0,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "5.8",
@@ -54,38 +95,59 @@
   "cat": "Shopping"
  },
  {
-  "d": "5.10",
-  "t": "Costco 🛒",
-  "a": 28.17,
-  "cat": "Groceries"
+  "d": "5.8",
+  "t": "🍎 Apple",
+  "a": 5.98,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
-  "d": "5.10",
-  "t": "Grocery Outlet",
-  "a": 10.68,
-  "cat": "Groceries"
+  "d": "5.8",
+  "t": "🥃 P10NEER",
+  "a": 77.78,
+  "cat": "Dine Out"
  },
  {
-  "d": "5.10",
-  "t": "HFS Market",
+  "d": "5.9",
+  "t": "🐟 Hawaiian FreshSeafood",
   "a": 45.81,
   "cat": "Dine Out"
  },
  {
   "d": "5.10",
-  "t": "P10neer 🍸",
-  "a": 77.78,
-  "cat": "Dine Out"
+  "t": "🛒 Costco",
+  "a": 28.17,
+  "cat": "Groceries"
  },
  {
   "d": "5.10",
-  "t": "Quail Animal Hospital 🐶",
+  "t": "🛒 Grocery Outlet",
+  "a": 10.68,
+  "cat": "Groceries"
+ },
+ {
+  "d": "5.10",
+  "t": "🐶 Quail Animal Hospital",
   "a": 393.0,
   "cat": "Alice"
  },
  {
+  "d": "5.10",
+  "t": "🤖 Cursor",
+  "a": 60.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "5.10",
+  "t": "🍑",
+  "a": 15.74,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
   "d": "5.11",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 67.18,
   "cat": "Groceries"
  },
@@ -94,6 +156,13 @@
   "t": "🍑",
   "a": 19.38,
   "cat": "Shopping"
+ },
+ {
+  "d": "5.12",
+  "t": "🤖 Cursor",
+  "a": 38.89,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "5.13",
@@ -108,28 +177,43 @@
   "cat": "Dine Out"
  },
  {
-  "d": "5.14",
-  "t": "Walmart",
-  "a": -251.26,
-  "cat": "Shopping"
- },
- {
   "d": "5.15",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 83.29,
   "cat": "Groceries"
  },
  {
   "d": "5.15",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 9.5,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "5.15",
   "t": "Lucky Strike",
   "a": 14.75,
   "cat": "Dine Out"
+ },
+ {
+  "d": "5.15",
+  "t": "✨ Grammarly",
+  "a": 144.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "5.16",
+  "t": "🍑",
+  "a": 40.89,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
+  "d": "5.16",
+  "t": "🍎 Apple",
+  "a": 0.99,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "5.17",
@@ -145,7 +229,7 @@
  },
  {
   "d": "5.17",
-  "t": "7-Eleven",
+  "t": "🥤 7-Eleven",
   "a": 4.62,
   "cat": "Food & Drink"
  },
@@ -157,7 +241,7 @@
  },
  {
   "d": "5.18",
-  "t": "Trader Joe's",
+  "t": "🥬 Trader Joe's",
   "a": 13.96,
   "cat": "Groceries"
  },
@@ -169,13 +253,13 @@
  },
  {
   "d": "5.20",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 6.38,
   "cat": "Groceries"
  },
  {
   "d": "5.21",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 4.31,
   "cat": "Groceries"
  },
@@ -186,22 +270,36 @@
   "cat": "Shopping"
  },
  {
+  "d": "5.21",
+  "t": "🍎 Apple",
+  "a": 8.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
   "d": "5.22",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 4.5,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "5.24",
-  "t": "Vons",
+  "t": "🛒 Vons",
   "a": 16.96,
   "cat": "Groceries"
  },
  {
   "d": "5.24",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 7.0,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "5.24",
+  "t": "💅 Nails",
+  "a": 130.0,
+  "cat": "Beauty",
+  "card": "3299"
  },
  {
   "d": "5.25",
@@ -217,20 +315,55 @@
  },
  {
   "d": "5.25",
-  "t": "Too Good To Go",
+  "t": "🥡 Too Good To Go",
   "a": 5.48,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "5.26",
+  "t": "🍑",
+  "a": 30.36,
+  "cat": "Shopping",
+  "card": "3299"
  },
  {
   "d": "5.28",
-  "t": "World Oil ⛽️",
+  "t": "⛽️ World Oil",
   "a": 44.54,
   "cat": "Car"
  },
  {
+  "d": "5.28",
+  "t": "💳 TJX Payment",
+  "a": 152.62,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
+  "d": "5.30",
+  "t": "🎮 Nintendo",
+  "a": 59.99,
+  "cat": "Entertainment",
+  "card": "3299"
+ },
+ {
+  "d": "5.30",
+  "t": "🍑",
+  "a": 25.26,
+  "cat": "Shopping",
+  "card": "3299"
+ },
+ {
   "d": "5.31",
-  "t": "Trader Joe's",
+  "t": "🥬 Trader Joe's",
   "a": 23.31,
   "cat": "Groceries"
+ },
+ {
+  "d": "5.31",
+  "t": "🍎 Apple",
+  "a": 2.99,
+  "cat": "Subscription",
+  "card": "3299"
  }
 ]

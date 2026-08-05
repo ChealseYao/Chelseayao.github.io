@@ -3,31 +3,60 @@
   "d": "6.1",
   "t": "YiaYia and Friends",
   "a": 43.9,
-  "cat": "Shopping"
+  "cat": "Gifts",
+  "n": "qinx🎁"
  },
  {
   "d": "6.2",
-  "t": "Mood",
+  "t": "🍳 MOOD",
   "a": 88.38,
   "cat": "Dine Out"
  },
  {
+  "d": "6.2",
+  "t": "📈 Robinhood",
+  "a": 500.0,
+  "cat": "Investment",
+  "card": "3299"
+ },
+ {
   "d": "6.3",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
+ },
+ {
+  "d": "6.3",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "6.4",
-  "t": "AMC Membership 🎬",
+  "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
  },
  {
+  "d": "6.7",
+  "t": "🍎 Apple",
+  "a": 10.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
   "d": "6.8",
-  "t": "OpenAI 🤖",
+  "t": "🤖 OpenAI",
   "a": 20.0,
   "cat": "Subscription"
+ },
+ {
+  "d": "6.8",
+  "t": "🍎 Apple",
+  "a": 5.98,
+  "cat": "Subscription",
+  "card": "3299"
  },
  {
   "d": "6.9",
@@ -37,43 +66,76 @@
  },
  {
   "d": "6.10",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 8.5,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "6.10",
+  "t": "🤖 Cursor",
+  "a": 60.0,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "6.13",
+  "t": "🇮🇳🍕 CurryPizza House",
+  "a": 73.6,
   "cat": "Dine Out"
  },
  {
   "d": "6.16",
-  "t": "Target 🎯",
+  "t": "🎯 Target",
   "a": 11.98,
   "cat": "Groceries"
  },
  {
   "d": "6.16",
-  "t": "Vons",
+  "t": "🛒 Vons",
   "a": 42.81,
   "cat": "Groceries"
  },
  {
-  "d": "6.18",
-  "t": "Rooster & Rice 🐔🍚",
+  "d": "6.16",
+  "t": "🍎 Apple",
+  "a": 0.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "6.17",
+  "t": "🐔🍚 Rooster & Rice",
   "a": 31.24,
   "cat": "Dine Out"
  },
  {
   "d": "6.19",
-  "t": "SixFlags Ticket 🎢",
+  "t": "🎢 SixFlags Ticket",
   "a": 69.9,
   "cat": "Entertainment"
  },
  {
   "d": "6.21",
-  "t": "Time Nightclub",
+  "t": "🪩 Time Nightclub",
   "a": 20.0,
-  "cat": "Dine Out"
+  "cat": "Entertainment"
+ },
+ {
+  "d": "6.21",
+  "t": "🍎 Apple",
+  "a": 8.99,
+  "cat": "Subscription",
+  "card": "3299"
+ },
+ {
+  "d": "6.21",
+  "t": "🍺 Time Nightclub Drinks",
+  "a": 40.0,
+  "cat": "Food & Drink"
  },
  {
   "d": "6.22",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 100.53,
   "cat": "Groceries"
  },
@@ -91,9 +153,9 @@
  },
  {
   "d": "6.22",
-  "t": "Magic Mountain",
+  "t": "🅿️ Magic Mountain Parking",
   "a": 6.03,
-  "cat": "Entertainment"
+  "cat": "Car"
  },
  {
   "d": "6.23",
@@ -109,21 +171,21 @@
  },
  {
   "d": "6.23",
-  "t": "Costco Gas ⛽️",
+  "t": "⛽️ Costco Gas",
   "a": 80.0,
   "cat": "Car"
  },
  {
   "d": "6.24",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 27.77,
   "cat": "Groceries"
  },
  {
   "d": "6.26",
-  "t": "Duke Bakery 🥐",
+  "t": "🥐 Duke Bakery",
   "a": 11.0,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "6.28",
@@ -139,15 +201,15 @@
  },
  {
   "d": "6.29",
-  "t": "Costco 🛒",
+  "t": "🛒 Costco",
   "a": 82.98,
   "cat": "Groceries"
  },
  {
   "d": "6.29",
-  "t": "Total Wine 🍷",
+  "t": "🍷 Total Wine",
   "a": 43.27,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "6.29",
@@ -157,7 +219,7 @@
  },
  {
   "d": "6.30",
-  "t": "Trader Joe's",
+  "t": "🥬 Trader Joe's",
   "a": 14.06,
   "cat": "Groceries"
  },
@@ -166,5 +228,12 @@
   "t": "🍑",
   "a": 14.8,
   "cat": "Shopping"
+ },
+ {
+  "d": "6.30",
+  "t": "🍑",
+  "a": 15.15,
+  "cat": "Shopping",
+  "card": "3299"
  }
 ]
