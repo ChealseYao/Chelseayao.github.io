@@ -19,6 +19,13 @@
   "cat": "Groceries"
  },
  {
+  "d": "7.2",
+  "t": "🏠 Rent · Row at Red Hill",
+  "a": 3674.12,
+  "cat": "Home",
+  "card": "joint"
+ },
+ {
   "d": "7.3",
   "t": "🎬 AMC Membership",
   "a": 27.99,
@@ -138,6 +145,13 @@
   "t": "👕 H&M",
   "a": 10.87,
   "cat": "Shopping"
+ },
+ {
+  "d": "7.8",
+  "t": "⚡ SoCal Edison",
+  "a": 145.8,
+  "cat": "Bills & Utilities",
+  "card": "joint"
  },
  {
   "d": "7.9",
@@ -342,6 +356,13 @@
   "card": "3299"
  },
  {
+  "d": "7.22",
+  "t": "💸 Yudi",
+  "a": 400.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "7.23",
   "t": "FTOC Tustin Medical",
   "a": 25.0,
@@ -353,6 +374,13 @@
   "t": "🛒 Ralphs",
   "a": 12.18,
   "cat": "Groceries"
+ },
+ {
+  "d": "7.24",
+  "t": "🎬 AMC Membership",
+  "a": 29.99,
+  "cat": "Entertainment",
+  "card": "joint"
  },
  {
   "d": "7.26",
@@ -398,6 +426,13 @@
   "cat": "Shopping"
  },
  {
+  "d": "7.27",
+  "t": "💸 Anytrack LLC",
+  "a": 310.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "7.30",
   "t": "🍑",
   "a": 26.93,
@@ -410,5 +445,12 @@
   "a": 90.43,
   "cat": "Gifts",
   "n": "Arc'teryx"
+ },
+ {
+  "d": "7.31",
+  "t": "🏦 Chase Monthly Fee",
+  "a": 15.0,
+  "cat": "Bills & Utilities",
+  "card": "joint"
  }
 ]

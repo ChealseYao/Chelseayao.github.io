@@ -86,19 +86,36 @@
    "name": "Travel",
    "emoji": "✈️",
    "color": "#3987e5"
+  },
+  {
+   "name": "Zelle",
+   "emoji": "💸",
+   "color": "#8a919c"
   }
  ],
  "cards": [
   {
    "id": "5355",
-   "name": "Chase Credit ····5355",
-   "label": "Chase 5355",
+   "name": "Chase Freedom ····5355",
+   "label": "Chase Freedom",
    "emoji": "💳"
   },
   {
    "id": "3299",
-   "name": "Chase Credit ····3299",
-   "label": "Chase 3299",
+   "name": "Chase Collage ····3299",
+   "label": "Chase Collage",
+   "emoji": "💳"
+  },
+  {
+   "id": "discover",
+   "name": "Discover Credit",
+   "label": "Discover",
+   "emoji": "💳"
+  },
+  {
+   "id": "joint",
+   "name": "Chase Joint Checking",
+   "label": "Chase Joint",
    "emoji": "💳"
   }
  ]

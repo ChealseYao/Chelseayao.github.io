@@ -19,6 +19,20 @@
   "card": "3299"
  },
  {
+  "d": "3.3",
+  "t": "🏠 Rent · Row at Red Hill",
+  "a": 4178.87,
+  "cat": "Home",
+  "card": "joint"
+ },
+ {
+  "d": "3.3",
+  "t": "⚡ SoCal Edison",
+  "a": 259.04,
+  "cat": "Bills & Utilities",
+  "card": "joint"
+ },
+ {
   "d": "3.4",
   "t": "🎬 AMC Membership",
   "a": 27.99,
@@ -49,6 +63,12 @@
   "cat": "Alice"
  },
  {
+  "d": "3.8",
+  "t": "🌶️ 奇味香锅",
+  "a": 81.0,
+  "cat": "Dine Out"
+ },
+ {
   "d": "3.9",
   "t": "🥬 99 Ranch",
   "a": 46.13,
@@ -65,6 +85,13 @@
   "t": "🛒 Amazon Fresh",
   "a": 8.24,
   "cat": "Groceries"
+ },
+ {
+  "d": "3.13",
+  "t": "💊 CVS",
+  "a": 30.28,
+  "cat": "Health",
+  "card": "discover"
  },
  {
   "d": "3.15",
@@ -152,6 +179,20 @@
   "cat": "Shopping"
  },
  {
+  "d": "3.23",
+  "t": "💸 Jingchao Tong",
+  "a": 105.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
+  "d": "3.24",
+  "t": "🎬 AMC Membership",
+  "a": 27.99,
+  "cat": "Entertainment",
+  "card": "joint"
+ },
+ {
   "d": "3.25",
   "t": "⛽️ Costco Gas",
   "a": 50.01,
@@ -176,22 +217,29 @@
   "cat": "Shopping"
  },
  {
+  "d": "3.26",
+  "t": "🇨🇺 Habana",
+  "a": 144.62,
+  "cat": "Dine Out"
+ },
+ {
   "d": "3.27",
   "t": "🍑",
   "a": 39.6,
   "cat": "Shopping"
  },
  {
+  "d": "3.27",
+  "t": "💸 Ziyuan Liu",
+  "a": 89.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "3.29",
   "t": "🥬 99 Ranch",
   "a": 49.98,
   "cat": "Groceries"
- },
- {
-  "d": "3.29",
-  "t": "Habana",
-  "a": 144.62,
-  "cat": "Dine Out"
  },
  {
   "d": "3.29",

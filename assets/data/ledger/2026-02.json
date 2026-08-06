@@ -74,6 +74,12 @@
   "cat": "Entertainment"
  },
  {
+  "d": "2.6",
+  "t": "🐔 Chipotle",
+  "a": 13.2,
+  "cat": "Dine Out"
+ },
+ {
   "d": "2.7",
   "t": "🏠 MMS Airbnb",
   "a": 282.75,
@@ -86,6 +92,12 @@
   "cat": "Dine Out"
  },
  {
+  "d": "2.7",
+  "t": "Outpost Mammoth",
+  "a": 5.56,
+  "cat": "Dine Out"
+ },
+ {
   "d": "2.8",
   "t": "🛒 Grocery Outlet",
   "a": 6.86,
@@ -93,8 +105,8 @@
  },
  {
   "d": "2.8",
-  "t": "🐔 Chipotle",
-  "a": 13.2,
+  "t": "🐷 CopperTop BBQ",
+  "a": 44.82,
   "cat": "Dine Out"
  },
  {
@@ -111,12 +123,6 @@
  },
  {
   "d": "2.9",
-  "t": "🐷 CopperTop BBQ",
-  "a": 44.82,
-  "cat": "Dine Out"
- },
- {
-  "d": "2.9",
   "t": "Mammoth Mtn Retail",
   "a": 4.92,
   "cat": "Shopping"
@@ -126,12 +132,6 @@
   "t": "🚛 Tiger Tote",
   "a": 5.65,
   "cat": "Car"
- },
- {
-  "d": "2.10",
-  "t": "Outpost Mammoth",
-  "a": 5.56,
-  "cat": "Dine Out"
  },
  {
   "d": "2.11",
@@ -177,6 +177,13 @@
   "n": "Chelsea's birthday cake"
  },
  {
+  "d": "2.20",
+  "t": "🎯 Target",
+  "a": 36.39,
+  "cat": "Groceries",
+  "card": "discover"
+ },
+ {
   "d": "2.22",
   "t": "🎯 Target",
   "a": 39.86,
@@ -195,6 +202,13 @@
   "cat": "Car"
  },
  {
+  "d": "2.24",
+  "t": "🎬 AMC Membership",
+  "a": 27.99,
+  "cat": "Entertainment",
+  "card": "joint"
+ },
+ {
   "d": "2.25",
   "t": "🎯 Target",
   "a": 5.27,
@@ -211,6 +225,12 @@
   "t": "🍜 Simply Pho",
   "a": 20.48,
   "cat": "Dine Out"
+ },
+ {
+  "d": "2.27",
+  "t": "🧋 一点点",
+  "a": 7.0,
+  "cat": "Food & Drink"
  },
  {
   "d": "2.28",

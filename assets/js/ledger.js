@@ -26,12 +26,13 @@
     idx.categories.forEach(c => CAT[c.name] = c);
     const months = [...new Set(ALL.map(monOf))].sort((a, b) => a - b);
 
-    // 卡片只作明细行备注，不做筛选；交易可带 card 字段（=卡 id），缺省记在第一张卡
+    // 交易可带 card 字段（=卡 id），缺省记在第一张卡；点明细行卡名或表头 Card 可筛选
     const CARDS = idx.cards || [];
     const CARD = {}; CARDS.forEach(c => CARD[c.id] = c);
     const cardOf = i => CARD[i.card] || CARDS[0];
     let mf = months[months.length - 1] || 0;   // 默认最新月份
     let catf = null;
+    let cardf = null;   // 卡筛选（卡 id），只作用于明细列表
     let sortBy = "date";   // date=日期降序 amt=金额降序
 
     // 每月 × 分类 合计（净额，负数按 0 参与堆叠）
@@ -190,10 +191,10 @@
           t.sum += i.a; t.n++;
         });
         const top = Object.entries(byT).sort((a, b) => b[1].sum - a[1].sum).slice(0, 6);
-        const RK = ["🥇","🥈","🥉","4","5","6"];
-        calHTML = `<div class="calmini"><div class="calhead">🏆&ensp;Top Merchants</div>` +
+        const RK = ["🥇","🥈","🥉","4️⃣","5️⃣","6️⃣"];
+        calHTML = `<div class="calmini">` +
           `<div class="tgrid">` + top.map(([name, v], i) =>
-            `<div class="tcard"><span class="trk${i > 2 ? " plain" : ""}">${RK[i]}</span>` +
+            `<div class="tcard"><span class="trk${i > 2 ? " num" : ""}">${RK[i]}</span>` +
             `<span class="tn">${name}</span>` +
             `<span class="tv" style="color:${CAT[v.cat].color}">${fmt(v.sum)}</span>` +
             `<span class="tct">${v.n} 笔</span></div>`
@@ -246,6 +247,7 @@
       // 下：全部明细（日期降序），行尾彩色分类标签
       const rows = inMonth
         .filter(i => !catf || i.cat === catf)
+        .filter(i => !cardf || (cardOf(i) && cardOf(i).id === cardf))
         .sort((a, b) => sortBy === "amt"
           ? b.a - a.a
           : (monOf(b) - monOf(a)) || (dayOf(b) - dayOf(a)));
@@ -259,25 +261,42 @@
       tx.className = "card";
       tx.innerHTML =
         `<h2>🧾&ensp;Transactions${catf ? `<span class="ft" style="color:${CAT[catf].color};border-color:${CAT[catf].color}">${CAT[catf].emoji} ${catf} ✕</span>` : ""}` +
+        (cardf ? `<span class="ft ftcard">💳 ${CARD[cardf].label} ✕</span>` : "") +
         `<span class="gp"><span class="st">${sortBy === "date" ? "by date ↓" : "by amount ↓"}</span>` +
         (catf && months.length > 1 ? `<span class="dot">·</span><span style="color:${CAT[catf].color}">avg $${Math.round(catAvg).toLocaleString()}/mo</span>` : "") +
         `<span class="dot">·</span><span>${rows.length} 笔</span><span class="dot">·</span>` +
         `<span class="gt"${catf ? ` style="color:${CAT[catf].color}"` : ""}>💰 ${fmt(total)}</span></span></h2>` +
         `<div class="thead"><span class="d">Date</span><span class="it">Merchant</span>` +
-        `<span class="ctag">Category</span><span class="cardn">Card</span><span class="amt">Amount</span></div>` +
+        `<span class="ctag">Category</span><span class="cardn"><select class="cardsel" title="按卡筛选">` +
+        `<option value="">Card ▾</option>` +
+        CARDS.map(c => `<option value="${c.id}"${cardf === c.id ? " selected" : ""}>${c.label || c.name}</option>`).join("") +
+        `</select></span><span class="amt">Amount</span></div>` +
         rows.map((i, idx) => {
           const nd = !idx || rows[idx - 1].d !== i.d;   // 新的一天才画分隔线、显示日期
           const wk = "周" + "日一二三四五六"[new Date(YEAR, monOf(i) - 1, dayOf(i)).getDay()];
           return `<div class="row${nd ? " nd" : ""}" data-day="${i.d}"><span class="d">${nd ? `${i.d}.${YEAR}<span class="dwk">${wk}</span>` : ""}</span>` +
             `<span class="it">${i.t}${i.n ? `<span class="tnote">${i.n}</span>` : ""}</span>` +
             `<span class="ctag" style="color:${CAT[i.cat].color}">${CAT[i.cat].emoji} ${i.cat}</span>` +
-            `<span class="cardn">${cardOf(i) ? (cardOf(i).label || cardOf(i).name) : ""}</span>` +
+            `<span class="cardn sel" data-card="${cardOf(i) ? cardOf(i).id : ""}">${cardOf(i) ? (cardOf(i).label || cardOf(i).name) : ""}</span>` +
             `<span class="amt ${i.a < 0 ? "refund" : ""}"${i.a < 0 ? "" : ` style="color:${CAT[i.cat].color}"`}>${fmt(i.a)}</span></div>`;
         }).join("");
-      const ftEl = tx.querySelector(".ft");
+      const ftEl = tx.querySelector(".ft:not(.ftcard)");
       if (ftEl) ftEl.addEventListener("click", () => { catf = null; render(); });
+      const ftcEl = tx.querySelector(".ftcard");
+      if (ftcEl) ftcEl.addEventListener("click", () => { cardf = null; render(); });
       tx.querySelector(".st").addEventListener("click", () =>
         { sortBy = sortBy === "date" ? "amt" : "date"; render(); });
+      // 表头下拉框选卡；点明细行卡名也可切换筛选
+      tx.querySelector(".cardsel").addEventListener("change", e => {
+        cardf = e.target.value || null;
+        render();
+      });
+      tx.addEventListener("click", e => {
+        const c = e.target.closest(".cardn.sel");
+        if (!c) return;
+        cardf = cardf === c.dataset.card ? null : c.dataset.card;
+        render();
+      });
       box.appendChild(tx);
 
       // 点月历某天 → 滚到明细里那一天，行高亮一下

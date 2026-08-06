@@ -93,7 +93,7 @@
   },
   {
    "match": "CHIANG RAI",
-   "t": "Chiang Rai",
+   "t": "🇹🇭 Chiang Rai",
    "cat": "Dine Out"
   },
   {
@@ -223,7 +223,7 @@
   },
   {
    "match": "HABANA",
-   "t": "Habana",
+   "t": "🇨🇺 Habana",
    "cat": "Dine Out"
   },
   {
@@ -363,8 +363,8 @@
   },
   {
    "match": "NV PARKS VALLEY",
-   "t": "NV Parks Valley of Fire",
-   "cat": "Bills & Utilities"
+   "t": "🏜️ NV Parks Valley of Fire souvenir",
+   "cat": "Shopping"
   },
   {
    "match": "OCEANO DUNES",

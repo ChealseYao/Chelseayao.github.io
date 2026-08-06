@@ -50,7 +50,8 @@
   .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
   .tcard{border:1px solid var(--line);border-radius:10px;background:#2a2d34;
     padding:10px 8px 8px;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:0;}
-  .tcard .trk{font-size:17px;line-height:1.2;}
+  .tcard .trk{font-size:21px;line-height:1.2;}
+  .tcard .trk.num{font-size:15px;padding:4px 0 2px;}
   .tcard .trk.plain{color:var(--muted);font-size:12px;padding:3px 0 2px;}
   .tcard .tn{max-width:100%;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .tcard .tv{font-family:var(--serif);font-size:16px;font-weight:700;letter-spacing:.3px;}
@@ -98,6 +99,14 @@
   /* 全部明细（日期降序） */
   h2 .ft{margin-left:12px;font-size:12px;color:var(--cd);border:1px solid var(--cd);
     border-radius:20px;padding:2px 10px;cursor:pointer;}
+  h2 .ft.ftcard{color:#7e93ad;border-color:#7e93ad;}
+  .cardn.sel{cursor:pointer;transition:color .12s ease;}
+  .cardn.sel:hover{color:var(--ink);text-decoration:underline dotted;text-underline-offset:3px;}
+  .cardsel{appearance:none;-webkit-appearance:none;background:transparent;border:none;
+    color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;
+    padding:0;cursor:pointer;max-width:100%;}
+  .cardsel:hover{color:var(--ink);}
+  .cardsel option{background:var(--paper);color:var(--ink);text-transform:none;}
   h2 .st{cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;transition:color .12s ease;}
   h2 .st:hover{color:var(--cd);}
   .thead{display:flex;align-items:baseline;gap:12px;padding:2px 6px 7px;

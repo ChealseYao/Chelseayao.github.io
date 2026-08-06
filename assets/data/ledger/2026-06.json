@@ -65,10 +65,25 @@
   "card": "3299"
  },
  {
+  "d": "6.8",
+  "t": "🏠 Rent · Row at Red Hill",
+  "a": 3636.5,
+  "cat": "Home",
+  "card": "joint"
+ },
+ {
   "d": "6.9",
   "t": "🍑",
   "a": 13.76,
   "cat": "Shopping"
+ },
+ {
+  "d": "6.9",
+  "t": "📮 USPS",
+  "a": 52.55,
+  "cat": "Shopping",
+  "card": "joint",
+  "n": "+$190 cash back"
  },
  {
   "d": "6.10",
@@ -97,6 +112,13 @@
   "cat": "Dine Out"
  },
  {
+  "d": "6.14",
+  "t": "🛒 Vons",
+  "a": 150.0,
+  "cat": "Groceries",
+  "card": "joint"
+ },
+ {
   "d": "6.16",
   "t": "🎯 Target",
   "a": 11.98,
@@ -122,10 +144,23 @@
   "cat": "Dine Out"
  },
  {
+  "d": "6.18",
+  "t": "💸 Yudi",
+  "a": 400.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "6.19",
   "t": "🎢 SixFlags Ticket",
   "a": 69.9,
   "cat": "Entertainment"
+ },
+ {
+  "d": "6.20",
+  "t": "🌶️🐔 YaSikNaRa",
+  "a": 110.0,
+  "cat": "Dine Out"
  },
  {
   "d": "6.21",
@@ -171,6 +206,13 @@
   "cat": "Car"
  },
  {
+  "d": "6.22",
+  "t": "💸 Shengxian Chen",
+  "a": 80.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "6.23",
   "t": "HungryPanda",
   "a": 8.99,
@@ -193,6 +235,13 @@
   "t": "🛒 Costco",
   "a": 27.77,
   "cat": "Groceries"
+ },
+ {
+  "d": "6.24",
+  "t": "🎬 AMC Membership",
+  "a": 27.99,
+  "cat": "Entertainment",
+  "card": "joint"
  },
  {
   "d": "6.26",
@@ -231,6 +280,13 @@
   "cat": "Shopping"
  },
  {
+  "d": "6.29",
+  "t": "💸 Hundred Grace Inc",
+  "a": 50.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "6.30",
   "t": "🥬 Trader Joe's",
   "a": 14.06,
@@ -248,5 +304,12 @@
   "a": 15.15,
   "cat": "Shopping",
   "card": "3299"
+ },
+ {
+  "d": "6.30",
+  "t": "🏦 Chase Monthly Fee",
+  "a": 15.0,
+  "cat": "Bills & Utilities",
+  "card": "joint"
  }
 ]

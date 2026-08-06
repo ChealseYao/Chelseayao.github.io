@@ -116,9 +116,9 @@
  },
  {
   "d": "4.12",
-  "t": "NV Parks Valley of Fire",
+  "t": "🏜️ NV Parks Valley of Fire souvenir",
   "a": 5.0,
-  "cat": "Bills & Utilities"
+  "cat": "Shopping"
  },
  {
   "d": "4.13",
@@ -216,6 +216,12 @@
   "cat": "Car"
  },
  {
+  "d": "4.23",
+  "t": "🇹🇭 Chiang Rai",
+  "a": 71.48,
+  "cat": "Dine Out"
+ },
+ {
   "d": "4.24",
   "t": "🥬 99 Ranch",
   "a": 24.82,
@@ -228,16 +234,17 @@
   "cat": "Car"
  },
  {
+  "d": "4.24",
+  "t": "🎬 AMC Membership",
+  "a": 27.99,
+  "cat": "Entertainment",
+  "card": "joint"
+ },
+ {
   "d": "4.26",
   "t": "🛒 Ralphs",
   "a": 22.57,
   "cat": "Groceries"
- },
- {
-  "d": "4.26",
-  "t": "Chiang Rai",
-  "a": 142.95,
-  "cat": "Dine Out"
  },
  {
   "d": "4.27",
@@ -252,6 +259,13 @@
   "a": 4.38,
   "cat": "Shopping",
   "card": "3299"
+ },
+ {
+  "d": "4.27",
+  "t": "📦 Amazon",
+  "a": 29.01,
+  "cat": "Shopping",
+  "card": "joint"
  },
  {
   "d": "4.28",

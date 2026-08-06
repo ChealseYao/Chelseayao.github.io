@@ -20,10 +20,18 @@
   "cat": "Travel"
  },
  {
-  "d": "5.3",
+  "d": "5.2",
   "t": "🛒 Grocery Outlet",
   "a": 37.12,
   "cat": "Groceries"
+ },
+ {
+  "d": "5.2",
+  "t": "🛒 Vons",
+  "a": 3.75,
+  "cat": "Groceries",
+  "card": "joint",
+  "n": "+$80 cash back"
  },
  {
   "d": "5.3",
@@ -49,6 +57,20 @@
   "t": "🎬 AMC Membership",
   "a": 27.99,
   "cat": "Entertainment"
+ },
+ {
+  "d": "5.4",
+  "t": "🏠 Rent · Row at Red Hill",
+  "a": 3697.23,
+  "cat": "Home",
+  "card": "joint"
+ },
+ {
+  "d": "5.4",
+  "t": "💸 760-784-0975",
+  "a": 350.0,
+  "cat": "Zelle",
+  "card": "joint"
  },
  {
   "d": "5.5",
@@ -112,6 +134,13 @@
   "t": "🐟 Hawaiian FreshSeafood",
   "a": 45.81,
   "cat": "Dine Out"
+ },
+ {
+  "d": "5.9",
+  "t": "📶 AT&T",
+  "a": 11.0,
+  "cat": "Bills & Utilities",
+  "card": "3299"
  },
  {
   "d": "5.10",
@@ -206,6 +235,13 @@
   "t": "🇮🇳 IndiaGate",
   "a": 21.33,
   "cat": "Dine Out"
+ },
+ {
+  "d": "5.15",
+  "t": "🚗 Farmers Insurance",
+  "a": 3856.76,
+  "cat": "Car",
+  "card": "joint"
  },
  {
   "d": "5.16",
@@ -308,6 +344,19 @@
   "card": "3299"
  },
  {
+  "d": "5.24",
+  "t": "🌶️ 洞庭鲜",
+  "a": 177.33,
+  "cat": "Dine Out"
+ },
+ {
+  "d": "5.24",
+  "t": "🎬 AMC Membership",
+  "a": 27.99,
+  "cat": "Entertainment",
+  "card": "joint"
+ },
+ {
   "d": "5.25",
   "t": "Erewhon",
   "a": 50.42,
@@ -333,6 +382,20 @@
   "card": "3299"
  },
  {
+  "d": "5.26",
+  "t": "🍽️ LY Family Kitchen",
+  "a": 15.0,
+  "cat": "Dine Out",
+  "card": "joint"
+ },
+ {
+  "d": "5.26",
+  "t": "💸 626-991-8666",
+  "a": 180.0,
+  "cat": "Zelle",
+  "card": "joint"
+ },
+ {
   "d": "5.28",
   "t": "⛽️ World Oil",
   "a": 44.54,
@@ -344,6 +407,13 @@
   "a": 152.62,
   "cat": "Shopping",
   "card": "3299"
+ },
+ {
+  "d": "5.29",
+  "t": "⚡ SoCal Edison",
+  "a": 379.06,
+  "cat": "Bills & Utilities",
+  "card": "joint"
  },
  {
   "d": "5.30",
@@ -358,6 +428,12 @@
   "a": 25.26,
   "cat": "Shopping",
   "card": "3299"
+ },
+ {
+  "d": "5.30",
+  "t": "🇲🇾 Belecan Grill",
+  "a": 56.0,
+  "cat": "Dine Out"
  },
  {
   "d": "5.31",
