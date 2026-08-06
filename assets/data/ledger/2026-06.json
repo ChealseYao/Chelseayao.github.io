@@ -68,7 +68,7 @@
   "d": "6.8",
   "t": "🏠 Rent · Row at Red Hill",
   "a": 3636.5,
-  "cat": "Home",
+  "cat": "Fixed Costs",
   "card": "joint"
  },
  {
@@ -79,11 +79,11 @@
  },
  {
   "d": "6.9",
-  "t": "📮 USPS",
+  "t": "🛂 Passport · USPS",
   "a": 52.55,
-  "cat": "Shopping",
+  "cat": "Travel",
   "card": "joint",
-  "n": "+$190 cash back"
+  "n": "dkl passport"
  },
  {
   "d": "6.10",
@@ -142,13 +142,6 @@
   "t": "🐔🍚 Rooster & Rice",
   "a": 31.24,
   "cat": "Dine Out"
- },
- {
-  "d": "6.18",
-  "t": "💸 Yudi",
-  "a": 400.0,
-  "cat": "Zelle",
-  "card": "joint"
  },
  {
   "d": "6.19",

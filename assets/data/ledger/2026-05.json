@@ -30,8 +30,7 @@
   "t": "🛒 Vons",
   "a": 3.75,
   "cat": "Groceries",
-  "card": "joint",
-  "n": "+$80 cash back"
+  "card": "joint"
  },
  {
   "d": "5.3",
@@ -62,7 +61,7 @@
   "d": "5.4",
   "t": "🏠 Rent · Row at Red Hill",
   "a": 3697.23,
-  "cat": "Home",
+  "cat": "Fixed Costs",
   "card": "joint"
  },
  {
@@ -95,7 +94,8 @@
   "d": "5.7",
   "t": "Coastal Communities Hospital",
   "a": 200.0,
-  "cat": "Health"
+  "cat": "Health",
+  "n": "emergency room 🚑"
  },
  {
   "d": "5.7",
@@ -194,16 +194,16 @@
   "card": "3299"
  },
  {
-  "d": "5.13",
-  "t": "HungryPanda",
-  "a": 8.49,
+  "d": "5.12",
+  "t": "🇮🇳 Biryani Pot Express",
+  "a": 34.19,
   "cat": "Dine Out"
  },
  {
-  "d": "5.14",
-  "t": "Biryani Pot Express",
-  "a": 68.37,
-  "cat": "Dine Out"
+  "d": "5.12",
+  "t": "🍨 Makkee Dessert",
+  "a": 8.49,
+  "cat": "Food & Drink"
  },
  {
   "d": "5.15",
@@ -240,8 +240,9 @@
   "d": "5.15",
   "t": "🚗 Farmers Insurance",
   "a": 3856.76,
-  "cat": "Car",
-  "card": "joint"
+  "cat": "Fixed Costs",
+  "card": "joint",
+  "n": "6 month"
  },
  {
   "d": "5.16",
@@ -277,7 +278,7 @@
  },
  {
   "d": "5.18",
-  "t": "Global Fresh Supermarket",
+  "t": "🥬 Global Fresh Supermarket",
   "a": 37.38,
   "cat": "Groceries"
  },
@@ -325,6 +326,18 @@
   "cat": "Food & Drink"
  },
  {
+  "d": "5.23",
+  "t": "🥡 Too Good To Go",
+  "a": 5.48,
+  "cat": "Food & Drink"
+ },
+ {
+  "d": "5.23",
+  "t": "Erewhon",
+  "a": 50.42,
+  "cat": "Groceries"
+ },
+ {
   "d": "5.24",
   "t": "🛒 Vons",
   "a": 16.96,
@@ -357,22 +370,17 @@
   "card": "joint"
  },
  {
-  "d": "5.25",
-  "t": "Erewhon",
-  "a": 50.42,
-  "cat": "Groceries"
- },
- {
-  "d": "5.25",
-  "t": "HungryPanda",
+  "d": "5.24",
+  "t": "🧋 Molly Tea",
   "a": 31.35,
-  "cat": "Dine Out"
+  "cat": "Food & Drink"
  },
  {
   "d": "5.25",
-  "t": "🥡 Too Good To Go",
-  "a": 5.48,
-  "cat": "Food & Drink"
+  "t": "🐑 來福砂鍋",
+  "a": 15.0,
+  "cat": "Dine Out",
+  "card": "joint"
  },
  {
   "d": "5.26",
@@ -380,13 +388,6 @@
   "a": 30.36,
   "cat": "Shopping",
   "card": "3299"
- },
- {
-  "d": "5.26",
-  "t": "🍽️ LY Family Kitchen",
-  "a": 15.0,
-  "cat": "Dine Out",
-  "card": "joint"
  },
  {
   "d": "5.26",

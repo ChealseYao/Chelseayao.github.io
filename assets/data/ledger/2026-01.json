@@ -188,20 +188,6 @@
   "cat": "Car"
  },
  {
-  "d": "1.21",
-  "t": "💸 Yudi",
-  "a": 1000.0,
-  "cat": "Zelle",
-  "card": "joint"
- },
- {
-  "d": "1.23",
-  "t": "💸 Keli Dong",
-  "a": 20.0,
-  "cat": "Zelle",
-  "card": "joint"
- },
- {
   "d": "1.24",
   "t": "🍲 老码头",
   "a": 69.0,
@@ -255,13 +241,13 @@
   "d": "1.29",
   "t": "🛂 CA DMV Service Fee",
   "a": 4.72,
-  "cat": "Car"
+  "cat": "Fixed Costs"
  },
  {
   "d": "1.29",
   "t": "🛂 CA DMV",
   "a": 236.0,
-  "cat": "Car",
+  "cat": "Fixed Costs",
   "n": "Vehicle Registration"
  },
  {

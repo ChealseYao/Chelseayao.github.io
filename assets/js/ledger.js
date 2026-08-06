@@ -30,7 +30,7 @@
     const CARDS = idx.cards || [];
     const CARD = {}; CARDS.forEach(c => CARD[c.id] = c);
     const cardOf = i => CARD[i.card] || CARDS[0];
-    let mf = months[months.length - 1] || 0;   // 默认最新月份
+    let mf = 0;   // 默认 All 视图
     let catf = null;
     let cardf = null;   // 卡筛选（卡 id），只作用于明细列表
     let sortBy = "date";   // date=日期降序 amt=金额降序
@@ -61,6 +61,23 @@
       tabs.querySelectorAll(".mt").forEach(x => x.classList.toggle("on", x === t));
       render();
     });
+
+    // 排除开关：Fixed Costs（房租/车保险/注册费等）、Investment ——影响所有图表和明细
+    let exFixed = false, exInv = false;
+    const isFixed = i => i.cat === "Fixed Costs";
+    const xtabs = document.createElement("div");
+    xtabs.className = "xtabs";
+    xtabs.innerHTML = `<span class="xt" data-x="fixed"><i class="sw"></i>📌 excl. Fixed Costs</span>` +
+      `<span class="xt" data-x="inv"><i class="sw"></i>📈 excl. Investment</span>`;
+    xtabs.addEventListener("click", e => {
+      const t = e.target.closest(".xt");
+      if (!t) return;
+      if (t.dataset.x === "fixed") exFixed = !exFixed; else exInv = !exInv;
+      t.classList.toggle("on");
+      render();
+    });
+    const hsT = document.getElementById("hs-toggles");
+    if (hsT) hsT.appendChild(xtabs);   // 开关放在 Total Spending 旁边
 
     // 月度堆叠柱状图：柱高 = 当月总消费，分段 = 各分类（固定色），点柱子切换月份
     // 月均（不含最新的一个月，因为还没过完）
@@ -121,8 +138,9 @@
 
     function render(){
       box.innerHTML = "";
-      calcMonthly(ALL);
-      const inMonth = ALL.filter(i => !mf || monOf(i) === mf);
+      const DATA = ALL.filter(i => !(exFixed && isFixed(i)) && !(exInv && i.cat === "Investment"));
+      calcMonthly(DATA);
+      const inMonth = DATA.filter(i => !mf || monOf(i) === mf);
 
       const byCat = {};
       inMonth.forEach(i => { byCat[i.cat] = (byCat[i.cat] || 0) + i.a; });

@@ -22,7 +22,7 @@
   "d": "3.3",
   "t": "🏠 Rent · Row at Red Hill",
   "a": 4178.87,
-  "cat": "Home",
+  "cat": "Fixed Costs",
   "card": "joint"
  },
  {
@@ -180,10 +180,11 @@
  },
  {
   "d": "3.23",
-  "t": "💸 Jingchao Tong",
+  "t": "🏀 Basketball Tournament Fee",
   "a": 105.0,
-  "cat": "Zelle",
-  "card": "joint"
+  "cat": "Entertainment",
+  "card": "joint",
+  "n": "Zelle · Jingchao Tong"
  },
  {
   "d": "3.24",
@@ -193,16 +194,16 @@
   "card": "joint"
  },
  {
+  "d": "3.24",
+  "t": "🛒 Albertsons",
+  "a": 36.11,
+  "cat": "Groceries"
+ },
+ {
   "d": "3.25",
   "t": "⛽️ Costco Gas",
   "a": 50.01,
   "cat": "Car"
- },
- {
-  "d": "3.26",
-  "t": "🛒 Albertsons",
-  "a": 36.11,
-  "cat": "Groceries"
  },
  {
   "d": "3.26",
@@ -223,17 +224,18 @@
   "cat": "Dine Out"
  },
  {
+  "d": "3.26",
+  "t": "👕 Adidas",
+  "a": 89.0,
+  "cat": "Shopping",
+  "card": "joint",
+  "n": "Zelle · Ziyuan Liu"
+ },
+ {
   "d": "3.27",
   "t": "🍑",
   "a": 39.6,
   "cat": "Shopping"
- },
- {
-  "d": "3.27",
-  "t": "💸 Ziyuan Liu",
-  "a": 89.0,
-  "cat": "Zelle",
-  "card": "joint"
  },
  {
   "d": "3.29",

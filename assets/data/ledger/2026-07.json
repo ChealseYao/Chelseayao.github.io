@@ -22,7 +22,7 @@
   "d": "7.2",
   "t": "🏠 Rent · Row at Red Hill",
   "a": 3674.12,
-  "cat": "Home",
+  "cat": "Fixed Costs",
   "card": "joint"
  },
  {
@@ -85,7 +85,7 @@
  },
  {
   "d": "7.7",
-  "t": "HungryPanda",
+  "t": "🐑 Mjoy",
   "a": 2.85,
   "cat": "Dine Out"
  },
@@ -356,13 +356,6 @@
   "card": "3299"
  },
  {
-  "d": "7.22",
-  "t": "💸 Yudi",
-  "a": 400.0,
-  "cat": "Zelle",
-  "card": "joint"
- },
- {
   "d": "7.23",
   "t": "FTOC Tustin Medical",
   "a": 25.0,
@@ -427,10 +420,11 @@
  },
  {
   "d": "7.27",
-  "t": "💸 Anytrack LLC",
+  "t": "🛂 Anytrack 签证中介",
   "a": 310.0,
-  "cat": "Zelle",
-  "card": "joint"
+  "cat": "Travel",
+  "card": "joint",
+  "n": "dkl 签证"
  },
  {
   "d": "7.30",

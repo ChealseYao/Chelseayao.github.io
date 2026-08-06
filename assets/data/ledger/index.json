@@ -88,6 +88,11 @@
    "color": "#3987e5"
   },
   {
+   "name": "Fixed Costs",
+   "emoji": "📌",
+   "color": "#3d7a72"
+  },
+  {
    "name": "Zelle",
    "emoji": "💸",
    "color": "#8a919c"
