@@ -67,7 +67,7 @@ const VENUE_SCOUT = {
         { src: "../../assets/img/wedding/waldorf-ballroom.jpg", alt: "宴会厅" },
       ],
       meta: ["档次 ⭐⭐⭐⭐⭐", "价格 $$$$$", "LED ✅(厅2)", "停车 ⭐⭐⭐⭐"],
-      price: "宴席 ¥5888/桌起 · 客房 ¥1500+/间（湖景/院景、双床/大床）",
+      price: "宴席 ¥5888/桌起 · 客房 ¥1500+/间",
       secs: [
         { h: "⚖️ 对比", items: ["餐标比盛美利亚低约 ¥400/桌，客房贵约 ¥700–800/间"] },
         { h: "🏛️ 厅1｜扇形厅（约 100㎡）", items: ["双子塔夜景；4 桌最舒适、5 桌略局促", "中央玻璃窗有承重柱，仅可放 KT 板；无法搭台，无投影/LED"] },
@@ -101,12 +101,14 @@ const VENUE_SCOUT = {
       meta: ["档次 ⭐⭐⭐⭐", "价格 $$$", "LED ❌", "停车 ⭐⭐⭐"],
       price: "宴席约 ¥53xx/桌起 · 服务费 ¥200",
       secs: [
-        { h: "🏛️ 场地", items: ["可做婚房 + 化妆间"] },
+        { h: "🏛️ 场地", items: ["位于万象城 5 楼平台，亮点是玻璃房", "赠送的化妆间是旁边酒店的客房"] },
+        { h: "🍵 茶水", items: ["喝茶需单独再包一个厅"] },
+        { h: "🌿 环境", items: ["位置较远，周围没什么景观"] },
         { h: "🅿️ 停车", items: ["万达附近，共用停车场"] },
-        { h: "🎁 赠送", items: ["饮料"] },
+        { h: "🎁 赠送", items: ["饮料", "化妆间（旁边酒店客房）"] },
       ],
-      pros: ["环境不错", "品牌口碑较好"],
-      cons: ["无 LED", "无茶水间", "动线一般（需绕新升降机）"],
+      pros: ["玻璃房有亮点", "环境不错", "品牌口碑较好"],
+      cons: ["无 LED", "喝茶需单独包厅", "位置较远、周围无景观", "动线一般（需绕新升降机）"],
     },
   ],
   checklist: [
@@ -114,6 +116,19 @@ const VENUE_SCOUT = {
     "是否可自带甜品/伴手礼", "是否赠送婚房/休息室", "是否赠送签到台", "是否赠送迎宾牌",
     "是否赠送 LED/投影/音响", "是否提供舞台", "是否提供试菜", "停车优惠政策",
     "定金比例", "退款政策", "档期保留时间", "布置限制（鲜花/背景板/气球等）",
+  ],
+};
+
+// 宾客名单 —— 条目写法：字符串 = 1 人；{ name, n: 人数, note: 备注 } = 多人/带备注
+const GUEST_LIST = {
+  title: "👥&ensp;Guest List",
+  note: "🐼 成都",   // 目前只记成都的
+  groups: [
+    { city: "👭 Friends", guests: [
+      "王琴心", "曾莹洁",
+      { name: "杨潞钰", n: 2 },
+      { name: "祁麟", n: 2 },
+    ] },
   ],
 };
 
@@ -151,23 +166,43 @@ const VENUE_SCOUT = {
       (block.venues ? `<div class="venues">${block.venues.map(v =>
         `<span class="venue"><b>${v.city}</b> · <span class="vd${v.date.includes("待定") ? " tbd" : ""}">${v.date}</span></span>`).join("")}</div>` : "");
 
-    const grid = document.createElement("div");
-    grid.className = "secs";
-    block.sections.forEach(s => {
-      const col = document.createElement("div");
-      col.className = "sec";
-      col.innerHTML =
-        (s.name ? `<div class="sname">${s.name}</div>` : "") +
-        s.items.map(norm).map(i =>
-          `<div class="item${i.done ? " done" : ""}">${i.done ? '<span class="tick">✓</span>' : ""}${i.t}</div>`
-        ).join("");
-      grid.appendChild(col);
-    });
-    sec.appendChild(grid);
+    if (block.sections.length){
+      const grid = document.createElement("div");
+      grid.className = "secs";
+      block.sections.forEach(s => {
+        const col = document.createElement("div");
+        col.className = "sec";
+        col.innerHTML =
+          (s.name ? `<div class="sname">${s.name}</div>` : "") +
+          s.items.map(norm).map(i =>
+            `<div class="item${i.done ? " done" : ""}">${i.done ? '<span class="tick">✓</span>' : ""}${i.t}</div>`
+          ).join("");
+        grid.appendChild(col);
+      });
+      sec.appendChild(grid);
+    }
     // 酒店考察内容并进"地点"块
     if (block.scout) sec.insertAdjacentHTML("beforeend", scoutHTML());
     box.appendChild(sec);
   });
+
+  // 宾客名单卡（在所有模块下面）
+  const cntOf = g => g.guests.reduce((s, p) => s + (typeof p === "string" ? 1 : (p.n || 1)), 0);
+  const gl = document.createElement("section");
+  gl.className = "block card";
+  gl.innerHTML =
+    `<span class="accent" style="background:var(--sy)"></span>` +
+    `<h2>${GUEST_LIST.title}<span class="gp">${GUEST_LIST.note ? `${GUEST_LIST.note} · ` : ""}${GUEST_LIST.groups.reduce((s, g) => s + cntOf(g), 0)} 人</span></h2>` +
+    GUEST_LIST.groups.map(g =>
+      `<div class="ghead">${g.city}<span class="gcnt">${cntOf(g)} 人</span></div>` +
+      (g.guests.length
+        ? `<div class="gchips">${g.guests.map(p => {
+            const o = typeof p === "string" ? { name: p } : p;
+            return `<span class="gchip">${o.name}${o.n > 1 ? ` ×${o.n}` : ""}${o.note ? `<i>${o.note}</i>` : ""}</span>`;
+          }).join("")}</div>`
+        : `<div class="gempty">待补充</div>`)
+    ).join("");
+  box.appendChild(gl);
 
   function scoutHTML(){
     const s = VENUE_SCOUT;

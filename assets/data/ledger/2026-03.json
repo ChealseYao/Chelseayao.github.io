@@ -206,6 +206,13 @@
   "cat": "Car"
  },
  {
+  "d": "3.25",
+  "t": "🎂 Thy Birthday Gift",
+  "a": 254.0,
+  "cat": "Gifts",
+  "n": "Meta glasses"
+ },
+ {
   "d": "3.26",
   "t": "🛒 Costco",
   "a": 30.13,
