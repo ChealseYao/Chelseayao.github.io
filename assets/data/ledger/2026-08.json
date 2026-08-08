@@ -63,8 +63,15 @@
  },
  {
   "d": "8.4",
+  "t": "💊 D3+K2",
+  "a": 23.69,
+  "cat": "Health",
+  "n": "Costco"
+ },
+ {
+  "d": "8.4",
   "t": "🛒 Costco",
-  "a": 37.78,
+  "a": 14.09,
   "cat": "Groceries"
  },
  {
@@ -86,5 +93,24 @@
   "t": "🥬 99 Ranch",
   "a": 15.15,
   "cat": "Groceries"
+ },
+ {
+  "d": "8.7",
+  "t": "🤖 OpenAI",
+  "a": 20.0,
+  "cat": "Subscription"
+ },
+ {
+  "d": "8.7",
+  "t": "🐶 Dog Foods",
+  "a": 55.0,
+  "cat": "Alice",
+  "n": "Costco · Blue Buffalo"
+ },
+ {
+  "d": "8.7",
+  "t": "🐱 3Cat",
+  "a": 10.0,
+  "cat": "Food & Drink"
  }
 ]

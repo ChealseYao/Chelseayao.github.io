@@ -78,6 +78,13 @@
   "card": "3299"
  },
  {
+  "d": "7.5",
+  "t": "🛒 Costco",
+  "a": 34.41,
+  "cat": "Groceries",
+  "n": "🍅💧🐔🍄‍🟫"
+ },
+ {
   "d": "7.6",
   "t": "🍑",
   "a": 45.58,
@@ -209,8 +216,16 @@
  {
   "d": "7.12",
   "t": "🛒 Costco",
-  "a": 50.62,
-  "cat": "Groceries"
+  "a": 36.69,
+  "cat": "Groceries",
+  "n": "🐔🫐🍄‍🟫🧀🥬"
+ },
+ {
+  "d": "7.12",
+  "t": "🧴 Body Wash",
+  "a": 13.93,
+  "cat": "Home",
+  "n": "Costco"
  },
  {
   "d": "7.12",
@@ -226,10 +241,11 @@
   "card": "3299"
  },
  {
-  "d": "7.14",
+  "d": "7.13",
   "t": "🎯 Target",
   "a": 30.16,
-  "cat": "Groceries"
+  "cat": "Shopping",
+  "n": "perfume mist + setting powder"
  },
  {
   "d": "7.14",
@@ -401,15 +417,23 @@
   "cat": "Groceries"
  },
  {
-  "d": "7.27",
-  "t": "SFC Irvine",
-  "a": 35.54,
-  "cat": "Groceries"
+  "d": "7.26",
+  "t": "🛒 Costco",
+  "a": 66.46,
+  "cat": "Groceries",
+  "n": "Water + Monster + Diet Coke"
+ },
+ {
+  "d": "7.26",
+  "t": "🧻 Baby Wipes",
+  "a": 20.37,
+  "cat": "Home",
+  "n": "Costco"
  },
  {
   "d": "7.27",
-  "t": "🛒 Costco",
-  "a": 86.83,
+  "t": "SFC Irvine",
+  "a": 35.54,
   "cat": "Groceries"
  },
  {

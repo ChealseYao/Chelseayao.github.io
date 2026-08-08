@@ -30,7 +30,8 @@
   "t": "🛒 Vons",
   "a": 3.75,
   "cat": "Groceries",
-  "card": "joint"
+  "card": "joint",
+  "n": "🍬🍌"
  },
  {
   "d": "5.3",
@@ -52,6 +53,13 @@
   "cat": "Food & Drink"
  },
  {
+  "d": "5.3",
+  "t": "🐶 Dog Foods",
+  "a": 5.14,
+  "cat": "Alice",
+  "n": "Target · Kindfull"
+ },
+ {
   "d": "5.4",
   "t": "🎬 AMC Membership",
   "a": 27.99,
@@ -63,12 +71,6 @@
   "a": 3697.23,
   "cat": "Fixed Costs",
   "card": "joint"
- },
- {
-  "d": "5.5",
-  "t": "🎯 Target",
-  "a": 5.14,
-  "cat": "Groceries"
  },
  {
   "d": "5.6",
@@ -137,10 +139,11 @@
   "card": "3299"
  },
  {
-  "d": "5.10",
+  "d": "5.9",
   "t": "🛒 Costco",
   "a": 28.17,
-  "cat": "Groceries"
+  "cat": "Groceries",
+  "n": "☕🍋💧"
  },
  {
   "d": "5.10",
@@ -169,10 +172,25 @@
   "card": "3299"
  },
  {
-  "d": "5.11",
+  "d": "5.10",
   "t": "🛒 Costco",
-  "a": 67.18,
-  "cat": "Groceries"
+  "a": 26.26,
+  "cat": "Groceries",
+  "n": "🥬🍅🍄‍🟫💧"
+ },
+ {
+  "d": "5.10",
+  "t": "🌬️ Air Freshener",
+  "a": 10.76,
+  "cat": "Home",
+  "n": "Costco"
+ },
+ {
+  "d": "5.10",
+  "t": "💊 D3+K2",
+  "a": 30.16,
+  "cat": "Health",
+  "n": "Costco"
  },
  {
   "d": "5.12",
@@ -200,10 +218,24 @@
   "cat": "Food & Drink"
  },
  {
-  "d": "5.15",
+  "d": "5.14",
+  "t": "⛽️ Costco Gas",
+  "a": 80.24,
+  "cat": "Car"
+ },
+ {
+  "d": "5.14",
   "t": "🛒 Costco",
-  "a": 83.29,
-  "cat": "Groceries"
+  "a": 53.13,
+  "cat": "Groceries",
+  "n": "🍅🐟💧"
+ },
+ {
+  "d": "5.14",
+  "t": "💊 D3+K2",
+  "a": 30.16,
+  "cat": "Health",
+  "n": "Costco"
  },
  {
   "d": "5.15",
@@ -253,6 +285,27 @@
   "card": "3299"
  },
  {
+  "d": "5.16",
+  "t": "🥬 Trader Joe's",
+  "a": 13.96,
+  "cat": "Groceries",
+  "n": "🧀🌿🍑🌶️"
+ },
+ {
+  "d": "5.16",
+  "t": "🛒 Costco",
+  "a": 97.43,
+  "cat": "Groceries",
+  "n": "🫐🍄‍🟫🥬🍦🥐🍣"
+ },
+ {
+  "d": "5.16",
+  "t": "🧻 Baby Wipes",
+  "a": 21.54,
+  "cat": "Home",
+  "n": "Costco"
+ },
+ {
   "d": "5.17",
   "t": "Kaiser Pharmacy",
   "a": 15.0,
@@ -278,27 +331,23 @@
  },
  {
   "d": "5.18",
-  "t": "🥬 Trader Joe's",
-  "a": 13.96,
-  "cat": "Groceries"
- },
- {
-  "d": "5.18",
   "t": "🍑",
   "a": 9.13,
   "cat": "Shopping"
  },
  {
-  "d": "5.20",
+  "d": "5.18",
   "t": "🎯 Target",
   "a": 6.38,
-  "cat": "Groceries"
+  "cat": "Groceries",
+  "n": "💪💧 Isopure"
  },
  {
-  "d": "5.21",
-  "t": "🎯 Target",
+  "d": "5.20",
+  "t": "🐶 Dog Foods",
   "a": 4.31,
-  "cat": "Groceries"
+  "cat": "Alice",
+  "n": "Target · Iams"
  },
  {
   "d": "5.21",
@@ -320,6 +369,13 @@
   "cat": "Food & Drink"
  },
  {
+  "d": "5.22",
+  "t": "🛒 Vons",
+  "a": 16.96,
+  "cat": "Groceries",
+  "n": "🧃🍋🍦"
+ },
+ {
   "d": "5.23",
   "t": "🥡 Too Good To Go",
   "a": 5.48,
@@ -328,14 +384,30 @@
  {
   "d": "5.23",
   "t": "Erewhon",
-  "a": 50.42,
-  "cat": "Groceries"
+  "a": 13.0,
+  "cat": "Groceries",
+  "n": "🌰🍪"
  },
  {
-  "d": "5.24",
-  "t": "🛒 Vons",
-  "a": 16.96,
-  "cat": "Groceries"
+  "d": "5.23",
+  "t": "🍷 Wine",
+  "a": 37.42,
+  "cat": "Food & Drink",
+  "n": "Erewhon"
+ },
+ {
+  "d": "5.23",
+  "t": "🛒 Costco",
+  "a": 9.58,
+  "cat": "Groceries",
+  "n": "🍊🍄‍🟫"
+ },
+ {
+  "d": "5.23",
+  "t": "💊 CoQ10 * 8",
+  "a": 237.71,
+  "cat": "Gifts",
+  "n": "Costco · 🎁 for parents"
  },
  {
   "d": "5.24",
@@ -387,7 +459,7 @@
   "d": "5.26",
   "t": "🔧 AC Repair",
   "a": 180.0,
-  "cat": "Home",
+  "cat": "Fixed Costs",
   "card": "joint",
   "n": "Zelle · Hundred Grace Inc"
  },
@@ -430,6 +502,27 @@
   "t": "🇲🇾 Belecan Grill",
   "a": 56.0,
   "cat": "Dine Out"
+ },
+ {
+  "d": "5.30",
+  "t": "🛒 Costco",
+  "a": 35.74,
+  "cat": "Groceries",
+  "n": "🍅🥬🥚🍗🍊💧"
+ },
+ {
+  "d": "5.30",
+  "t": "🐶 Dog Food",
+  "a": 67.97,
+  "cat": "Alice",
+  "n": "Costco · Blue Buffalo"
+ },
+ {
+  "d": "5.30",
+  "t": "🦆 Dog Toys",
+  "a": 12.38,
+  "cat": "Alice",
+  "n": "Costco"
  },
  {
   "d": "5.31",

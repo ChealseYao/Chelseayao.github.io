@@ -58,6 +58,20 @@
   "card": "3299"
  },
  {
+  "d": "6.7",
+  "t": "👙 Bikini Set",
+  "a": 32.33,
+  "cat": "Shopping",
+  "n": "Target"
+ },
+ {
+  "d": "6.7",
+  "t": "🎯 Target",
+  "a": 16.48,
+  "cat": "Groceries",
+  "n": "🍦🍿"
+ },
+ {
   "d": "6.8",
   "t": "🤖 OpenAI",
   "a": 20.0,
@@ -92,6 +106,19 @@
   "n": "dkl passport"
  },
  {
+  "d": "6.9",
+  "t": "⛽️ Costco Gas",
+  "a": 60.04,
+  "cat": "Car"
+ },
+ {
+  "d": "6.10",
+  "t": "🛒 Costco",
+  "a": 28.12,
+  "cat": "Groceries",
+  "n": "🥤💧"
+ },
+ {
   "d": "6.10",
   "t": "🥐 Duke Bakery",
   "a": 8.5,
@@ -106,10 +133,24 @@
  },
  {
   "d": "6.12",
+  "t": "🛒 Costco",
+  "a": 12.48,
+  "cat": "Groceries",
+  "n": "💧🍓🍊"
+ },
+ {
+  "d": "6.12",
   "t": "🧋 ChaRedefine",
   "a": 8.88,
   "cat": "Food & Drink",
   "card": "3299"
+ },
+ {
+  "d": "6.13",
+  "t": "🏠 Yuki Visit Gift",
+  "a": 33.78,
+  "cat": "Gifts",
+  "n": "Whole Foods · 🧼🍰🍉"
  },
  {
   "d": "6.13",
@@ -125,16 +166,46 @@
   "card": "joint"
  },
  {
-  "d": "6.16",
-  "t": "🎯 Target",
-  "a": 11.98,
-  "cat": "Groceries"
+  "d": "6.14",
+  "t": "🛒 Costco",
+  "a": 84.38,
+  "cat": "Groceries",
+  "n": "🍎🧀🐔🍣🥬"
  },
  {
-  "d": "6.16",
+  "d": "6.14",
+  "t": "🧻 Paper Towels",
+  "a": 22.51,
+  "cat": "Home",
+  "n": "Costco"
+ },
+ {
+  "d": "6.14",
+  "t": "🩸 Pads",
+  "a": 17.99,
+  "cat": "Home",
+  "n": "Costco"
+ },
+ {
+  "d": "6.14",
   "t": "🛒 Vons",
-  "a": 42.81,
-  "cat": "Groceries"
+  "a": 38.8,
+  "cat": "Groceries",
+  "n": "🐔🍓🍑🍋🥛🍦"
+ },
+ {
+  "d": "6.14",
+  "t": "🍷 Barefoot Wine",
+  "a": 4.01,
+  "cat": "Food & Drink",
+  "n": "Vons"
+ },
+ {
+  "d": "6.15",
+  "t": "🎯 Target",
+  "a": 11.98,
+  "cat": "Groceries",
+  "n": "🍦"
  },
  {
   "d": "6.16",
@@ -181,10 +252,25 @@
   "cat": "Food & Drink"
  },
  {
-  "d": "6.22",
+  "d": "6.21",
   "t": "🛒 Costco",
-  "a": 100.53,
-  "cat": "Groceries"
+  "a": 58.35,
+  "cat": "Groceries",
+  "n": "🫐🌿🍄‍🟫🧂🌶️🍣💧"
+ },
+ {
+  "d": "6.21",
+  "t": "🫙 Zip Bags",
+  "a": 13.78,
+  "cat": "Home",
+  "n": "Costco"
+ },
+ {
+  "d": "6.21",
+  "t": "🫚 Turmeric",
+  "a": 28.4,
+  "cat": "Health",
+  "n": "Costco"
  },
  {
   "d": "6.22",
@@ -230,10 +316,11 @@
   "cat": "Car"
  },
  {
-  "d": "6.24",
+  "d": "6.23",
   "t": "🛒 Costco",
   "a": 27.77,
-  "cat": "Groceries"
+  "cat": "Groceries",
+  "n": "🧃🥬"
  },
  {
   "d": "6.24",
@@ -241,6 +328,20 @@
   "a": 27.99,
   "cat": "Entertainment",
   "card": "joint"
+ },
+ {
+  "d": "6.24",
+  "t": "🛒 Whole Foods",
+  "a": 20.09,
+  "cat": "Groceries",
+  "n": "🍦"
+ },
+ {
+  "d": "6.24",
+  "t": "🍦 Dog IceCream",
+  "a": 7.53,
+  "cat": "Alice",
+  "n": "Whole Foods"
  },
  {
   "d": "6.26",
@@ -263,8 +364,23 @@
  {
   "d": "6.28",
   "t": "🛒 Costco",
-  "a": 82.98,
-  "cat": "Groceries"
+  "a": 39.92,
+  "cat": "Groceries",
+  "n": "💧🍞🍣🍄‍🟫"
+ },
+ {
+  "d": "6.28",
+  "t": "🧺 Laundry Pods",
+  "a": 32.31,
+  "cat": "Home",
+  "n": "Costco"
+ },
+ {
+  "d": "6.28",
+  "t": "🦆 Dog Toys",
+  "a": 10.75,
+  "cat": "Alice",
+  "n": "Costco"
  },
  {
   "d": "6.28",
@@ -282,7 +398,7 @@
   "d": "6.29",
   "t": "🔍 Home Inspection Fee",
   "a": 50.0,
-  "cat": "Home",
+  "cat": "Fixed Costs",
   "card": "joint",
   "n": "Zelle · Hundred Grace Inc"
  },

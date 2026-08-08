@@ -198,7 +198,7 @@ const GUEST_LIST = {
       (g.guests.length
         ? `<div class="gchips">${g.guests.map(p => {
             const o = typeof p === "string" ? { name: p } : p;
-            return `<span class="gchip">${o.name}${o.n > 1 ? ` ×${o.n}` : ""}${o.note ? `<i>${o.note}</i>` : ""}</span>`;
+            return `<span class="gchip">${o.name}${o.n > 1 ? `<i>(${o.n})</i>` : ""}${o.note ? `<i>${o.note}</i>` : ""}</span>`;
           }).join("")}</div>`
         : `<div class="gempty">待补充</div>`)
     ).join("");
